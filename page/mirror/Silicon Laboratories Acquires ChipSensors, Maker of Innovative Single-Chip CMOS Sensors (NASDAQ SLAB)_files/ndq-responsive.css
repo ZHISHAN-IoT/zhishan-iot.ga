@@ -1,0 +1,329 @@
+/* 
+***********************************
+Page: NDQ Responsive
+Category: N/A
+Search: 0
+Track: 0
+Version: 9.8.0 
+Author: Jonathan Hagan
+Date: 27 Jun 2014
+***********************************
+*/
+@charset "utf-8";
+
+/* USE THIS FOR GOING LIVE */
+/*@media 
+	(min-device-width: 768px) and (max-device-width: 1024px),
+	only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5)  {*/
+
+/* QUERIES FOR TESTING ON DESKTOP */
+@media 
+	only screen and (max-width: 760px),
+	(max-width: 1028px),
+	(max-width: 320px),
+	(min-device-width: 768px) and (max-device-width: 1024px),
+	only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5)  {
+
+	#ndq-content .ndq-leftcol, #ndq-content .ndq-rightcol { float:none; width:auto; }
+	div.ndq-dialog { max-width:100%; }
+	.ndq-wide-screen { display:none; }
+	.ndq-small-screen { display:block; }
+	
+	/* Forms for small devices */
+	#ndq-form .ndq-form-note,#ndq-form img,#ndq-form #captcha { float:none; } 
+	#ndq-form label, #ndq-content label { float:none; display:block; }
+	#ndq-form input, #ndq-form textarea, #ndq-form select { float:none; }
+	#ndq-form .ndq-submit { text-align:left; float:none; }
+	#ndq-form fieldset { width:100%; }
+	#ndq-content.ndq-alerts label, #ndq-content.ndq-donotsend label { display:inline; }
+	#ndq-content form .formSpacer {display:none; }
+
+	/* Force table to not be like tables anymore */
+	.wsh-dataTable, .wsh-dataTable thead, .wsh-dataTable th, .wsh-dataTable tbody, .wsh-dataTable td, .wsh-dataTable tr { display:block; }
+	.wsh-dataTable caption { display:inline; }
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.wsh-dataTable thead tr { position:absolute; top:-9999px; left:-9999px;	}
+	#ndq-content caption { border:none; margin-bottom:5px; display: block;}
+	.wsh-dataTable tr:first-child { border-top:1px solid #ccc; }	
+	.wsh-dataTable tr { border-bottom:1px solid #ccc; }	
+	.wsh-dataTable td { border:none; position:relative; }
+	.wsh-dataTable td, #ndq-content td, #ndq-content th { border:none; position:relative; overflow:visible; }
+	.wsh-dataTable td:before { position:absolute; top:6px; left:6px; padding-right:10px; white-space:nowrap; }
+
+	/* releasedetail.cfm */
+	.ndq-table-responsive {
+		width: 100%;
+		margin-bottom: 15px;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid #ddd;
+		-webkit-overflow-scrolling: touch;}
+
+	/* Pagination */
+	#ndq-pagination { float:none !important; display:block; }
+	#ndq-pagination form {text-align: left;}
+	#ndq-pagination #ndq-page { }
+	#ndq-pagination a {text-decoration: none;}
+
+	/* Briefcase */
+	.ndq-briefcaseLegend { float:none; text-align:left; margin-top:1.12em; }	
+
+	/* File Types */
+	.ndq-filing-types-td {text-align: left;}
+
+	/* Calculator */
+	#ndq-content .ndq-calc-shares { display:block; }
+	#ndq-content .ndq-calc-date { display:block; }
+	#ndq-content .ndq-calc-submit { display:block; }
+	#ndq-content .ndq-calc-reinvest label { display:inline; }
+	
+	/* Directors */
+	#ndq-content .ndq-committee-chair, #ndq-content .ndq-committee-member { height:auto; }
+	#ndq-content .ndq-expand-link #ndq-view-transactions {float:none !important; display:block !important; margin-top:10px;}
+	#ndq-content .ndq-committees table td, #ndq-content.ndq-committees table th {text-align: left;}
+	
+	/* Index */
+	#ndq-content .ndq-intro,#ndq-content .ndq-stock { float:none; width:auto; margin-bottom: 1em; }
+	#ndq-content .ndq-stock { width:210px; }
+
+	/* Stock Quote */
+	.ndq-stockquote .ndq-leftcol,.ndq-stockquote .ndq-rightcol { float:none !important; width:100% !important; }
+	#ndq-content.ndq-stockquote th {border:0;}
+	
+	/* Stock Quote, Dividends, Calculator */
+	.ndq-data-table td { text-align:left; }
+	#ndq-stock-img img { width:100%; }
+	
+	/* ******************************************************************** */
+	/*                         Table Headers                                */
+	/* ******************************************************************** */
+	
+	/* Search */
+	.wsh-search td:before { content: attr(data-before); }
+	.wsh-search td { padding-left:23% !important; }
+	.ndq-search .ndq-search-year, .ndq-search .ndq-search-categories { float:none; }
+	.ndq-search label {display: inline-block !important;}
+	table.wsh-search {margin-top: 20px;}
+	
+	/* Download Library */
+	.wsh-downloads td:before { content: attr(data-before); }
+	.wsh-downloads .wsh-downloads-hide {display: none;}
+	.wsh-downloads td { padding-left:30% !important; }
+	
+	/* SEC Filings */
+	.wsh-sec td:before { content: attr(data-before); }
+	.wsh-sec td { padding-left:40% !important; }
+		/* Spanish Specific */
+		.ndq-spanish .wsh-sec td { text-align: right; }
+		.ndq-spanish #DocFilter select {width: 100%;max-width: 100% !important;}
+		.ndq-spanish #ndq-pagination select {width: 100% !important;}
+	
+	/* Briefcase */
+	.wsh-briefcase td:before { content: attr(data-before); }
+	.wsh-briefcase td { padding-left:25% !important; }
+	
+	/* Printed Materials */
+	.wsh-printedmats td:before { content: attr(data-before); }
+	.wsh-printedmats td label { display:inline-block !important; }
+	.wsh-printedmats td { text-align: right;; }
+		/* danish specific */
+		.ndq-danish .wsh-printedmats td { padding-left:55% !important; }	
+		/* spanish specific */
+		.ndq-spanish .wsh-printedmats td { padding-left:55% !important; }	
+		
+	/* Press Releases */
+	.wsh-releases td:before { content: attr(data-before); }
+	.wsh-releases .wsh-briefcase { padding-left:60% !important; }
+	.wsh-releases td:nth-of-type(2) { padding-left: 6px; }
+	.wsh-releases td summary { display:block; margin-top:15px; }
+	.wsh-releases td { padding-left:51% !important; }
+		/* danish specific */
+		.ndq-danish .wsh-releases td { padding-left:40% !important; }	
+		/* spanish specific */
+		.ndq-spanish .wsh-releases td { padding-left:40% !important; }	
+		/* for expand/collapse */
+		.wsh-releases .ndq-showsummary {display: none !important;}
+		.wsh-releases .releaseSummary {display: block;}
+	
+	/* Insider Transactions INCLUDE */
+	.wsh-inc-transactions td:before { content: attr(data-before); }
+	.wsh-inc-transactions td { text-align: right !important; }
+
+	/* Analyst Coverage */
+	.wsh-analysts td:before { content: attr(data-before); }
+	.wsh-analysts td { padding-left:30% !important; }
+		/* danish specific */
+		.ndq-danish .wsh-analysts td { padding-left:30% !important; }	
+		
+	/* Events */ 
+	.wsh-events tbody .ndq-reminder-hidden {display: none !important;} 
+	.wsh-events td:before { content: attr(data-before); }
+	.wsh-events td { padding-left:38% !important; }
+		/* danish specific */
+		.ndq-danish .wsh-events td { padding-left:45% !important; }	
+		/* spanish specific */
+		.ndq-spanish .wsh-events td { padding-left:45% !important; }		
+		
+	.wsh-presentations td:before { content: attr(data-before); }
+	.wsh-presentations td { padding-left:15% !important; }
+
+	/* Governance */
+	.wsh-governance td:before { content: attr(data-before); }
+	.wsh-governance td { text-align: right; }
+
+	/* Stock Lookup */
+	.wsh-stocklookup td:before { content: attr(data-before); }
+	.wsh-stocklookup td { padding-left:25% !important; }
+		/* danish specific */
+		.ndq-danish .wsh-stocklookup td { padding-left:30% !important; }	
+
+	/* Dividends */
+	.wsh-dividends td:before { content: attr(data-before); }
+	.wsh-dividends td { padding-left:35% !important; }
+	.wsh-dividends td.ndq-table-bold:before {content: "";}
+	.wsh-dividends td.ndq-table-bold {display: table-cell;padding-left: 5px !important;border: 0px solid #fff;width: 100%;position: relative;}
+
+	/* Splits */
+	.wsh-split td:before { content: attr(data-before); }
+	.wsh-split td { padding-left:35% !important; }
+	.wsh-split td.ndq-table-bold:before {content: "";}
+
+
+	/* Calculator */
+	.wsh-calculator td:before { content: attr(data-before); }
+	.wsh-calculator td { padding-left:42% !important;	}
+		/* spanish specific */
+		.ndq-spanish .wsh-calculator td { text-align: right; }
+			
+	.wsh-adjustments td:before { content: attr(data-before); }
+	.wsh-adjustments-hide {display: none !important;}
+	.wsh-adjustments td { padding-left:42% !important; }
+		/* spanish specific */	
+		.ndq-spanish .wsh-adjustments td { text-align: right;	}
+
+	/* Financials */
+	.wsh-financials-sec td:before { content: attr(data-before); }
+	.wsh-financials-sec td { padding-left:30% !important; }
+		/* danish specific */
+		.ndq-spanish .wsh-financials-sec td { padding-left:40% !important; }	
+		/* danish specific */
+		.ndq-spanish .wsh-financials-sec td { padding-left:50% !important; }	
+		
+	.wsh-financials td:before { content: attr(data-before); }
+	.wsh-financials td { padding-left:30% !important; }
+		/* danish specific */
+		.ndq-danish .wsh-financials td { padding-left:20% !important; }	
+		/* spanish specific */
+		.ndq-spanish .wsh-financials td { padding-left:20% !important; }	
+	
+	/* Annuals & Proxies */
+	.wsh-annuals-sec td:before { content: attr(data-before); }
+	.wsh-annuals-sec td { padding-left:20% !important; }
+		/* spanish specific */
+		.ndq-spanish .wsh-annuals-sec td { padding-left:35% !important; }
+		
+	.wsh-annuals td:before { content: attr(data-before); }
+	.wsh-annuals td { padding-left:30% !important; }
+	
+	/* Ownership Profile */
+	.wsh-ownership-breakdown td:before { content: attr(data-before); }
+	.wsh-ownership-breakdown td { text-align: right !important; }
+	
+	.wsh-ownership-rotation td:before { content: attr(data-before); }
+	.wsh-ownership-rotation td { text-align: right !important; }
+	
+	.wsh-ownership-concentration td:before { content: attr(data-before); }
+	.wsh-ownership-concentration td { text-align: right !important;}
+
+	.wsh-ownership-style td:before { content: attr(data-before); }
+	.wsh-ownership-style td { text-align: right !important; }
+
+	.wsh-ownership-topholders td:before { content: attr(data-before); }
+	.wsh-ownership-topholders td {
+		text-align: right !important;
+		padding-left: 48% !important;
+	}
+
+	/* Insider Transactions */
+	.wsh-transactions td:before { content: attr(data-before); }
+	.wsh-transactions td { padding-left:42% !important; }
+	
+	/* Insider Ownership */
+	.wsh-insider-ownership td:before { content: attr(data-before); }
+	.wsh-insider-ownership td { padding-left:42% !important; }
+		/* spanish specific */
+		.ndq-spanish .wsh-insider-ownership td { padding-left:60% !important; }
+	
+	
+	/* Insider Ownership EXPAND OPTION */
+	.wsh-ownership td:before { content: attr(data-before); }
+	.wsh-ownership td { padding-left:42% !important; }
+	.wsh-ownership-trades td { text-align: right !important; }
+	
+	/* Estimates */
+	.wsh-estimates-revert { display: table !important; }
+	.wsh-estimates-revert tbody { display: table-row-group !important; }
+	.wsh-estimates-revert tr { display: table-row !important; }
+	.wsh-estimates-revert td { display: table-cell !important; }
+	
+	.wsh-analyst-forecasts {}
+	.wsh-analyst-forecasts td{text-align: right}
+	.wsh-analyst-forecasts td:before { content: attr(data-before); }
+	
+	.wsh-actuals {}
+	.wsh-actuals td{text-align: right}
+	.wsh-actuals td:before { content: attr(data-before); }
+	
+	.wsh-pe-ratios {}
+	.wsh-pe-ratios td{text-align: right}
+	.wsh-pe-ratios td:before { content: attr(data-before); }
+	
+	.wsh-growth-rates {}
+	.wsh-growth-rates td{text-align: right}
+	.wsh-growth-rates td:before { content: attr(data-before); }
+	
+	/* Key Ratios */
+	.wsh-ratios-revert { display: table !important; }
+	.wsh-ratios-revert tbody { display: table-row-group !important; }
+	.wsh-ratios-revert tr { display: table-row !important;width: 100%; }
+	.wsh-ratios-revert td, .wsh-ratios-revert th { display: table-cell !important; }
+	.wsh-ratios-top, .wsh-ratios-bottom {float: none;width:100%;display: block;}
+	
+	/* Corporate Governance Document */
+	#ndq-content div.ndq-dialog, #ndq-tools div.ndq-dialog {
+	  max-width: 85%;
+	}
+
+	/* Homepage */
+	.featuredReports td::before,
+	.financialSchedules td::before{ content: attr(data-before); }
+
+	.featuredReports td { padding-left:30% !important; }
+
+	.financialSchedules td{ padding-left: 49% !important; }
+
+
+}
+
+@media (max-width:1024px){
+	#ndq-content .ndq-stock{
+		width: 50%;
+		margin-left: 25%;
+	}
+}
+
+@media (max-width:700px){
+	#ndq-content .ndq-stock{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#ndq-tools div.ndq-dialog{
+		width: 70%;
+		margin-left: 15%;
+	}
+}

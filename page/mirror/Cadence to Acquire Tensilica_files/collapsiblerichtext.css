@@ -1,0 +1,235 @@
+#expandableRichText {
+	padding-right: 25px;
+}
+
+#expandableRichText.info ul.benefits {
+	border-bottom: 1px #D9D9D9 solid;
+	margin-bottom: 20px;
+	font-size: 20px;
+	padding: 0;
+	list-style: none;
+	line-height: 20px;
+	font-size: 20px;
+}
+
+#expandableRichText.info ul.benefits li {
+	margin-bottom: 10px;
+}
+
+#expandableRichText.info ul.benefits li:before {
+	content: "•";
+	margin-right: 5px;
+	color: #E31837;
+}
+
+#expandableRichText.info ul.benefits li:last-child {
+	margin-bottom: 21px;
+}
+
+#expandableRichText.info p.element {
+	padding-right: 15px;
+}
+
+#expandableRichText.info.events h2 {
+	color: #E31837;
+	font-size: 25px;
+	margin-top: 30px;
+}
+
+#expandableRichText.info.events p.footprint {
+	font-size: 12px;
+}
+
+#expandableRichText.info.events ul {
+	padding: 0;
+	list-style: none;
+}
+
+#expandableRichText.info.events ul li:before {
+	content: "•";
+	margin-right: 5px;
+	color: #E31837;
+}
+
+#expandableRichText.info.events a {
+	color: #0b86c0;
+	text-decoration: none;
+}
+
+#expandableRichText.info.events a:hover {
+	color: #E31837;
+}
+
+#expandableRichText.info.events div.link {
+	background: none repeat scroll 0% 0% #FFFFFF;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 20px;
+	height: 27px;
+	width: 105px;
+	margin-left: 0px;
+}
+
+#expandableRichText.info.events div.link p {
+	padding: 2px 17px;
+	font-size: 14px;
+	display: inline-block;
+	color: #000000;
+}
+
+#expandableRichText.info.events div.link p a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#expandableRichText.info.events div.link div.leftmodulearrow {
+	display: inline-block;
+	width: 21px;
+	right: 0;
+	position: absolute;
+	height: 100%;
+	background: #E31837;
+}
+
+#expandableRichText.info.events div.link div.leftmodulearrow div.arrow-left
+	{
+	width: 0px;
+	position: absolute;
+	height: 0px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #FFFFFF;
+	top: 8px;
+	left: 8px;
+}
+
+#expandableRichText.info .columns.company div.columnInfo {
+	min-height: 160px;
+	background-color: #EEEEEE;
+	position: relative;
+}
+
+#expandableRichText.info .columns.company div.columnInfo ul {
+	padding: 13px 13px 13px 17px ;
+}
+
+#expandableRichText.info .columns.company div.columnInfo ul.logo {
+	width: 75%;
+}
+
+#expandableRichText.info .columns.company div.columnInfo ul li {
+	line-height: 25px;
+	font-size: 15px;
+}
+
+#expandableRichText.info .columns.company div.columnInfo ul li a {
+	text-decoration: none;
+	color: #0b86c0;
+}
+
+#expandableRichText.info .columns.company div.columnInfo ul li a:hover {
+	color: #E31837;
+}
+
+#expandableRichText.info .columns.company div.columnInfo img.imglogo {
+	position: absolute;
+	right: 18px;
+	bottom: 24px;
+}
+
+#expandableRichText.info .element {
+	display: none;
+}
+
+.more {
+	color: #0b86c0;
+	text-decoration: none;
+}
+
+.more:hover {
+	color: #E31837;
+}
+
+.less {
+	color: #0b86c0;
+	display: none;
+	text-decoration: none;
+}
+
+.less:hover {
+	color: #E31837;
+}
+
+#expandableRichText ul {
+	padding-left: 10px;
+	margin-bottom: 20px;
+	line-height: 25px;
+	list-style: none;
+}
+
+#expandableRichText ul li {
+	padding-left: 11px;
+	text-indent: -0.7em;
+}
+
+#expandableRichText ul li:before {
+	content: "•";
+	margin-right: 5px;
+	color: #E31837;
+}
+
+@media ( max-width : 1200px) {
+	#expandableRichText.info .columns.company div.columnInfo {
+		min-height: 200px;
+	}
+}
+
+@media ( max-width : 1200px) {
+	#expandableRichText.info .columns div.columnInfo ul.logo {
+		width: 100% ;
+	}
+}
+
+@media ( max-width : 767px) {
+	#expandableRichText.info .columns {
+		max-width: 348px ;
+	}
+	#expandableRichText.info .columns.company {
+		max-width: 378px ;
+	}
+}
+
+@media ( max-width : 480px) {
+	#expandableRichText {
+		padding-right: 0px ;
+	}
+	#expandableRichText h1 {
+		font-size: 19px ;
+	}
+	#expandableRichText img {
+		width: 100% ;
+		margin-bottom: 50px;
+	}
+	#expandableRichText.info ul.benefits li {
+		font-size: 18px;
+	}
+	#expandableRichText.info span.pdf img {
+		width: auto ;
+		margin-bottom: 0px ;
+	}
+	#expandableRichText .columns figcaption p {
+		padding-top: 1px;
+	}
+	#expandableRichText .columns.company {
+		max-width: 100% ;
+	}
+}
+.richtext #expandableRichText.info a {
+	color: #0b86c0;
+	text-decoration: none;
+}
+
+.richtext #expandableRichText.info a:hover {
+	color: #E31837;
+}

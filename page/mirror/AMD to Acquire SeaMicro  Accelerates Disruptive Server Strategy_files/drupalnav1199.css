@@ -1,0 +1,31 @@
+﻿li.topNavHeading {
+    font-size: 17px;
+    padding: 10px 9px !important;
+}
+
+li.topNavHeading span {
+    padding-right: 17px;
+    font-size: 17px;    
+}
+
+li.topNavHeading span::after {
+    padding: 0 0 0 8px;
+}
+
+li.topNavLink {
+
+}
+
+li.topNavLink a,
+.ms-WPBody li.topNavLink a,
+.ms-WPBody li.topNavLink a:link {
+    font-size: 17px;
+    padding: 15px 20px;
+}
+
+/* footer */
+
+.footer {
+    width: 900px;
+    margin: 0 auto;
+}

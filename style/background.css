@@ -1,0 +1,36 @@
+/*
+ * @Author:ZHISHAN IoT
+ * @Dessciption:background style
+ */
+
+#background_nj
+{
+    background-color: lightgrey;
+    background-image: url("/image/0001.jpg");   /* specify the source background image */
+    background-repeat: no-repeat;
+
+    /* fullscreen config */
+    background-attachment: fixed;
+    /*position: fixed;*/
+	width:  100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -9999;
+}
+
+#background_zz
+{
+    background-color: lightgrey;
+    background-image: url("/image/0002.jpg");   /* specify the source background image */
+    background-repeat: no-repeat;
+
+    /* fullscreen config */
+    background-attachment: fixed;
+    /*position: fixed;*/
+	width:  100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -9999;
+}
+
+/* --- END OF FILE --- */

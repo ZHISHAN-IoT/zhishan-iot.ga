@@ -1,0 +1,122 @@
+/*
+ * @Author:ZHISHAN IoT
+ * @Dessciption:UI style
+ */
+
+#ui_baseBody
+{
+	background:rgba(0,0,0,0.3);
+	height:auto;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+#ui_indexBody
+{
+	background:rgba(0,0,0,0.3);
+	height:100%;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+#ui_baseContentDiv
+{
+	height:  100%;   
+	width: 100%;
+	padding:  0 30px 0 15px;
+	z-index: 1000;
+    color: #FFFFFF;
+    font-family: consola;
+    box-sizing: border-box;
+    margin:0 auto;
+    vertical-align: left;
+    text-align:left;
+    position:relative;
+	clear:both;
+}
+
+#ui_indexDiv
+{
+	height:  100%;   
+	width: 100%;
+	/*padding:  0 30px 0 15px;*/
+	z-index: 1000;
+    color: #FFFFFF;
+    font-family: consola;
+    box-sizing: border-box;
+    margin:0 auto;
+    vertical-align: middle;
+    text-align:center;
+    position:relative;
+	clear:both;
+}
+
+#ui_indexDiv02
+{
+    margin:auto; 
+    position: absolute; 
+    top: 0;
+    left: 0; bottom: 0; right: 0;
+    
+    height: 100%;
+    width: 100%;
+	z-index: 1000;
+    color: #FFFFFF;
+    font-family: consola;
+    text-align: center;
+    line-height:25px;
+}
+
+
+
+/* TODO */
+#test
+{
+}
+
+*{
+    margin: 0px;
+    padding:0px;
+}
+.topbody{
+    font-family: 'consola';    
+    width:100%;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-decoration: blink;
+}
+.topbar{
+    width:100%;
+    background-color: #000;
+    display: inline-block;
+    
+    z-index: 9999;
+    position: fixed;    
+}
+.topbar li{
+    float:left;
+}
+.toplist{
+    display: inline-block;
+    list-style-type:none;
+}
+.toplist a{
+    color:#FFF;
+    text-decoration: none;
+}
+.title,.toplist a{
+    display:block;
+    
+    display: block;
+    float: left;
+}
+.toplist a{
+    padding:15px 20px 15px 20px;
+}
+.title{
+    color:#FFF;
+    text-decoration: none;
+    padding:15px 30px 15px 30px;
+}

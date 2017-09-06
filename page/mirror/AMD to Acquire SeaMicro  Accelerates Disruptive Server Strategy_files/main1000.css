@@ -1,0 +1,2923 @@
+﻿@charset "utf-8";
+
+body {
+	background: none;
+}
+
+body.ms-backgroundImage { 
+	background: none;
+	background-color: #fff;
+}
+
+.page-border,
+.content {
+	width: 100%;
+	margin-top: 0;
+	padding: 0;
+}
+
+.pageWidth {
+	width: 2px;
+}	
+
+.pageContent {
+    display: inline-block;
+    float: right;
+    margin: 3% 3% 0 3%;
+    width: 74%;
+}
+
+.pageContentFull {
+	width: 94%;
+    margin: 0 3%;
+}
+
+.pageContentFull h1 {
+    margin-top: 30px;
+}
+
+.homePageContentFull {
+	width: 96%;
+	padding: 2%;
+}
+
+#pageNotFound {
+	margin: 30px 3% 0 3%;
+	width: 90%;
+	min-height: 500px;
+}
+
+#pageStatusBar {
+	margin-bottom: 0 !important;
+}
+
+#hide_responsive {
+	display: none;
+}
+
+#hide_rwd, 
+#hide_desktop {
+	display: inline-block;
+}
+
+.page, 
+.page_content,
+#s4-workspace,
+.pageNotFoundContainer {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+#s4-workspace {
+	margin-top: 90px;
+	overflow-x: hidden;	
+}
+
+.maincontent {
+	width: 100%;
+	margin: auto;
+	background: none;
+}
+
+.maincontent_top {
+	background: none;
+	height: 0;
+	margin: 0;
+}
+
+#masthead {
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	z-index: 99;
+	background-color: #fff;
+	margin-top: -90px !important;
+}
+
+/*
+#masthead {
+	width: 100%;
+	height: 89px;
+	margin-top: 0 !important;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+*/
+
+#masthead {
+	border-bottom: 1px solid #ccc;
+}
+
+.mastheadTop {
+    width: 100%;
+    height: 89px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.mastheadBottom {
+	display: none;
+}
+
+.SecondaryNav, 
+.primary-nav, 
+#leftNav, 
+#footer-nav {
+	display: none;
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* Search Box */
+
+.search_rwd {
+	width: 202px;
+	height: 31px;
+	float: right;
+}
+
+#sitesearch_rwd {
+	border: 1px #999 solid;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 155px;
+	float: left;
+	margin: 0px 5px 0px 0px;
+}
+
+#sitesearch_rwd input.ms-sbplain {
+	font-size: 1.3em;
+	color: #333;
+	background: transparent;
+	width: 150px;
+	vertical-align: middle;
+	text-align: center;
+	border: none;
+}
+
+.search_rwd #search_icon {
+	margin-top: -3px;
+}
+
+#sitesearch{
+	margin: 18px 18px 0 18px;
+}
+
+#leftNav{
+	display: none;
+}
+
+p img {
+	display: none;
+}
+
+.itemFloatLeft p img {
+	/* display: inline-block; */
+}
+
+.landingPageThreeColumn {
+    margin-right: 2.47933884297521%;
+    width: 31.68044077134986%;	
+}
+
+.landingPageThreeColumnLast {
+    width: 31.68044077134986%;   
+}
+
+
+.landingPageThreeColumn p img,
+.landingPageThreeColumnLast p img {
+	display: inline-block;
+}
+
+.landingPageThreeColumn img,
+.landingPageThreeColumnLast img {
+	width: 100%;
+}
+
+.productDetailLeft img,
+.productDetailRight img {
+    width: 100%;
+}
+
+ul{
+	/* padding: 3% 0 3% 8%; */
+	list-style: outside disc;
+}
+
+h1 {
+	/* margin-left: 30px; */
+}
+
+/* Breadcrumbs */
+
+.breadcrumb {
+	display: none;
+	margin: 1px;
+}
+
+/* =Footer */
+/*	
+.footer {
+	float: left;
+	width: 100%; 
+	padding-bottom: 50px;
+}
+
+#rtp {
+	float:right;
+	height:16px;
+	padding:11px 16px -11px 0px;
+	position:relative;
+	bottom:28px;
+	left:0px;
+}
+
+#rtp a {
+	font-size:0.917em;
+	color:#000;
+	text-decoration:none;
+}
+	
+a.rtpbutton {
+	padding:1px 5px 5px 22px;
+}
+
+.rtpico {
+	-moz-background-clip:border !important;
+	-moz-background-inline-policy:continuous !important;
+	-moz-background-origin:padding !important;
+	background:transparent url(Images/vision/rtp-icon-gray.png) no-repeat scroll 0 0 !important;
+}
+
+.st_sharethis_custom{
+	background: url(Images/vision/share-icon-gray.png) no-repeat scroll left top transparent; 
+	padding: 1px 16px 6px 22px;
+	margin-left:11px;
+	font-size:11px;
+	color:#000;
+	text-decoration:none;	
+}
+
+#footer-nav{
+	display:none;
+	width:0;
+	height:0;
+	padding:0;
+	margin:0;
+}
+
+.footer ul.links {
+	width: 100%;
+}
+
+.footer .links {
+	list-style-type: none;
+	float: left;
+	margin: 0px;
+	padding: 0;
+}
+
+.footer .links .first {
+	margin: 0 0 0 3px;
+	padding: 0;
+	border-left: none;
+}
+
+.footer .links li {
+	display: inline;
+	list-style-type: none;
+	margin: 0 0 0 8px;
+	padding: 0 0 0 8px;
+	border-left: solid 1px #000;
+}
+
+.footer .copyright {
+    color: #606060;
+    font-size: 10px;       
+}
+
+.footer a {
+	text-decoration: none;
+	color: #000;
+	font-size: 10px;
+}	
+
+.footerText {
+	text-decoration: none;
+	color: #000;
+	font-size: 10px;
+}
+
+.footer #sitesearch {
+	padding-top: 10px;
+	padding-bottom: 7px;
+	border: 1px solid #000;	
+	width: 400px;
+}
+
+.footer #sitesearch img {
+    float: right;
+}
+
+.footer .ms-sbplain {
+    width: 91%;
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: auto;
+    vertical-align: top;
+}
+*/
+
+#ST { /* hides sharethis chicklets for 1024 and above browser size */
+	display:none;
+}
+
+	display:none;
+}
+
+/* Page Layout Div Container Styles */
+
+.homepageContent {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.contentcontainerfull{
+	width:96%;
+	margin:0 2% auto;
+}
+
+.contentcentercolumnnonav {
+	width:100%;
+	vertical-align:top;
+	float:right;
+}
+
+.contentfullwidth{
+	float:left; 
+	width:100%;
+	vertical-align:top;
+}
+
+.contentcentercolumn {
+	width:74%;
+	float:left;
+	vertical-align:top;
+}
+
+.contentrightcolumn{
+	float:right; 
+	width:24%; 
+	vertical-align:top;
+}
+
+.contentfooter{
+	float:left; 
+	width:100%; 
+	vertical-align:top;
+	font-size: 10px;
+}
+
+.contentblockdisplay{
+	padding-bottom:11px;
+}
+
+#grey_border{
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border: 1px solid #D0D0D0;
+	padding:11px;
+	margin-bottom:11px;
+}
+
+#grey_border_no_padding{
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border: 1px solid #D0D0D0;
+	padding-top:4px;
+	display:inline-block;
+	width:100%;
+}
+
+#landingpage_col_container{
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border: 1px solid #D0D0D0;
+	padding-top: 4px;
+	display: inline-block;
+	width: 100%;
+}
+
+.columnContainerCenter .itemCenter img {
+	width: 100%;
+}
+
+
+
+/* Mobile Primary Drop Down Menu */
+
+.rwd_menu {
+	list-style: none;
+	color: #ccc;
+	/* border-right: 1px solid #ccc; */
+	border-left: 1px solid #ccc;
+	float: right;
+	text-align: center;
+	display: block;
+	height: 30px;
+	padding: 30px;
+	width: 50px;
+	font-size: 24px;
+	font-family: 'KlavikaMediumCondensedItalic', Calibri, sans-serif;
+}
+
+.rwd_menu {
+	border-right: none;
+}
+
+.rwd_menu .slide {
+	font-size: 24px;
+	font-family: 'KlavikaMediumCondensedItalic', Calibri, sans-serif;
+}
+
+.rwd_menu_dropdown {
+	background-color: #000;
+	position: relative;
+	right: 182px;
+	top: 28px;
+	text-align: left;
+	width: 250px;
+	padding: 6px;
+	font-size:12px;
+	z-index:99999999999999999;
+}
+
+.view2 .rwd_menu_dropdown{
+	top:15px;
+}
+
+.rwd_menu_dropdown li{
+	font-size:16px;
+	line-height:2em;
+	border-bottom: solid 1px #333;
+	list-style:none;
+	display:block;
+}
+
+.rwd_menu_dropdown li a, .rwd_menu_dropdown li a:hover {
+	width:250px;
+	padding:12px 0px 6px 6px;
+	font-size:1.15em;
+	color:#fff;
+	display:block;
+	font-family:'KlavikaMediumCondensedItalic', Calibri, sans-serif;
+}
+
+.rwd_menu_dropdown li a:hover {
+	background:#333;
+	text-decoration:none;
+	width:240px;
+}
+
+img.static_hero_640{
+	display:none;
+}
+
+img.static_hero_1000{
+	width:100%;
+	height:auto;
+	padding-bottom:11px;
+}
+
+
+/* Worldwide Drop Down Menu */
+.worldwide{
+	float:left;
+	padding:0 11px 11px 11px;
+}
+
+#worldwide {
+	padding:1px 0px 0px 0px;
+	margin: 0 11px 0 0;
+	list-style:none;
+	color: #555;
+	display:inline;
+	float:right;
+}
+
+#worldwide li {
+	padding: 0px;
+	display: inline;
+	list-style:none;
+	float: left;
+	font-size:1em;
+}
+
+#worldwide li a {
+	display: block;
+	font-size:1.2em;
+	color:#555;
+}
+
+#worldwide li ul {
+	display: none;
+	width: 165px;
+	background-color: #ccc;
+	padding: 6px;
+}
+
+#worldwide li:hover ul, #worldwide li.hover ul {
+	display: block;
+	position: absolute;
+	top:-258px;
+	list-style:none;
+	margin: 0px;
+	z-index:99999999;
+    border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border: 1px solid #bbb;
+}
+
+#worldwide li:hover li, #worldwide li.hover li {
+	float: left;
+	width: 165px;
+	padding:5px 8px;
+}
+
+#worldwide li li a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* Left Nav */
+
+
+#sideNavBox {
+    margin: 0 3% 0 0;
+}
+
+#left-col li {
+    background-image: none;
+}
+
+#left-col li:hover,
+#left-col li a:hover {
+    background-image: none;     
+}
+
+#left-col li a {
+    padding: 15px 10px;
+    width: 89%;
+}
+
+#left-col li ul li a {
+    width: 85%;
+}
+
+#left-col li.selected > .ms-core-listMenu-item {
+    width: 84%;
+}
+
+/* =Footer 		
+.footer {
+	float:left;
+	width:100%;
+	margin:0; 
+}
+
+#rtp {
+	float:right;
+	height:16px;
+	padding:11px 16px -11px 0px;
+	position:relative;
+	bottom:28px;
+	left:0px;
+}
+
+#rtp a {
+	font-size:0.917em;
+	color:#000;
+	text-decoration:none;
+}
+	
+a.rtpbutton {
+	padding:1px 5px 5px 22px;
+}
+
+.rtpico {
+	-moz-background-clip:border !important;
+	-moz-background-inline-policy:continuous !important;
+	-moz-background-origin:padding !important;
+	background:transparent url(Images/vision/rtp-icon-gray.png) no-repeat scroll 0 0 !important;
+}
+
+.st_sharethis_custom{
+	background: url(Images/vision/share-icon-gray.png) no-repeat scroll left top transparent; 
+	padding: 1px 16px 6px 22px;
+	margin-left:11px;
+	font-size:11px;
+	color:#000;
+	text-decoration:none;	
+}
+
+#footer-nav{
+	display:none;
+	width:0;
+	height:0;
+	padding:0;
+	margin:0;
+}
+
+.footer ul.links {
+	width:100%;
+}
+
+.footer .links {
+	list-style-type:none;
+	float:left;
+	margin: 0px;
+	padding:0;
+}
+
+.footer .links .first {
+	margin:0px, 0px, 0px, 3px; 
+	padding:0px;
+	border-left:none;
+}
+
+.footer .links li {
+	display:inline;
+	list-style-type:none;
+	margin:0px 0px 0px 8px; 
+	padding:0px 0px 0px 8px;
+	border-left:solid 1px #999;
+}
+
+.footer a {
+	text-decoration:none;
+	color:#666;
+	font-size:10px;
+}	
+
+.footerText {
+	text-decoration:none;
+	color:#666;
+	font-size:10px;
+}
+
+#ST { 
+	display:none;
+}
+*/
+
+/* Homepage */
+
+/*
+.homePageHeroContainer {
+	margin-top: 0;
+}
+
+.homePageHeroContent {
+    width: 100%;
+    margin-left: 3%;
+}
+
+.homePageHeroImage {
+
+}
+
+.homePageHeroText {
+    width: 50%;
+}
+
+.heroVidBtn {
+   	margin-top: 30%;
+}
+
+.homePageHeroContainer .homePageHero {
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin-left: auto;      	
+}
+
+.homePageHeroContent {
+    width: 100%;
+}
+
+.homePageHeroVideo {
+	height: 300px;
+}
+
+.homePageHeroVideo video {
+    height: 300px;
+    width: 100%;
+}
+
+@media screen and (-ms-high-contrast:active),
+ (-ms-high-contrast:none) {
+
+    .homePageHeroVideo video {
+    width: auto;	    
+    }
+
+}
+
+*/
+/*
+.homePageHeroVideo video {
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, 50%);
+    -ms-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+    min-width: 110%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+}
+*/
+
+
+/* 640 */
+
+/*
+.homePageHeroContent {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+    position: relative;
+}
+
+.homePageHeroContainer .homePageHero {
+	background-size: auto 300px;
+    width: 100%;
+}
+
+
+
+.homePageHeroImage img {
+    height: 300px;
+}
+
+
+.homePageHeroContainer {
+    height: 300px;
+}
+*/
+
+#gameHomePageHero .homePageHeroContainer .homePageHero {
+	width: 100%;
+    background-position: 70% 0;
+    background-repeat: no-repeat;
+	background-size: auto 300px;    
+    height: 300px;  
+    position: relative;
+    left: 0;
+    margin-left: auto;     
+}
+
+#gameHomePageHero .homePageHeroContent {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+    position: relative;
+}
+
+#homePageHeroMult .homePageHeroContent.Black h1, 
+#homePageHeroMult .homePageHeroContent.Black h2, 
+#homePageHeroMult .homePageHeroContent.Black p {
+    color: #fff;
+}
+
+#homePageHeroMult .homePageHeroContent.Black .homePageHeroLink a {
+    background-image: url("Images/button-arrow-white.png");
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#gameHomePageHero .homePageHeroText {
+    width: 89%;
+    margin-top: 300px;
+    padding-left: 2%;
+    padding-right: 2%;    
+}
+
+#gameHomePageHero .homePageHeroImage {
+	position: absolute;
+    text-align: left;
+    margin-left: -1140px;
+    top: 0;
+    width: 100%;
+    left: 50%;
+}
+
+#homePageHeroMult .pageContentFull .HeroItem {
+	margin-left: 0;
+}
+
+.pageContentFull#homePageHeroMult h1 {
+    margin-top: 0;
+}
+
+#homePageHeroMult .homePageMainHero, 
+#homePageHeroMult .homePageSecondHero, 
+#homePageHeroMult .homePageThirdHero {
+    height: auto;
+    position: relative;
+}
+
+#homePageHeroMult .homePageHeroContentContainer,
+#homePageHeroMult .homePageMainHero .homePageHeroContentContainer,
+#homePageHeroMult .homePageSecondHero .homePageHeroContentContainer,
+#homePageHeroMult .homePageThirdHero .homePageHeroContentContainer {
+	width: 100%;
+    left: 0;
+    margin-left: 0;
+    height: auto;
+    position: inherit;
+    top: 0;
+    transform: none;   
+}
+
+#generalContentHero .homePageMainHero {
+    height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+ #generalContentHero .homePageMainHero .homePageHeroContentContainer {
+    position: relative;
+    z-index: 0;
+    width: auto;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    transform: none;
+    /* display: table-row-group; */
+    order: 2;
+}
+
+#generalContentHero .homePageHeroImage {
+    position: relative;
+        margin-left: -1190px;
+/*    
+    left: 0;
+    margin-left: 0;
+    height: auto;
+*/    
+    order: 1;    
+}
+
+#generalContentHero .homePageHeroImage img {
+
+    /*	left: 50%;
+    margin-left: -484px;
+ top: 50%; */
+    /* transform: translateY(-50%); */  
+}
+
+
+#homePageHeroMult .homePageHeroContent,
+#homePageHeroMult .homePageHeroContent.right,
+#generalContentHero .homePageHeroContent {
+	padding: 0;
+    margin-top: 673px;
+    background-color: #000;
+    text-align: center;
+    display: inline-block;
+	width: 100%;
+}
+
+#generalContentHero .homePageHeroContent {
+
+    margin-top: 0;
+}
+
+
+#homePageHeroMult .homePageHeroText,
+#generalContentHero .homePageHeroText {
+	margin: 30px 3%;
+}
+
+#generalContentHero .HeroItem.stacked .heroBg {
+	background-position: 75% 0;
+}
+
+#generalContentHero .HeroItem.stacked .heroBg,
+#generalContentHero .HeroItem.stacked .heroBg.Newhorizon {
+    height: auto;
+    position: relative;
+}
+
+#generalContentHero .HeroItem.stacked .heroContent {
+    z-index: 1;
+    margin-top: 673px;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    height: auto;
+    position: inherit;
+    top: 0;
+    transform: none;
+    background-color: #000;
+    text-align: center;    
+}
+
+#generalContentHero .HeroItem.stacked .heroBg.Newhorizon .heroContent {
+    background-color: transparent;  
+    margin: 20px 0 10px 0; 
+}
+
+#generalContentHero .HeroItem.stacked .heroContent .heroText {
+    margin: 30px 3%;
+    padding: 0;
+}
+
+#generalContentHero .HeroItem.stacked .heroBg.Newhorizon .productHubHeroText {
+    display: inline-block;
+    margin-top: 225px !important;
+    width: 100%;
+    padding: 0 3%;
+}
+
+/*
+#homePageHeroMult .homePageHeroVideo {
+	left: 50%;
+    margin-left: -1430px;
+    top: 0;
+    position: absolute;
+    height: 673px;
+    overflow: hidden;    
+}
+*/
+
+#homePageHeroMult .homePageHeroImage,
+#homePageHeroMult .homePageHeroVideo {
+	left: 50%;
+    margin-left: -1190px;
+    top: 0;
+}
+
+#homePageHeroMult .homePageHeroImage.right {
+    margin-left: -690px;
+}
+
+#homePageHeroMult .homePageHeroImage img {
+    width: auto;
+}
+
+.pointerFeaturesPointerContainer {
+	display: none;
+}
+
+.pointerFeature {
+	width: 27.3%;
+    margin: 0 3%;
+    vertical-align: top;
+}
+
+.landingPageThreeColumn.pointerFeature h3 a {
+    color: #000;
+}
+
+.pointerFeature p,
+.pointerFeature:hover p, 
+.pointerFeature.active p {
+    color: #000;
+	font-family: 'KlavikaMediumCondensedItalic', Calibri, Arial, sans-serif;
+    font-size: 25px;
+    line-height: 26px;
+    margin-bottom: 0;      
+}
+
+.landingPageThreeColumn.pointerFeature p,
+.landingPageThreeColumn.pointerFeature:hover p, 
+.landingPageThreeColumn.pointerFeature.active p {
+	padding-bottom: 15px;
+    line-height: 21px;
+    margin: 0;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+}
+
+.pointerFeatureCopy {
+    width: 27.3%;
+    padding: 0 3%;
+}
+
+.teamColumns .pointerFeatureCopy {
+	padding: 0;
+    margin: 0 3%;
+	width: 27%;    
+}
+
+.pointerFeatureCopy h3,
+.pointerFeatureCopy.active h3 {
+    color: #000;
+	font-family: 'KlavikaMediumCondensed', Calibri, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 21px;
+	font-family: Calibri, Arial, sans-serif;    
+}
+
+.pointerFeatureCopy .pointerFeatureBtn,
+.pointerFeatureCopy.active .pointerFeatureBtn {
+    color: #000;
+    border: 2px solid #000;
+    background-image: url("Images/button-arrow-black.png");
+}
+
+/*
+.pointerFeatureCopy a,
+.pointerFeatureCopy.active a {
+    color: #000;
+    border: 2px solid #000;
+    background-image: url("Images/button-arrow-black.png");
+}
+*/
+
+.teamColumns .pointerFeatureCopy p,
+.teamColumns .pointerFeatureCopy.active p {
+    color: #000;
+}
+
+.pointerFeature img {
+    width: 100%;
+}
+
+.pointerFeaturePointer {
+	width: 27.3%;
+    margin: 0 3%;
+}
+
+.pointerFeaturesCopyContainer {
+    background-color: #fff;
+    padding-bottom: 30px;
+    cursor: default;
+}
+
+.pointerFeaturesCopy {
+	width: 27.3%;
+    margin: 0 3%;
+
+}
+
+
+/*
+#homePageHeroMult .homePageFeature {
+    width: 29.3%;
+    padding-left: 3%;
+    display: table-cell;
+}
+
+#homePageHeroMult .homePageFeature:last-child {
+    padding-right: 3%;    
+}
+
+#homePageHeroMult .homePageFeature {
+    width: 29.3%;
+    padding-left: 3%;
+    display: table-cell;
+}
+
+
+.homePageFeature img {
+    width: 100%;
+}
+
+.homePageFeaturePointer {
+	width: 29.3%;
+    padding-left: 3%;   
+}
+
+.homePageFeaturePointer img {
+    width: 59px;
+}
+
+*/
+
+#homePageHeroMult .homePageHeroLink {
+	float: none;
+	margin: 0;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#homePageHeroMult .homePageEndTile {
+	padding: 30px 3%;
+	height: auto;
+	width: 94%; 
+	float: left;
+	position: relative;
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroContentContainer {
+	margin-top: 0;
+    top: 0;
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    position: relative;
+    float: right;
+	left: 0;
+    margin-left: 0;
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroContent {
+	margin-top: 0;
+    width: auto;
+    background-color: transparent;
+    text-align: left;
+    /* position: relative; */
+    display: inline-block;
+    /* float: right; */
+    /* overflow: hidden; */ 
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroText {
+	/* width: 100%; */
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroLink {
+	margin-top: 10px;	
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroText h2 {
+	font-size: 45px;
+	line-height: 45px;   
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroImage {
+	margin-left: 0;
+    width: 50%;
+    left: 0;
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+	top: 50%;
+	transform: translateY(-50%);
+    padding: 0;
+    position: absolute;  
+}
+
+#homePageHeroMult .quickNavCopy {
+    float: none;
+    text-align: center;
+    margin-top: 0;
+}
+
+#homePageHeroMult .quickNavIcon {
+	height: auto;
+}
+
+#homePageHeroMult .quickNavContainer h3 {
+    padding-left: 0;
+}
+
+#homePageHeroMult .quickNavButtonContainer {
+    padding-left: 0;
+}
+
+#homePageHeroMult .quickNavContainer.gaming .quickNavButton, 
+#homePageHeroMult .quickNavContainer.shop .quickNavButton {
+    margin-left: 0;
+}
+
+#homePageHeroMult .quickNavContainer.drivers .quickNavButton, 
+#homePageHeroMult .quickNavContainer.drivers .quickNavButton:visited {
+    margin-bottom: 5px;
+}
+
+
+/*
+.homePageFeaturesCopyContainer {
+    padding-left: 7%;
+    padding-right: 7%;    
+    width: 86%;
+}
+*/
+
+.homePageHeroCenteredStackedContent {
+	width: 96%;
+    padding: 2%;
+}
+
+.homePageHeroCenteredStackedContent .homePageHeroImage {
+    left: auto !important;
+}
+
+.homePageHeroCenteredStackedContent .homePageHeroText {
+    width: 92%;
+}
+
+#homePage .HeroItem {
+	height: auto;
+    width: 100%;
+	margin: 0;
+	display: inline-block;
+}
+
+#homePage .HeroItem h1 {
+	font-size: 65px;
+	line-height: 65px;
+	padding-bottom: 15px;
+}
+
+#homePage .heronav {
+	text-align: left; 
+	padding-left: 30px;
+	display: inline-block;
+	width: 95%;
+}
+
+#homePage .heronav img{
+	cursor: pointer;
+}
+
+#homePage .homepage-hero-text {
+	float: left;
+	font-size: 18px;
+	line-height: 25px;
+	padding: 30px 0 20px 30px;
+	vertical-align: middle;
+	height: auto;
+	margin-top: 0;
+	position: relative;
+	width: 35%;	
+}
+
+#homePage .homepage-hero-img {
+ 	float: right;
+ 	height: auto;
+ 	width: 60%;
+	z-index: 0;
+	position: relative;
+}
+
+#homePage .homepage-hero-img img {
+ 	float: right;
+ 	height: auto;
+ 	width: 100%;
+} 
+
+.HeroItem.homePageHeroContainer.video .homePageHero {
+    overflow: visible;
+}
+
+.HeroItem.homePageHeroContainer.video .homePageHeroText {
+	width: 89%;
+    margin-top: 300px;
+    padding: 20px 2%;
+    position: relative;
+    bottom: 0; 
+}
+
+.HeroItem.homePageHeroContainer.video .homePageHeroText h2 {
+    color: #000;
+}
+
+.HeroItem.homePageHeroContainer.video .homePageHeroText p {
+    line-height: 21px;
+    font-size: 14px;
+    color: #000;
+}
+
+.HeroItem.homePageHeroContainer.video .homePageHeroLink a,
+.HeroItem.homePageHeroContainer.video .homePageHeroLink a:visited,
+.HeroItem.homePageHeroContainer.video .homePageHeroLink a:hover {
+	background-color: #000;
+	background-image: url("Images/button-arrow.png");
+	background-position: right 70%;
+	background-repeat: no-repeat;
+	border: medium none;
+	color: #fff;
+	font-family: KlavikaBoldCondensedItalic,Calibri,Arial,Helvetica,sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin: 5px 5px 5px 0;
+	padding: 5px 25px 5px 10px;
+	text-transform: uppercase;
+	float: left;	
+}
+
+.homepage-content {
+	width: 96%;
+	padding: 60px 2%;
+}
+
+.homepage-copy {
+	width: 70%;
+	float:left;
+	padding-right:0;
+}
+
+.homepage-links{
+	width:25%;
+	float:right;
+}
+
+.hubPageHeroContainer {
+	margin-top: 0;
+}
+
+.hubPageHeroContent {
+    width: 100%;
+    margin-left: 3%;
+}
+
+.pageContentFull.hubPageHeroContainer {
+    width: 100%;
+    margin: 0;
+}
+
+.hubPageHeroImage {
+    margin-left: -60%;
+}
+
+.hubPageHeroText {
+    width: 50%;
+}
+
+
+.hubPageHeroContainer .hubPageHero {
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin-left: auto;      	
+}
+
+.hubPageHeroContent {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Hero Rotator */
+
+.homepage-hero-img {
+    width: 58%;	
+}
+
+.homepage-hero-img img {
+    width: 100%;	
+}
+
+.homePageTileSmall {
+    margin-right: 0;
+}
+
+.driverTile {
+    margin-left: 0;
+    margin-right: 19px;
+}
+
+.tileHoverContent {
+    width: 280px;
+}
+
+/*  Homepage Redesign Styles 10-2014  */
+.homepageContent{
+	width:100%;
+}
+
+.homepage_tile_large_l, 
+.homepage_tile_large_r,
+#gameHomePage .homepage_tile_large_l, 
+#gameHomePage .homepage_tile_large_r  {
+	width: 100%;
+}
+
+.homepage_tile_large_bg,
+#gameHomePage .homepage_tile_large_bg {
+	position: relative;
+
+}
+
+.homepage_tile_large_text,
+#gameHomePage .homepage_tile_large_text {
+	width: 50%;
+}
+
+#gameHomePage .homePageTileLeft {
+    width: 49%;
+    margin-right: 0;
+}
+
+#gameHomePage .homePageTileRight {
+    width: 49%;
+}
+
+
+.homePageTileSmall,
+#gameHomePage .homePageTileSmall {
+	width: 48%;
+}
+
+#gameHomePage .homePageTileSmall.rightTile {
+	width: 100%;
+	height: auto;
+}
+
+#gameHomePage .homePageTileSmall.rightTile .tileHoverContent {
+	width: 56%;
+    padding: 10px 2% 20px 2%;
+    float: right;
+    position: relative;
+    background-image: none;
+}
+
+#gameHomePage .homePageTileSmall.rightTile .tileBackground {
+    margin: 0;
+	padding: 20px 2%;
+    width: 36%;
+    float: left;
+    position: relative;
+}
+
+#gameHomePage .homePageTileSmall.rightTile .tileBackground img {
+    width: 90%
+}
+
+#gameHomePage .homePageTileFull.twitchTile .homepage_tile_large_text {
+    width: 36%;
+    height: auto;
+    padding: 20px 2%;
+}
+
+#gameHomePage .homePageTileFull.twitchTile .homepage_tile_twitch_content {
+    width: 60%;
+    float: left;
+}
+
+#gameHomePage .homePageTileFull.twitchTile .homepage_tile_large_text img {
+    width: 80%;
+}
+
+#gameHomePage .gameFeaturedHubPromoContainer .gamePromoImg img {
+	width: 100%;
+}
+
+#gameFeaturedHubHero .HeroItem.stacked .heroContent {
+    margin-left: 7%;
+    padding-right: 0;
+    width: 60%;
+}
+
+.twitchPreview {
+    height: auto;
+}
+
+.driverTile {
+	background-position: center;
+}
+
+.tileBackground {
+	text-align: center;
+}
+
+.tileHoverContent {
+	width: 91%;
+	padding: 5%;
+}
+
+#gameHomePage .newsTile .tileBackground {
+    text-align: center;
+}
+
+#gameHomePage .homePageTileFull {
+    width: 100%;
+}
+
+#gameHomePage .homepage_tile_large_r.twitterTile {
+	width: 46% !important;
+}
+
+#gameHomePage .twitterTile .ms-fullWidth {
+    width: 100%;
+}
+
+#gameHomePage .featuredTile .homepageTileContent {
+    width: 96%;
+}
+
+.gameHomeIconRowWrapper {
+    width: 100%;
+}
+
+.gameHomeIconImg {
+	width: 20%;	
+}
+
+.gameHomeIconImg img {
+    width: 100%;
+}
+
+
+/* General Content */
+
+.generalHero {
+	height: auto;
+}
+
+.generalHeroImage {
+	height: auto;
+}
+
+.generalHeroText {
+    padding: 0;
+}
+
+.generalHeroImage img {
+	width: 100%;
+}
+
+.generalProductRow ul {
+	width: 55%;
+    margin-left: 20px;
+}
+
+.generalProductRow p img{
+	display: inline-block;
+}
+
+/* Hub Pages */
+
+
+.majorHubHero, 
+.productHubHero {
+	margin-top: 0;
+}
+
+.majorHubHeroImage img {
+	width: 100%;
+}
+
+/*
+.majorHubHero,
+.productHubHero {
+	min-height: 0;
+	height: auto;
+	margin-top: 0;	
+	width: 100%;
+	margin-left: 0;
+}
+
+.majorHubHeroImage,
+.productHubHeroImage {
+	overflow: hidden;
+	height: auto;
+}
+
+.majorHubHeroImage img,
+.productHubHeroImage img {
+	width: 100%;
+}
+
+.majorHubGrid,
+.productHubGrid {
+	display: inline-block;	
+	margin: 0 3% 60px;
+    width: 94%;	
+}
+
+.majorHubHeroText h2,
+.productHubHeroText h2 {
+	font-size: 35px;	
+	line-height: 35px;		
+}
+
+.majorHubHeroText, 
+.productHubHeroText {
+    padding-top: 8px;
+}
+
+
+.majorHubGridColumn {
+	width: 50%;
+}
+
+
+.majorHubGridColumn.group {
+	width: 33.33%;
+}
+
+
+.majorHubGridHeader {
+	display: inline-block; 
+	width: 86%;
+	float: left; 
+}
+
+.majorHubGridHeader:hover,
+.productHubGridHeader:hover { 
+	width: 86%;   
+}
+
+.majorHubGridContent {
+	display: inline-block; 
+	width: 86%;
+	float: left;    
+}
+
+.majorHubGrid,
+.majorHubGridProduct {  
+	margin-left: 3%;
+	margin-right: 3%;
+	width: 94%;
+	border-left: 1px solid #ddd;;		
+}
+
+*/
+
+.majorHubGridColumn {  
+	 width: 50%;
+	 border-left: 1px solid #ddd;
+	 border-right: 1px solid #ddd;
+}
+
+.majorHubGridProduct .majorHubGridColumn {
+	 width: 33.3%;
+}
+
+/* Rotating Banners */
+
+/* .pageContentFull .HeroItem, */
+#gameHomePageHero .pageContentFull .HeroItem {
+    height: auto;
+    margin-bottom: 0;
+    margin-left: -4%;
+    margin-top: 0;
+    min-height: 0;
+    width: 108%;
+}
+
+.pageContentFull .HeroItem h2 {
+    margin-top: 0;
+}
+
+.pageContentFull .HeroItem .major-hub-hero-text {
+	display: inline-block;
+  	float: left;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 20px 0 20px 3.09917355371901%;
+    width: 38.01652892561983%;
+}
+
+.pageContentFull .HeroItem .major-hub-hero-img {
+	overflow: hidden;
+	height: auto;
+}
+
+.pageContentFull .HeroItem .major-hub-hero-img img {
+	width: 100%;	
+}
+
+.pageContentFull #heronav {
+    padding-left: 3%;
+}
+
+/* Product Page */
+
+.productDetailHeroImage {
+	text-align: left;
+}
+
+.productDetailHeroImage img {
+    width: 100%;
+}
+
+.productDetailHeroIcons img {
+	width: auto;
+}
+
+.productDetailHero2Image {
+	text-align: left;
+}
+
+.productDetailHero2Image img {
+    width: 100%;
+}
+
+.productDetailColumn {
+    display: inline-block;
+    float: left;
+    margin: 0 2.5% 0 0;
+    width: 47.5%;
+}
+
+.productDetailPromoImage:last-child,
+.productDetailTwoColumnContent:last-child,
+.productDetailTwoColumnLink:last-child {
+	display: none;
+}
+
+.productDetailPromoImage {
+	width: 100%;
+	background-color: #000;
+}
+
+.productDetailPromoImage img {
+	width: 100%;
+}
+
+
+#sideNavBox {
+	width: 20%;
+	margin: 3% 0 0 0;
+}
+
+.minorHubHero {
+	height: auto;
+}
+
+.minorHubHeroImage {
+	height: auto;
+}
+
+.minorHubHeroText {
+    padding: 3% 0 3% 3.8961%;
+}
+
+.minorHubHeroImage img {
+	width: 100%;
+}
+
+.productListingHubHero {
+	height: auto;
+}
+
+.productListingHubHeroImage {
+	height: auto;
+}
+
+.productListingHubHeroImage img {
+	width: 100%;
+}
+
+/*
+.productListingHubHeroText {
+    padding: 3% 0 3% 3.8961%;
+}
+*/
+
+/* Product Hub */
+
+/*
+.pageContentExpand {
+	width: 100%;
+	margin: 0;
+}
+
+.pageContentFull .HeroItem.stacked {
+    height: 225px;
+    width: 100%;
+    margin: 0;
+}
+
+
+.HeroItem.stacked .HeroContent.imageLeft .productHubHeroText,
+.HeroItem.stacked .HeroContent.imageRight .productHubHeroText {
+
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;    
+}
+*/
+
+
+.pageContentExpand {
+	width: 100%;
+	margin: 0;
+}
+
+.HeroItem.stacked .HeroContent {
+	padding-left: 3%;
+	padding-right: 3%;
+	width: 57%;
+	margin-left: 0;
+}
+
+.HeroItem.stacked .heroText .heroQuote {
+  margin: 10px 0 0 0;
+  padding: 20px 0 0 0;
+}
+
+.HeroItem.stacked .heroText.white .heroQuote {
+  border-top: 1px solid #7d7d7d;
+}
+
+.HeroItem.stacked.HeroItem .heroText.white h1,
+.HeroItem.stacked.HeroItem .heroText.white h2,
+.HeroItem.stacked.HeroItem .heroText.white p {
+	color: #000;
+}
+
+
+#productHub .HeroItem.stacked .heroContent.imageLeft,
+#landingPageBlack .HeroItem.stacked .heroContent.imageLeft {
+	width: 60%;
+	margin-left: 37%;
+	padding-left: 0;	
+	padding-right: 0;
+}
+
+.HeroItem.stacked .heroContent.imageCenter {
+	margin-left: 0;
+	padding-right: 3%;
+	width: 100%;		
+}
+
+.HeroItem.stacked .heroContent.imageLeft .productHubHeroText {
+	padding-left: 0;	
+}
+
+/*
+.HeroItem.stacked .productHubHeroText {	
+    padding-right: 0;
+    width: 60%;
+}
+*/
+
+#productHub .HeroItem.stacked .heroContent .productHubHeroText, 
+#gameFeaturedHubHero .HeroItem.stacked .heroContent .productHubHeroText,
+#landingPageBlack .HeroItem.stacked .heroContent .productHubHeroText {
+    width: 100%;
+    padding: 20px 0 5px 0;
+    margin-top: 225px !important;
+    display: inline-block;
+}
+
+.heroContent.imageRight .HeroItem.stacked .productHubHeroText,
+.heroContent.imageright .HeroItem.stacked .productHubHeroText {	
+	padding-left: 3%;
+}
+
+
+.HeroItem.stacked.HeroItem .productHubHeroText h2,
+.HeroItem.stacked.HeroItem .productHubHeroText p {
+	width: 100%;
+}
+
+.HeroItem.stacked.HeroItem .imageLeft .productHubHeroText h2,
+.HeroItem.stacked.HeroItem .imageLeft .productHubHeroText p {
+	width: 100%;
+}
+
+
+.HeroItem.stacked.HeroItem .imageCenter .productHubHeroText h2,
+.HeroItem.stacked.HeroItem .imageCenter .productHubHeroText p {
+	width: 100%;
+}
+
+/*
+#productHub .HeroItem.stacked .heroContent {    
+	margin-left: 7%;
+	padding-right: 0;
+	width: 60%;		
+}
+*/
+
+
+
+#productHub .HeroItem.stacked .heroBg,
+#landingPageBlack .HeroItem.stacked .heroBg {
+    background-position: 70% 0;
+}
+
+#productHub .HeroItem.stacked .heroContent,
+#landingPageBlack .HeroItem.stacked .heroContent {    
+	margin-left: 3%;
+	padding-right: 0;
+	width: 94%;		
+}
+
+#productHub .HeroItem.stacked .heroContent .imageLeft,
+#landingPageBlack .HeroItem.stacked .heroContent .imageLeft {    
+	margin-left: 37%;	
+}
+
+#productHub .HeroItem.stacked .heroContent .imageCenter,
+#landingPageBlack .HeroItem.stacked .heroContent .imageCenter {    
+	width: 88%;
+}
+
+#executivePage .HeroItem.stacked .heroBg {
+  background-size: auto 300px;
+}
+
+#executivePage .HeroItem.stacked .HeroContent {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 30px;
+  width: 85%;
+  margin-left: 0;
+  height: auto !important;
+  margin-top: 300px;
+  background-color: #fff;
+}
+
+#executivePage .HeroItem.stacked .HeroContent .heroText {
+  margin-top: 30px;
+}
+
+#executivePage .landingPageThreeColumn img,
+#executivePage .landingPageThreeColumnLast img {
+	width: 100%;
+}
+
+#fullScreenPromoPage.pageContentFull .HeroItem,
+#homePageHero.pageContentFull .HeroItem {
+	margin: 0;
+}
+
+#fullScreenPromoPage .HeroItem.stacked .HeroContent,
+#homePageHero .HeroItem.stacked .HeroContent {
+	padding: 0;
+	background-color: transparent; 
+	width: 94%;
+	margin: 30px 3% 0 3%;
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroContent .heroLogo,
+#homePageHero .HeroItem.stacked .heroContent .heroLogo {
+    margin-left: 0;
+    width: 40%;
+}
+
+#fullScreenPromoPage .landingPageThreeColumn p img, 
+#fullScreenPromoPage .landingPageThreeColumnLast p img {
+	display: inline-block;
+}
+
+#fullScreenPromoPage .landingPageThreeColumn img, 
+#fullScreenPromoPage .landingPageThreeColumnLast img {
+	width: 100%;
+}
+
+#fullScreenPromoPage .twoColumnLeft,
+#fullScreenPromoPage .twoColumnRight {
+	width: 100%;
+}
+
+#fullScreenPromoPage .pageSection .pageContentFull {
+  	min-height: 0 !important;
+}
+
+#fullScreenPromoPage .pageSection.rectangleGrayDark,
+#fullScreenPromoPage .pageSection.dotsGray {
+  	min-height: 0 !important;
+}
+
+.heroDownBtn {
+	right: 50px;
+}
+
+
+.grayHeroFullPage {
+    min-height: 0;
+}
+
+.grayHeroFullPageImage {
+    height: auto;
+}
+
+
+.grayHeroFullPageImage img {
+    width: 100%;	
+}
+
+
+/* Great Page */
+
+
+.greatPageHero {
+    margin: 0 0 30px 0;
+    height: auto;
+    min-height: 0;
+}
+
+.greatPageHeroText {
+    padding: 3% 0 0 3.8961%;
+    width: 34.6623%;
+}
+
+/*
+.greatPageHeroText h2 {
+    font-size: 25px;
+    line-height: 25px;
+}
+*/
+
+.greatPageHeroText p,
+.greatPageHeroText .ms-rtestate-field p,
+.greatPageHeroText {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.greatPageHeroImage {
+    height: auto;
+    width: 58.4416%;
+    float: right;
+}
+
+.greatPageHeroImage img {
+    width: 100%;
+}
+
+.greatPageHeroButtons {
+    padding: 3% 3.8961%;
+    vertical-align: top;
+    width: 92.1039%;
+}
+
+
+.greatPageHeroButtons a {
+    margin-right: 10px;
+}
+
+#greatPageRow1 {
+	padding-top: 30px;
+}
+
+.greatPageContentLeft,
+.greatPageContentRight {
+    padding: 3% 0;
+}
+
+.greatPageContentLeft .greatPageContentText h3,
+.greatPageContentRight .greatPageContentText h3 {
+    margin-top: 0;
+}
+
+
+.greatPageContentLeft .greatPageContentText {
+    width: 46%;
+}
+
+.greatPageContentLeft .greatPageContentImage,
+.greatPageContentRight .greatPageContentImage {
+    width: 50%;
+}
+
+
+.greatPageContentLeft .greatPageContentImage img,
+.greatPageContentRight .greatPageContentImage img {
+    width: 100%;
+}
+
+.greatPageResources {
+    width: 100%;
+    margin: 30px 0;
+    padding: 30px 0;    
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;    
+}
+
+.greatPageResources .groupmarker {
+	width: 50%;
+	float: left;
+}
+
+.greatPageResourcesButtons {
+	float: left;
+    width: 100%;	
+}
+
+.greatPageResourcesButtons a {
+	clear: none;
+	margin: 0 10px 0 0;
+}
+
+.greatPageRotator {
+    width: 100%;
+	margin: 30px auto;
+}
+
+.greatPageRightContent {
+    width: 100%;
+}
+
+.greatPageContainer {
+	margin: 0 auto;        
+	float: none;
+}
+
+.tabImageLeft240 .image img {
+	width: 100%;
+}
+
+
+/* Benchmarks */
+
+#benchmark img {
+	width: 100%;
+}
+
+#benchmark h1 {
+	word-wrap: break-word;	
+}
+
+.resTable {
+	display: none;
+}
+
+.resTable h3 {
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+}
+
+.timeline {
+	width: 100%;
+}
+
+/* Header Only Tables */
+
+
+/* Product Spec Tables (Inside Tabs) */
+
+.coda-slider-1-panel #resTable {
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.coda-slider-1-panel .resTable {
+	display: block;
+	width: 100%;
+}
+
+.coda-slider-1-panel .row {
+	float: left;
+	width: 100%;
+}	
+
+.coda-slider-1-panel .dataGroup {
+	width: 94%;
+	float: left;
+	border-top: 1px solid #ddd;	
+	border-bottom: 1px solid #ddd;
+    color: #999;
+    font-family: 'KlavikaMediumCondensedItalic',Calibri,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 3%;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+.coda-slider-1-panel .dataGroup:first-child{
+	display: none;	
+}
+
+.coda-slider-1-panel .val {
+	width: 100%;
+	float: left;	
+}
+
+.coda-slider-1-panel .dataCell {
+	float: left;
+    border-right: 1px solid #ddd;
+    border-bottom: none;	
+	width: 50%;
+	padding: 10px;
+    font-family: Calibri,Arial,sans-serif;
+    font-size: 14px;	
+}
+
+.coda-slider-1-panel .dataLabel {
+    border-bottom: none;	
+	text-align: right;
+	font-weight: bold;
+    border-right: none;
+	width: 50%;
+}
+
+.coda-slider-1-panel .dataVal {
+	padding: 10px;
+    border-bottom: none;
+	font-family: Calibri,Arial,sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.coda-slider-1-panel .newClass:nth-child(2){
+	display: none;	
+}
+
+.coda-slider-1-panel .dataLabelRow {
+	display: none;	
+}
+
+.coda-slider-1-panel .val .dataCell {
+	width: 100%;
+}
+
+.centeredTabImages,
+.centeredTabImages img {
+	width: 100%;
+}
+
+#saLandingPage .HeroItem.stacked .heroBg {
+	background-size: auto 300px;
+}
+
+#saLandingPage .HeroItem.stacked .HeroContent {
+	padding-left: 7%;
+	padding-bottom: 30px;
+	width: 100%;
+	margin-left: 0;
+	height: auto !important;
+	margin-top: 300px;
+	background-color: #000;
+}
+
+#saLandingPage .HeroItem.stacked .heroContent .heroText {
+	margin-top: 25px;
+	width: 94%;
+}
+
+#saLandingPage .HeroItem.stacked .heroContent .heroText h2,
+#saLandingPage .HeroItem.stacked .heroContent .heroText p {
+	color: #fff;
+}
+
+/*
+#saLandingPage .HeroItem.stacked .heroContent .heroText a.hero_button,
+#saLandingPage .HeroItem.stacked .heroContent .heroText a.hero_button:visited,
+#saLandingPage .HeroItem.stacked .heroContent .heroText a.hero_button:hover {
+	background-color: #f26621;
+}
+*/
+
+.HeroItem.stacked.HeroItem .heroText.white h1,
+.HeroItem.stacked.HeroItem .heroText.white h2,
+.HeroItem.stacked.HeroItem .heroText.white p {
+	color: #fff;
+}
+
+.HeroItem.stacked.HeroItem h2.white {
+	color: #fff;
+}
+
+
+
+/* Game */
+
+.pageContentFull#gameHomePageHero .HeroItem {
+	margin-left: 0;
+	height: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: 0;
+    width: 108%;	
+}
+
+#gameHomePageHero .homePageHeroText {
+    background-image: none;
+    background-color: #000;
+    margin-bottom: 30px;
+}
+
+#gameHomePageHero .homepage_tile_large_l, 
+#gameHomePageHero .homepage_tile_large_r {
+    width: 100%;
+}
+
+#game.pageContent .HeroItem {
+    width: 100%;
+}
+
+#game.pageContent .gameHeroText {
+    margin-top: 0;
+    width: 90%;
+}
+
+.pageContent#game .homepage-hero-img {
+    width: 100%;
+}
+
+#game.pageContent .gameHeroImage img {
+    display: none;
+}
+
+.productDetailHero img {
+	width: 100%;
+}
+
+.gamePageRow.gamePageContentLeft .gamePageContentImage img,
+.gamePageRow.gamePageContentRight .gamePageContentImage img {
+    width: 100%;
+}
+
+.pageContentLeft .pageContentImage img,
+.pageContentRight .pageContentImage img {
+    width: 100%;
+}
+
+.pageContent#game iframe[id*='twitter-widget-'] {
+	width: 100% !important;
+}
+
+.pageContent#game .gameLeftColumn {
+	width: 59%;
+}
+
+.pageContent#game .gameLeftColumn {
+	width: 59%;
+}
+
+.pageContent#game .verticalHero {
+	width: 38%;
+}
+
+.pageContent#game .verticalHero img {
+	width: 100%;
+}
+
+.pageContent#game .gameList {
+	width: 59%;
+}
+
+#game.pageContent .ls-wrapper .liquid-slider .panel img {
+    width: 100%;
+}
+
+#game.pageContent .ls-wrapper .liquid-slider .panel .videoContainer iframe,
+#game.pageContent .ls-wrapper .liquid-slider .panel .videoContainer object,
+#game.pageContent .ls-wrapper .liquid-slider .panel .videoContainer embed {
+    width: 100% !important;
+}
+
+.columnContainer .gamePromoOne,
+.columnContainer .gamePromoTwo {
+    width: 48%;
+}
+
+.columnContainer .gamePromoOne img,
+.columnContainer .gamePromoTwo img {
+    width: 100%;
+}
+
+
+.gamePromoContent {
+	width: 100%;
+}
+
+.gameHomePageHeroContainer .heroContent {
+	width: 100%;	
+}
+
+.gameHomePageHeroContainer .heroBg {
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 409px !important;	
+}
+
+.gameHomePageHeroContainer .heroContent {
+	height: auto !important;	
+}
+
+.gameHomePageHeroContainer .heroText {
+	padding: 409px 3% 0 3%;
+	width: 94%;
+}
+
+.gameHomePageHeroContainer .heroText h2 {
+	width: 100%;
+}
+
+.gameHomePageHeroContainer .homePageHeroLink {
+    margin-bottom: 15px;
+}
+
+.gameHomePageHeroContainer a.orangeButton, 
+.gameHomePageHeroContainer a.orange_button {
+    margin-bottom: 20px;	
+}
+
+.gameHomePageHeroContainer a.orangeButton:hover, 
+.gameHomePageHeroContainer a.orange_button:hover,
+.gameHomePageHeroContainer a.orangeButton:visited, 
+.gameHomePageHeroContainer a.orange_button:visited {
+    background-color: #f26621;	
+}
+
+
+/*
+#videoLightbox {
+	width: 95%;
+}
+
+#videoLightbox .videoContainer iframe {
+    width: 100% !important;
+}
+*/
+
+
+ul.gameLogos li {
+	margin: 0 1.5% 0 0;
+}
+
+ul.gameLogos li img {
+	width: auto !important;
+}
+
+/* CORE Infographic */
+
+.coreInfg #main-wrapper {
+	width: 100%;
+	background: #ededed url("Images/main-bg-1000.jpg") no-repeat top center;
+	margin-bottom: 30px;
+}
+
+
+.coreInfg .title {
+    margin: 30px 3% 5px;
+}
+
+.coreInfg #core-left {
+	width: 100%;
+	float: none;
+}
+
+.coreInfg #numbers {
+	min-height: 670px; 
+	width: 536px; 
+	margin: 0 auto;
+}
+
+.coreInfg #core-right {
+	width: 100%;
+	float: none;
+}
+
+.coreInfg #accordion {
+    margin: 0 3% 0 3%;
+}
+
+.coreInfg #accordion h3 {
+	background-position: 97% center;
+}
+
+.coreInfg #accordion h3.active {
+	background-position: 97% center;	
+}
+
+.ls-wrapper {
+    overflow: hidden;
+}
+
+.ls-wrapper .ls-nav {
+    padding-right: 0;   
+}
+
+.ls-wrapper .ls-select-box {
+    width: 100%;
+}
+
+#coda-slider-1-nav-ul {
+    width: 760px;	
+}
+
+.standaloneLandingPageLargeHero .homepage-hero-img {
+    width: 67%;	
+}
+
+.standaloneLandingPageLargeHero .homepage-hero-text {
+	margin-top: 0;
+}
+
+.saLandingPageHeroContainer {
+	margin-top: 0;
+}
+
+.saLandingPageHeroContainer .saLandingPageHero {
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin-left: auto;        	
+}
+
+.saLandingPageHeroContent {
+    width: 100%;
+}
+
+.saLandingPageHeroText {
+    width: 39%;
+}
+
+.saLandingPagePromo .saLandingPagePromoText {
+	margin-left: 3%;
+    width: 35%;
+}
+
+.saLandingPageInfo {
+    padding-left: 3%;
+    padding-right: 3%; 
+    width: 96%;   
+}
+
+.saLandingPageInfo p img {
+    display: inline-block;
+    width: 96% !important;
+}
+
+.saLandingPagePromo {
+    width: 100%;
+}
+
+.saLandingPagePromo .saLandingPagePromoImg {
+    width: 57%;
+}
+
+.saLandingPagePromo .saLandingPagePromoImg {
+    padding-right: 3%;
+    width: 57%;
+}
+
+.saLandingPagePromo .saLandingPagePromoImg img {
+    width: 100%;
+}
+
+.saLandingPage .imageTextLeft {
+	width: 100%;
+}
+
+
+.saLandingPage .imageTextRight {
+	width: 100%;
+}
+
+.saLandingPageLeftCol {
+    margin-right: 3.5%;
+    padding-right: 3.5%;
+}
+
+.saLandingPage968 .saLandingPageLeftCol,
+.saLandingPage968 .saLandingPageRightCol {
+    margin-right: 0;
+    padding-right: 0;  
+}
+
+.homePageTileSmall.lastTile {
+	float: right;
+}
+
+.newsTile {
+    float: right;
+    padding: 2%;
+    width: 44%;
+    text-align: left;
+}
+
+.newsTile .tileBackground {
+    text-align: left;
+}
+
+
+.footerContainer, .footerAccordion {
+	width: 100%;
+}
+
+
+.pageFooter {
+	width: 98%;
+}
+
+.follow {
+	display: none;	
+}
+
+.followContainer {
+    border-bottom: none;
+	width: 94%;
+    padding-right: 3%;    
+}
+
+.footer-links {
+	padding: 19px 3% 0;
+	width: 94%;
+}
+
+#rtp {
+	float: right;
+	height: 16px;
+	padding: 11px 16px -11px 0px;
+	position: relative;
+	bottom: 28px;
+	left: 0;
+	margin: 0;
+	display: none;
+}
+
+#rtp a {
+	color: #000;
+	text-decoration: none;
+	font-size: 10px;	
+}
+
+/* Display Templates */
+
+/* Help Me Choose */
+
+.floatingRefiner {
+	min-width: 0;
+	width: 100%;
+}
+
+.filterSliderBarGraph {
+	text-align: center;
+}
+
+.filterSliderBarGraph .ms-ref-refinername:link, 
+.filterSliderBarGraph .ms-ref-refinername:visited {
+  margin-bottom: 10px;
+}
+
+.ms-ref-refinername:link, 
+.ms-ref-refinername:visited {
+	width: 100%;
+}
+
+.histogram_container {
+	margin: 0 auto;
+}
+
+.slider_extent_label_section {
+	margin: 0 auto;
+}
+
+.slideronly_container {
+	margin: 0 auto;
+	width: 160px;
+}
+
+.handle_label_section {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.filterDropDown:last-child {
+    width: 100%;
+}
+
+#Container select {
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+.wsgItem {
+  width: 50%;
+  padding: 5px 0 20px 0;
+}
+
+.wsgItem .imageContainer img {
+	margin-bottom: 20px;
+}
+
+/* AMD Is Everywhere */
+
+.twoColumnLeft h1 {
+    margin-top: 0;
+}
+
+.amdIsEverywhereHero.homePageHeroBg {
+	background: none;
+}
+
+.caseStudies a.pointer {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.amdIsEverywhere .videoContainer,
+.corpResp .videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* padding-top: 30px; */
+    height: auto !important;
+    margin-top: 0;
+}
+
+.amdIsEverywhere .videoContainer iframe,
+.corpResp .videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Search Results */
+
+.ms-srch-sbLarge > .ms-srch-sb-searchLink {
+    float: right;
+}
+
+.searchResults {
+    float: left;
+    width: 56%;
+}
+
+.searchResults .ms-webpart-cell-vertical {
+    display: inline-block;
+}
+
+.searchResults .ms-webpart-chrome-vertical {
+    display: block;
+}
+
+.searchResults .ms-srch-item-body {
+    display: block;
+}
+
+.searchResults .ms-srch-item-path {
+	width: 100%;
+}
+
+.ms-srchnav {
+    margin: 20px 0 0 0;
+}
+
+.ms-srch-result #ResultFooter {
+    display: none;
+}
+
+.ms-srch-ellipsis {
+    white-space: normal;
+}
+
+/* Shop Promo */
+
+.shopPromo {
+    width: 40%;
+}
+
+.searchResults .ms-srch-item {
+    width: 96%;
+}
+
+#SearchBox {
+    width: 100%;
+}
+
+.ms-srch-sbLarge {
+    width: 100%;
+}
+
+.ms-srch-sbLarge>input {
+    width: 90%;
+}
+
+ul#shopModule {
+    width: 90%;
+    padding: 15px 3% 50px 3%;
+}
+
+.shopModImage {
+    margin-right: 4%;
+}
+
+.shopModOrangeButtonDiv {
+    margin-top: 15px;
+}
+
+#prevnext {
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;    
+}
+
+
+
+/* addThis */
+
+.addthis-smartlayers, 
+div#at4-share, 
+div#at4-follow, 
+div#at4-whatsnext, 
+div#at4-thankyou {
+    display: none;
+}
+
+/*
+.at4m-menu .at4m-menu-inner .at4m-menu-search {
+    display: none !important;
+}
+
+.at4m-menu .at4m-menu-content ul li {
+    border-bottom: none;
+}
+
+.at4m-menu .at4m-menu-content ul li a {
+    display: none; 
+}
+
+.at4m-menu .at4m-menu-content ul li:nth-of-type(1) a,
+.at4m-menu .at4m-menu-content ul li:nth-of-type(2) a,
+.at4m-menu .at4m-menu-content ul li:nth-of-type(3) a,
+.at4m-menu .at4m-menu-content ul li:nth-of-type(4) a,
+.at4m-menu .at4m-menu-content ul li:nth-of-type(6) a,
+.at4m-menu .at4m-menu-content ul li:nth-of-type(108) a,
+.at4m-menu .at4m-menu-content ul li:nth-of-type(141) a{
+    border-bottom: 1px solid #e7e9ec;
+    display: block;
+}
+
+.at4m-menu .at4m-menu-content ul li a[svc='gmail'] {
+    display: none; 
+}
+*/
+
+.at4m-menu-footer-inner {
+	display: none;	
+}
+
+/*
+.jiathis_default_pos {
+	display: none !important;
+}
+
+
+.jiathis_style {
+	display: none !important;	
+}
+*/
+
+.jiathis.jiathis_txt.jtico.jtico_jiathis {
+	/* display: none !important; */
+}
+
+.newHorizonHero .pageContentFull h1 {
+    margin-top: 0;
+}
+
+.pageContentExpand.newHorizonEventContent {
+	margin: 40px 3% 60px 3%;
+	width: 94%;
+}
+
+.pageContentExpand#landingPageBlack .videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: auto !important;
+    margin-top: 0;
+}
+
+.pageContentExpand#landingPageBlack .videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.pageContentExpand#landingPageBlack .videoContainer {
+    position: relative;
+    height: auto !important;
+}
+
+.pageContentExpand#landingPageBlack .videoContainer iframe, 
+.pageContentExpand#landingPageBlack .videoContainer object, 
+.pageContentExpand#landingPageBlack .videoContainer embed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+*/
+

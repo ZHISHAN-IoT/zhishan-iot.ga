@@ -1,0 +1,50 @@
+main.content { }
+main.content figure { position:relative; overflow:hidden; margin:-2em; }
+figure img { display: block; max-width:100%; }
+figure figcaption { /*position: absolute;*/ padding: 2em; background: #156; }
+figure figcaption *, figure figcaption *:visited { color:#fff; }
+
+section.banner .c12 .level1 { margin: 0; }
+
+nav.drawer a:visited:hover { color:#c00 } /* Visited nav links hover in red */
+
+/* DOWNLOADS BOX (UNDER SIDE NAV) */
+.downloadBox { margin: 2rem; padding: 2em; background:#f4f4f4; border:1px solid #e0e0e0; margin:2em\0/IE8+9; }
+nav.drawer .downloadBox li { border-top:none; }
+nav.drawer .downloadBox li a { color:#189; }
+nav.drawer .downloadBox li a:hover { color:#c00; text-decoration:none; }
+.tab ul, .anchor ul { margin-left: .5rem}
+.nav li.specialNav {
+	background-color: #f4f4f4;
+}
+.nav li.specialNav a {
+	background: url(http://www.ti.com/corp/docs/investor_relations/images/edelivery_green_leaf.png) no-repeat 2rem center;
+	padding-left: 4rem;
+}
+.nav li.specialNav a:link, 
+.nav li.specialNav a:visited{
+	color:#189;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media print {
+nav.drawer, header  { display: none }
+
+ul > li {
+    background: none;
+    list-style-type:disc;
+    margin: 0 0 0.5em;
+    padding-left: 0.6em;}
+}
+
+main.content .tab-content { display: none; }
+main.content .tab-content.active { display: block; }
+
+nav.drawer  li {
+    padding-left: 1.4em;}
+}
+
+	

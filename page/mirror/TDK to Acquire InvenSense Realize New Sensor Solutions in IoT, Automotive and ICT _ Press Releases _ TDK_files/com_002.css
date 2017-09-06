@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#header ul#global_nav li#nav2 a img{ visibility:hidden !important;}
+
+#stage a span{ font-size:1.2em; line-height:1em;}
+/*
+#stage #contents h5 { font-weight: bold; margin: 0; padding: 0;}
+*/
+
+#stage #contents p {  line-height: 1.6em;    margin-bottom: 10px !important; font-size: 1.4rem !important;}
+
+/*
+#contents h5 { background: rgba(0, 0, 0, 0) url("/news_center/common/img/bg_th01.gif") repeat-x scroll 0 0; border-bottom: 1px dotted #c3d3e4; color: #036; font-weight: bold; padding: 5px;}
+*/
+#agree_text { background: #f7fcff none repeat scroll 0 0; border: 5px solid #dce6eb; color: #4d7686; margin: 20px auto; padding: 10px; width: 600px; }
+#btn_area { margin-top: 20px; text-align: center;}
+div.freeedit{display:none;}
+
+/*----------------------------
+
+2016
+
+----------------------------*/
+#contents #main {width:auto !important; float: none !important;}
+
+
+/*----------------------------
+
+2017
+
+----------------------------*/
+.chart {margin-top:56px; position: relative; text-align:center;}
+.chart ul li { width: 100%; max-width:720px; margin: 0 auto 49px;}
+.chart ul li article { display: flex; width: 720px;}
+.chart ul li span { width:27px;}
+.chart ul li div {width: 720px;}
+.chart ul li span + div {width: 693px;}
+
+.imgRight {
+	display: inline !important;
+	text-align: right;
+}
+
+.regularBox {width: 760px; margin:0 auto;}
+
+.floatImgBox {clear: both;}
+.floatImgBox .floatImgLeft {float: left; text-align:center; margin: 0 14px 14px 0;}
+.floatImgBox .floatImgRight {float: right; text-align:center; margin: 0 0 14px 14px;}
+
+@media screen and (min-width: 600px) and (max-width: 999px) {
+.regularBox {width: 100%;}
+
+.chart ul{ width: 100%;}
+.chart ul li {overflow-x: auto;}
+}
+@media screen and (max-width: 599px) {
+.pc_only {display: none;}
+.regularBox {width: 100%;}
+
+.chart ul{ width: 100%;}
+.chart ul li {overflow-x: auto;}
+/*.chart ul li div {width: 720px;}*/
+
+.chart2 ul li { width: 100%; max-width:300px;}
+
+ul.year li{width: 48% !important;}
+ul.year li{margin-right:7px !important;}
+ul.year li:nth-child(2n) {margin-right: 0 !important;}
+
+.floatImgBox .floatImgLeft, .floatImgBox .floatImgRight {float: none; margin:0 auto 14px;}
+.floatImgBox { display: flex;flex-direction: column; }
+.floatImgBox .floatText { order: 1;}
+.floatImgBox .floatImgLeft, .floatImgBox  .floatImgRight { order: 2; }
+}

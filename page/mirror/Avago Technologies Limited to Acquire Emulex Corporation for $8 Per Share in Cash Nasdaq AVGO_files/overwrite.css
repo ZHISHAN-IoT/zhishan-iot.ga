@@ -1,0 +1,127 @@
+﻿/* 649 - 767 - 1024 */
+#main-container-home {
+	max-width: 970px !important;
+}
+
+#main-content-L1 {
+	width: 97% !important;
+	margin: 0 0 0 10px !important;
+	padding: 20px 0 0 0 !important;
+}
+
+@media only screen and (max-width:1024px){   
+	#contact-top-pc-browser{display:block !important;}
+	#footer-L a {
+		display: block;
+		margin: 0 !important;
+		padding: 0 !important;
+		background-color: inherit !important;
+		color: #0094b3 !important;
+		height: 30px !important;
+	}
+	#footer-L ul li {
+		margin: 5px 0 15px 0 !important;
+		text-align: left !important;        		
+	}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 997px) {
+    #logodiv
+    {
+        width: 200px;
+    }
+    #register-button, #signin-button
+    {
+        margin: 0 0 0 6px;
+    }
+}
+
+@media only screen and (max-width: 804px) and (min-width: 768px) {
+    #register-button
+    {
+        margin-top: 6px;
+    }
+     #signin-button
+    {
+         margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 649px) {
+    div#logodiv {
+        width: 150px !important;
+    }
+    div#share-print
+    {
+        display: none;
+    }
+}
+
+.hero-home-feature-container {
+    margin: 25px auto 25px !important;
+}
+
+.hero-home-feature-container .signup-btn-1 {
+    margin-top: 0px !important;
+}
+
+.signup-btn-1, .orange-btn {
+    padding: 5px 5px 5px 5px !important;
+    font-family: 'SourceSansProRegular';
+    text-transform:capitalize;
+    font-size: 20px !important;
+    word-spacing: 5px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 20px !important;
+}
+
+@media only screen and (min-width: 1025px) {
+	.hero-home-left{
+		float: left;
+		width: 30% !important;
+	}
+
+	.hero-home-right {
+		float: left;
+		width: 70% !important;
+	}
+	
+	div#main-content-L1.padding-top-none {
+	    padding: 0 !important;
+    }
+}
+
+.feature_jump.leftalign {
+    margin-right: 5px;
+    width: 175px;
+}
+
+#contact-top-pc-browser a {
+    display: block;
+    float: left;
+    padding: 7px 8px 7px 8px !important;
+    margin: 0 !important;
+	border:none !important;
+}
+
+#contact-top-pc-browser{
+	border-style: solid !important;
+	background-color: transparent !important;
+	border-color: #f5f5f5 !important;
+	border-radius: 0px !important;
+}
+
+#copyright {
+	text-align: center;
+    margin-top: 10px !important;
+}
+
+div.mw_release table 
+{
+    border-collapse: separate;
+    border-spacing: 0;
+}

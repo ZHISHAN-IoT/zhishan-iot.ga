@@ -1,0 +1,390 @@
+﻿/*styles for CBS pagination controls */
+#Paging {
+	text-align: center;
+}
+
+#Paging > li {
+	display: inline;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+/*Refiner Styles*/
+
+.floatingRefiner {
+	float:left;
+	min-height:100px;
+	min-width: 25%;
+	max-width: 32%;
+	vertical-align: baseline;
+}
+
+#Container label {
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#Container select {
+	clear: both;
+	display: block;
+}
+
+.filterSliderBarGraph .ms-ref-refinername:link, 
+.filterSliderBarGraph .ms-ref-refinername:visited {
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.refTitle {
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+/* Comparison Tables */
+
+.compareTable {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compareTableRow {
+	display: table-row;
+    width: 100%;	
+}
+
+.compareTableCell {
+	display: table-cell;
+	border: 1px solid #ddd;	 
+	text-align: center; 
+	vertical-align: middle;
+	padding: 10px;	 	
+}
+
+.compareTableCell p {
+	margin: 0;
+	padding: 0; 	
+}
+
+.compareTableCell.TableHeader {
+    color: #999;
+    font-family: "KlavikaMediumCondensedItalic", Calibri, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;	
+    font-weight: bold;
+}
+
+.compareTableCell.tableLabel {
+	text-align: left;	
+}
+
+span.remove {
+	color: #f26621;
+    font-size: 11px;	
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+span.remove:visited {
+	color: #f26621;
+}
+
+span.remove:hover {
+	color: #000;
+}
+
+
+.fcTableItem {
+	display: table-cell;
+	border: 1px solid #ddd;    	
+}
+
+
+
+.ItemSKU {
+    display: inline-block;
+    float: left;
+    margin: 15px 3% 30px 0;
+    padding: 0;
+    width: 30.3%;
+}
+
+.ItemSKU a {
+    margin: 10px 0;
+}
+
+
+/*Press Releases*/
+.PRItem {
+	margin-bottom:11px;
+}
+
+.PRDescription {
+	padding-left:22px;
+}
+
+.PRDescription p:last-child {
+	padding-bottom:0px;
+}
+
+.PRDescription * {
+	font-size: 14px;
+	font-family: Calibri, Arial, sans-serif;
+	font-weight: normal;
+}
+
+/*styles for gallery display template used on http://www-auth-new.amd.com/en-us/Pages/changing-game-partners.aspx
+needs tweaking so it doesn't look so dumb*/
+ul.gallerylist {
+	position: relative;
+	margin-left: 0;
+	}
+li.galleryitem {
+	list-style-type: none;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.galleryBody > img{
+	margin-left: 0;
+	margin-right: 10px; /*I don't know if we need this padding*/
+	float:left;
+}
+.galleryText{ /*Justified the text so it looks pretty*/
+	text-align:justify;
+	text-justify:inter-word;
+}
+#thumbholder{
+	width:600px; /*is is the outer holder of the thumbnails. the bigger one will be inside it and will scroll*/
+	height: 170px; /*this height works perfectly for the 100x100 thumbnails*/
+	overflow-x: scroll; /*real scrolling lets mobile/touch devices work better*/
+	overflow-y: hidden;	/*but if something is too tall it just won't show*/
+	border:medium silver inset;/*this border is just here to make the thumbnail slider look like a discrete thing*/
+	margin-top: 7px;
+}
+#galleryThumbs{
+	width:3000px;/*this width just works for this list. we might want to tweak*/
+}
+.galleryThumb {
+	float:left;
+	margin-left: 2px;/*the margin might (probably should) be tweaked*/
+	cursor: pointer;
+	border 1px solid #ccc;	/*border should be tweaked too*/
+	width: 100px;
+	height: 100%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#galleryThumbs > .active{
+	background-color: #ccc;/*the active thumbnail will be a different color*/
+}
+#thumbholder p{
+	line-height: normal;/*this was weird. why are paragraphs spaced out so much?*/
+}
+.glow{
+	background-color: #eee;
+}
+
+/*AMD Events*/
+.EventItem{
+	width:100%;
+	display:table-row;
+}
+
+.EventItemDate{
+	display:table-cell;
+	width:165px;
+	vertical-align:top;
+}
+
+.EventItemBody{
+	display:table-cell;
+	vertical-align:top;
+}
+
+.EventGroup{
+	width:100%;
+	display:table-row;
+}
+
+.EventGroupTitle{
+	vertical-align:top;
+	display:table-cell;
+}
+
+/*AMD Articles*/
+.AMDArticle{
+	line-height:18px;
+	margin-top:10px;
+}
+
+/*Locations and Contacts*/
+.Contacts{
+	width:249px;
+	display:table-cell;
+	padding-bottom:25px;"
+}
+
+/*Awards*/
+.AwardItem{
+	padding-bottom:22px;
+}
+
+.AwardLogo{
+	display:table-cell;
+	vertical-align: top;
+}
+
+.AwardBody{
+	display:table-cell;
+	padding-left:11px;
+	vertical-align: top;
+}
+
+/*Partner and Distributor Locators*/
+.LocatorItem{
+	height:110px;
+}
+
+.LocatorImage{
+	display:table-cell;
+	width:140px;
+	vertical-align:top;
+	padding:5px;
+}	
+
+.LocatorTitle{
+	display:table-cell;
+	width:266px;
+	vertical-align:top;
+	padding:5px;
+}
+
+.LocatorCell{
+	display:table-cell;
+	width:108px;
+	vertical-align:top;
+	padding:5px;
+}
+
+/*Embedded Ecosystem Page*/
+.EMBEcoItem{
+	width: 100%;
+}
+
+.EMBEcoImage{
+	margin-bottom: 15px;
+}	
+
+.EMBEcoDesc{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.EMBEcoRefiner{
+	float: left;
+    width: 24%;
+    margin-right: 1%;
+    margin-top: 20px;
+}
+
+.EMBEcoRefiner select{
+	width:100%;
+}
+
+/*Pricing*/
+.PricingItem{
+	border-top:1px #ccc solid;
+	width:100%;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+.PricingTitle{
+	display:table-cell;
+	width:628px;
+}
+
+.PricingPrice{
+	display:table-cell;
+	text-align:right;
+	width:142px;
+}
+
+/* styling for workstation graphics help me choose */
+.wsgItem {
+float: left;
+width: 25%;
+padding: 5px 2em 5px 2em;
+}
+.twoColumn:nth-of-type(3n+1){
+	clear: both;
+}
+
+.histogram_bar_active{
+height:2px;
+display:block;
+/* [ReplaceColor(themeColor:"SubtleLines")] */ background-color:#c6c6c6;
+/* [ReplaceColor(themeColor:"SubtleLines")] */ border-left:1px solid #c6c6c6;
+/* [ReplaceColor(themeColor:"SubtleLines")] */ border-right:1px solid #c6c6c6;
+/* [ReplaceColor(themeColor:"AccentLines")] */ border-top:2px solid #cc092f;
+}
+.histogram_bar_active:hover,.histogram_bar_inactive:hover
+{
+/* [ReplaceColor(themeColor:"ButtonHoverBorder")] */ background-color:#636466;
+/* [ReplaceColor(themeColor:"ButtonHoverBorder")] */ border-left:1px solid #636466;
+/* [ReplaceColor(themeColor:"ButtonHoverBorder")] */ border-right:1px solid #636466;
+/* [ReplaceColor(themeColor:"AccentLines")] */ border-top:2px solid #cc092f;
+}
+.histogram_bar_active:active,.histogram_bar_inactive:active
+{
+/* [ReplaceColor(themeColor:"ButtonPressedBorder")] */ background-color:#2a8dd4;
+/* [ReplaceColor(themeColor:"ButtonPressedBorder")] */ border-left:1px solid #2a8dd4;
+/* [ReplaceColor(themeColor:"ButtonPressedBorder")] */ border-right:1px solid #2a8dd4;
+/* [ReplaceColor(themeColor:"AccentLines")] */ border-top:2px solid #cc092f;
+}
+.histogram_bar_inactive{
+height:2px;
+display:block;
+/* [ReplaceColor(themeColor:"DisabledLines")] */ background-color:#c7c8ca;
+/* [ReplaceColor(themeColor:"DisabledLines")] */ border-left:1px solid #c7c8ca;
+/* [ReplaceColor(themeColor:"DisabledLines")] */ border-right:1px solid #c7c8ca;
+/* [ReplaceColor(themeColor:"ButtonGlyphDisabled")] */ border-top:2px solid #b1b1b1;
+
+}
+
+.slider_tick_active {
+z-index: 93;
+height: 3px;
+width: 1px;
+top: 11px;
+position: absolute;
+display: inline;
+background-color: #cc092f;
+border: 1px solid #cc092f;
+margin-top: 0.5px;
+}
+
+.ajax__multi_slider_default .inner_rail_horizontal {
+z-index: 90;
+position: absolute;
+background-color: #cc092f;
+border-top: 1px solid #cc092f;
+border-bottom: 1px solid #cc092f;
+height: 1px;
+margin-top: -1px;
+padding-top: 0px;
+}
+
+.ms-ref-ctrl .ms-ref-selSec .ms-ref-filterSel, .ms-ref-ctrl .ms-ref-allSec .ms-ref-filterSel {
+ color: #cc092f;
+}

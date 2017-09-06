@@ -1,0 +1,135 @@
+.ddsmoothmenu {
+	width: auto; 
+	height: 40px; 
+	font-size: 13px
+}
+* html .ddsmoothmenu {
+	height: 1%
+}
+.ddsmoothmenu ul {
+	z-index: 100; 
+	padding-bottom: 0px; 
+	list-style-type: none; 
+	margin: 0px; 
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px
+}
+.ddsmoothmenu ul li {
+	position: relative; 
+	display: inline; 
+	float: left
+}
+.ddsmoothmenu ul li a {
+	margin:8px 10px 0px 0px;
+	padding: 0px 13px 10px;
+	line-height: 22px; 
+	display: block; 
+	font-weight: bold;
+	color: #000; 
+	text-decoration: none; 
+}
+* html .ddsmoothmenu ul li a {
+	display: inline-block
+}
+.ddsmoothmenu ul li a:hover {
+	background-image: url(img/menubg.png);
+	font-weight: bold;
+	color: #ff6633;
+	text-shadow: none;
+	background-repeat: no-repeat;
+	background-position: center -10px;
+}
+.ddsmoothmenu ul li a.selected {
+	background-image: url(img/menubg.png); 
+	background-repeat: no-repeat;
+	background-position: center -10px;
+	font-weight: bold;
+	color: #ff6633; 
+}
+.selected2 {
+	background-color:#FFF;
+	color: #ffffff; 
+}
+
+.ddsmoothmenu ul li a.active {
+	font-weight: bold;
+	color: #84ba5c
+}
+.ddsmoothmenu ul li a.active:hover {
+	font-weight: bold;
+	color: #ff6633
+}
+.ddsmoothmenu ul li a.selected.active {
+	font-weight: bold;
+	color: #ff6633
+}
+a div.nav-icon-home {
+	width: 20px; 
+	background: url(img/icon_home.png) no-repeat center center; 
+	height: 20px
+}
+a.active div.nav-icon-home {
+	background-image: url(img/icon_home_active.png)
+}
+a:hover div.nav-icon-home {
+	background-image: url(img/icon_home_hover.png)
+}
+.ddsmoothmenu ul li ul {
+	background-color:#FFF;
+	position: absolute; 
+	display: none; 
+	visibility: hidden; 
+	left: 0px; 
+}
+.ddsmoothmenu ul li ul li {
+	display: list-item;
+	float: none
+}
+.ddsmoothmenu ul li ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px; 
+	color: #414141; 
+	padding: 8px 10px 8px 10px; 
+	background-image: url(img/bg_nav_lv2.png); 
+	line-height: 14px; 
+	margin: 0px 0px 0px 0px; 
+	border-top: #cccccc 1px dotted; 
+}
+.ddsmoothmenu ul li ul li a:hover {
+	background-image: url(img/bg_nav_hover.png)
+}
+.ddsmoothmenu ul li ul li ul {
+	top: 0px
+}
+.ddsmoothmenu ul li ul li ul li a {
+	border-left: #cccccc 1px dotted; 
+	border-right: #cccccc 1px dotted; 
+}
+.downarrowclass {
+	position: absolute;
+	display: none; 
+	top: 13px; 
+	right: 7px
+}
+.rightarrowclass {
+	position: absolute; 
+	top: 11px; 
+	right: 5px
+}
+* html .rightarrowclass {
+	display: none
+}
+.ddshadow {
+	position: absolute; 
+	border-left: #404e53 1px solid; 
+	width: 0px; 
+	background: silver; 
+	height: 0px; 
+	top: 0px; 
+	left: 0px
+}
+.toplevelshadow {
+	opacity: 0.8
+}

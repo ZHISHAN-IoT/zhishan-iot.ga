@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* NASDAQ OMX CSS */
+
+/* GENERAL STYLES */
+.ndq-bold { font-weight:bold !important; }
+.ndq-nowrap { white-space:nowrap !important; }
+.ndq-alignL { text-align:left !important; }
+.ndq-alignC { text-align:center !important; }
+.ndq-alignR { text-align:right !important; }
+.ndq-valignT { vertical-align:top !important; }
+.ndq-valignM { vertical-align:middle !important; }
+.ndq-valignB { vertical-align:bottom !important; }
+.ndq-valignBL { vertical-align:baseline !important; }
+.ndq-noTxtDec, .ndq-noTxtDec a, .ndq-noTxtDec img { text-decoration:none !important; }
+.ndq-txtUL { text-decoration:underline !important; }
+.ndq-txtCap { text-transform:capitalize !important; }
+.ndq-noDisplay { display:none !important; }
+.ndq-inline { display:inline !important; }
+.ndq-floatL { float:left !important; }
+.ndq-floatR { float:right !important; }
+.ndq-cursorPointer { cursor:pointer !important; }
+.ndq-cursorAuto { cursor:auto !important; }
+.ndq-clear { clear:both !important; }
+
+/* SPACING */
+.ndq-indent { margin-left:20px !important; }
+
+.ndq-p0 { padding:0 !important; }
+.ndq-p5 { padding:5px !important; }
+.ndq-p10 { padding:10px !important; }
+.ndq-p15 { padding:15px !important; }
+.ndq-p20 { padding:20px !important; }
+.ndq-p25 { padding:25px !important; }
+
+.ndq-pt0 { padding-top:0 !important; }
+.ndq-pt5 { padding-top:5px !important; }
+.ndq-pt10 { padding-top:10px !important; }
+.ndq-pt15 { padding-top:15px !important; }
+.ndq-pt20 { padding-top:20px !important; }
+.ndq-pt25 { padding-top:25px !important; }
+
+.ndq-pr0 { padding-right:0 !important; }
+.ndq-pr5 { padding-right:5px !important; }
+.ndq-pr10 { padding-right:10px !important; }
+.ndq-pr15 { padding-right:15px !important; }
+.ndq-pr20 { padding-right:20px !important; }
+.ndq-pr25 { padding-right:25px !important; }
+
+.ndq-pb0 { padding-bottom:0 !important; }
+.ndq-pb5 { padding-bottom:5px !important; }
+.ndq-pb10 { padding-bottom:10px !important; }
+.ndq-pb15 { padding-bottom:15px !important; }
+.ndq-pb20 { padding-bottom:20px !important; }
+.ndq-pb25 { padding-bottom:25px !important; }
+
+.ndq-pl0 { padding-left:0 !important; }
+.ndq-pl5 { padding-left:5px !important; }
+.ndq-pl10 { padding-left:10px !important; }
+.ndq-pl15 { padding-left:15px !important; }
+.ndq-pl20 { padding-left:20px !important; }
+.ndq-pl25 { padding-left:25px !important; }
+.ndq-pl125 { padding-left:125px !important; }
+
+.ndq-m0 { margin:0 !important; }
+.ndq-m5 { margin:5px !important; }
+.ndq-m10 { margin:10px !important; }
+.ndq-m15 { margin:15px !important; }
+.ndq-m20 { margin:20px !important; }
+.ndq-m25 { margin:25px !important; }
+
+.ndq-mt0 { margin-top:0 !important; }
+.ndq-mt5 { margin-top:5px !important; }
+.ndq-mt10 { margin-top:10px !important; }
+.ndq-mt15 { margin-top:15px !important; }
+.ndq-mt20 { margin-top:20px !important; }
+.ndq-mt25 { margin-top:25px !important; }
+
+.ndq-mr0 { margin-right:0 !important; }
+.ndq-mr5 { margin-right:5px !important; }
+.ndq-mr10 { margin-right:10px !important; }
+.ndq-mr15 { margin-right:15px !important; }
+.ndq-mr20 { margin-right:20px !important; }
+.ndq-mr25 { margin-right:25px !important; }
+
+.ndq-mb0 { margin-bottom:0 !important; }
+.ndq-mb5 { margin-bottom:5px !important; }
+.ndq-mb10 { margin-bottom:10px !important; }
+.ndq-mb15 { margin-bottom:15px !important; }
+.ndq-mb20 { margin-bottom:20px !important; }
+.ndq-mb25 { margin-bottom:25px !important; }
+
+.ndq-ml0 { margin-left:0 !important; }
+.ndq-ml5 { margin-left:5px !important; }
+.ndq-ml10 { margin-left:10px !important; }
+.ndq-ml15 { margin-left:15px !important; }
+.ndq-ml20 { margin-left:20px !important; }
+.ndq-ml25 { margin-left:25px !important; }

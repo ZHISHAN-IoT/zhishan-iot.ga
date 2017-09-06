@@ -1,0 +1,65 @@
+/* 
+INTEL CLEAR fonts
+- These fonts are the property of Intel and to be used only by/for Intel web properties.
+*/
+@font-face {
+    font-family: "intel-clear";
+	src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin.eot");
+    src: url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin.eot?#iefix") format("embedded-opentype"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin.woff2") format("woff2"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin.woff") format("woff"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "intel-clear";
+    src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold.eot");
+    src: url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold.eot?#iefix") format("embedded-opentype"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold.woff2") format("woff2"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold.woff") format("woff"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "intel-clear";
+    src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-italic.eot");
+    src: url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-italic.eot?#iefix") format("embedded-opentype"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-italic.woff2") format("woff2"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-italic.woff") format("woff"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "intel-clear";
+    src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold-italic.eot");
+    src: url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold-italic.eot?#iefix") format("embedded-opentype"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold-italic.woff2") format("woff2"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold-italic.woff") format("woff"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-bold-italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "intel-clear";
+    src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite.eot");
+    src: url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite.eot?#iefix") format("embedded-opentype"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite.woff2") format("woff2"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite.woff") format("woff"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "intel-clear";
+    src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite-italic.eot");
+    src: url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite-italic.eot?#iefix") format("embedded-opentype"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite-italic.woff2") format("woff2"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite-italic.woff") format("woff"), url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-latin-lite-italic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+.recode50{
+	font-family:"intel-clear", "arial", "helvetica", sans-serif !important;
+}
+
+/* Intel Clear Pro (Headline) Font*/
+@font-face {
+	font-family:"intel-clear-headline";
+	src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-headline.eot");
+	src:url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-headline.eot?#iefix") format("embedded-opentype"),url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-headline.woff2") format("woff2"),url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-headline.woff") format("woff"),url("https://www.intel.com/etc/designs/intel/us/en/Fonts/intel-clear-headline.ttf") format("truetype");
+	font-weight:400;
+	font-style:normal
+}
+
+/* 
+Map to "intel-clear-headline" for any element you wish the Headline font to be used. Be sure to always use intel-clear as its fallback.
+Example for Latin locales:
+.someclassobject {font-family:"intel-clear-headline", "intel-clear", "arial", "helvetica", sans-serif !important;}
+*/

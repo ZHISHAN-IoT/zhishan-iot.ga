@@ -1,0 +1,39 @@
+/*former file fonts_cn.css
+_____________________________________*/
+.bodyWrapper,ul.expandMenu{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.support,.support .categoryName,.ticForm input, .ticForm textarea,.boxContent,.borderedTable .body,.borderedTable .body .boldLink, .borderedTable .body .link,.navlist a,.navlist li,.prevViewedProds table select, .prevViewedProds .link{
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navlist .listHeader,.categoryHeading a{
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.bodyWrapper h4,.navSecondary, .navSecondary a,.nav_secondary a,.headerNavTop, .headerNavTop a,.footer,.dateText,#breadcrumb,.support .categoryKeyword {
+	font-size: 12px;
+}
+
+.font9 a,.font10 a,.font11 a,.font12 a,table#page-header div.top-nav,table#page-header .searchOptions,#homeProductMap tr.li.level1 table.ul.expandMenu tr.li.level2 {
+	font-size: 12px !important;
+}
+
+.support .salesCountry {
+        font-size: 12px;
+        width: 150px;
+}
+
+#breadcrumb .leaf{
+	font-size: 12px;
+	font-weight: bold;
+}
+#homeProductMap table.ul.expandMenu tr.li.level1 {
+	font-weight: bold;
+	font-size: 12px !important;
+}
+
+.dojoComboBoxItem {
+        font: 11px Verdana, Arial, Helvetica, sans-serif;
+}

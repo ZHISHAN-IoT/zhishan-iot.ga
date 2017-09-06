@@ -1,0 +1,68 @@
+﻿/*
+.footerContainer {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.footer-main {
+    text-align: center;
+    padding-top: 0;
+}
+
+.footer a, 
+ul.footer-nav li a {
+    line-height: 28px;
+    padding: 5px 0;
+}
+*/
+
+.footer-main {
+    /* margin-bottom: 20px; */
+    text-align: center;
+}
+
+ul.footer-nav:first-child {
+    padding: 0 0 30px 0;
+}
+
+.footer a, 
+ul.footer-nav li a {
+    line-height: 28px;
+}
+
+.followContainer {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+}
+
+.follow {
+    padding: 30px 0;
+}
+
+.follow a {
+    margin-right: 0;
+}
+
+.footer-links {
+    text-align: center;
+    padding-top: 30px;    
+}
+
+.footer .copyright {
+    margin-right: 0;
+}
+
+.footer-newsletter input[type="submit"] {
+    margin: 10px 0 20px 0;
+}
+
+.footer-newsletter input {
+    width: 97%;
+}
+
+.footer-newsletter input, 
+.footer-newsletter button {
+    float: right;
+}

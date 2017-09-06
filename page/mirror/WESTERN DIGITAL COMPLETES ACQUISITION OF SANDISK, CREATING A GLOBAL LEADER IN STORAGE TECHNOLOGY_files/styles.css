@@ -1,0 +1,65 @@
+/* CORP UPDATES */
+h5 {
+  letter-spacing: 0;
+}
+
+_:-webkit-full-screen:not(:root:root), svg#Layer_1 {
+
+  max-width: 100%; 
+
+}
+
+@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
+and (not (-moz-appearance:none))
+{
+
+  svg#Layer_1 {
+    max-width: 100%; 
+  }
+
+}
+
+.meet-team .team-category .xt-thumb a {
+	width: 100%;
+}
+
+.oem-panel .it-blog .articles:nth-child(odd) {
+	clear: both;
+}
+.oem-panel .it-blog .articles {
+	margin-top: 2rem;
+	float: left;
+	width: 50%;
+}
+
+.oem-panel .it-blog .articles .blog-item {
+	
+}
+.oem-panel .it-blog .articles .blog-thumb {
+	float: left;
+	padding-right: 1.25rem;
+	width: 35%;
+}
+
+.oem-panel .it-blog .articles .blog-summary {
+	padding-right: 1rem;
+	float: right;
+	width: 65%;
+}
+
+.oem-panel .it-blog .articles .blog-summary h4 {
+	margin-top: 0;	
+}
+
+.oem-panel .it-blog .articles .blog-summary p {
+	margin: .3725rem 0;	
+}
+
+.oem-panel .it-blog .articles .blog-summary h4 a {
+	color: black;
+}
+
+.oem-panel .it-blog .articles .blog-summary h4 a:hover {
+	color: red;
+}
+

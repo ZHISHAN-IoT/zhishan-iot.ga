@@ -1,0 +1,33 @@
+/* 
+***********************************
+Page: NDQ Print
+Category: N/A
+Search: 0
+Track: 0
+Version: 9.8.0 
+Author: Jonathan Hagan
+Date: 27 Jun 2014
+***********************************
+*/
+@charset "utf-8";
+
+/* Remove/hide everything except logo and content with #ndq-content div */
+body { background:none; }
+#wrapper{ width:97%; border:0; }
+#breadcrumb { display:none; }
+#column1 { display:none; width:0%; }
+#column2 { display:block; width:100%; border:0; }
+#column3 { display:none; width:0%; }
+#footer { display:none; }
+
+
+/* NDQ specific - do not delete */
+#ndq-content { width:97%; }
+#ndq-content .ndq-expand-link, #ndq-content .ndq-expand-link-nobio { color:#000; }
+#ndq-content #ndq-exp-col { display:none; }
+
+/* Release Detail Specific */
+#ndq-content.ndq-releasedetail {width: 100%;background: none;font-family: Georgia, "Times New Roman", Times, serif;font-size: 120%;}	
+.ndq-releasedetail #ndq-header {display: none;}
+.ndq-releasedetail #ndq-article {width: 97%;border: 0;background: none;margin: 0;padding: 0;}
+.ndq-releasedetail .ndq-rightcol {display: none;}

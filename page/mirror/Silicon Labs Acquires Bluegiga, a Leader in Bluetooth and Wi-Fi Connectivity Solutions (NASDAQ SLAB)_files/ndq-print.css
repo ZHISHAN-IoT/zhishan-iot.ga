@@ -1,0 +1,71 @@
+/* 
+***********************************
+Page: NDQ Print
+Category: N/A
+Search: 0
+Track: 0
+Version: 9.8.0 
+Author: Jonathan Hagan
+Date: 27 Jun 2014
+***********************************
+*/
+@charset "utf-8";
+
+/* Remove/hide everything except logo and content with #ndq-content div */
+body { background:none; }
+#wrapper{ width:97%; border:0; }
+#breadcrumb { display:none; }
+#column1 { display:none; width:0%; }
+#column2 { display:block; width:100%; border:0; }
+#column3 { display:none; width:0%; }
+#footer { display:none; }
+
+
+/* NDQ specific - do not delete */
+#ndq-content { width:97%; }
+#ndq-content .ndq-expand-link, #ndq-content .ndq-expand-link-nobio { color:#000; }
+#ndq-content #ndq-exp-col { display:none; }
+
+/* Release Detail Specific */
+#ndq-content.ndq-releasedetail {width: 100%;background: none;font-family: Georgia, "Times New Roman", Times, serif;font-size: 120%;}	
+.ndq-releasedetail #ndq-header {display: none;}
+.ndq-releasedetail #ndq-article {width: 97%;border: 0;background: none;margin: 0;padding: 0;}
+.ndq-releasedetail .ndq-rightcol {display: none;}
+
+.menu-outer,
+#breadcrumbs,
+.hub-sidebar,
+.footer .main-row,
+.banner,
+#ndq-tabs ul li{ display: none; }
+
+#ndq-tabs ul li.active{
+	display: block;
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+
+#ndq-tabs div,
+#ndq-tabs ul li.active,
+.footer{ border: none; }
+
+.footer{ padding-top: 1em;}
+
+.hub-main{ width: 100%; }
+
+.header .logo{
+	position: relative;
+	top: 0;
+	left: 0;
+	max-width: 1230px;
+	margin: 0 auto;
+	-webkit-transform: translateY(0%);
+	   -moz-transform: translateY(0%);
+	    -ms-transform: translateY(0%);
+	        transform: translateY(0%);
+}
+
+a,
+a:visited,
+a:link{ color: #000; }

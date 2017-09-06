@@ -1,0 +1,13 @@
+/*
+  @Author:ZHISHAN IoT
+  @Dessciption:font style sheet
+ */
+
+
+/* font-00:consola */
+@font-face
+{
+  font-family: consola;
+  font-style: normal;
+  src: url('/style/font/consola.ttf');
+}

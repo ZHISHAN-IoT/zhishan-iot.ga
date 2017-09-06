@@ -1,0 +1,79 @@
+/* 
+***********************************
+Page: NDQ Filetypes
+Category: N/A
+Search: 0
+Track: 0
+Version: 9.8.0 
+Author: Jonathan Hagan
+Date: 27 Jun 2014
+***********************************
+*/
+@charset "utf-8";
+
+.ndq-filetypes div { display:inline-block; }
+.ndq-filetypes img { vertical-align:top; }
+#ndq-filetypes a, .ndq-filetypes a, #ndq-filetypes a:before, .ndq-filetypes a:before, #ndq-content [class^="ndqicon-"], #ndq-content [class*=" ndqicon-"], #ndq-content a.ndq-audio
+{text-decoration:none; display: inline-block;}
+	
+.ndq-filesize { font-size:.8em; min-width:50px; }
+.wsh-printedmats .ndq-filesize, .wsh-annuals .ndq-filesize, .ndq-corporate-governance .ndq-filesize {min-width: 20px !important;}
+.ndq-filetypes-na { display:inline; padding-left:28px; }
+
+#ndq-content a[href $='.pdf']:before, #ndq-content a[href $='.PDF']:before, a.ndq-pdf:before,	 
+#ndq-content a[href $='.xbrl']:before, a.ndq-xbrl:before,
+#ndq-content a[href $='.ppt']:before, #ndq-content a[href $='.pptx']:before, a.ndq-ppt:before,
+#ndq-content a[href $='.xlsx']:before, a.ndq-xlsx:before,
+#ndq-content a[href $='.xls']:before, a.ndq-xls:before,
+#ndq-content a[href $='.doc']:before, a.ndq-doc:before,
+#ndq-content a[href $='.docx']:before, a.ndq-docx:before,
+#ndq-content a[href $='.html']:before, a.ndq-html:before,
+#ndq-content a[href $='.htm']:before,
+#ndq-content a[href $='.jpg']:before,
+#ndq-content a[href $='.gif']:before,
+#ndq-content a[href $='.mp3']:before,
+#ndq-content a[href $='.txt']:before,
+#ndq-content a.ndq-event:before,
+#ndq-content a[href $='filename=']:before,
+#ndq-content a.ndq-audio:before,
+#ndq-content a.ndq-rss:before {
+	font-family: "ndqfonticons" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	font-size:22px;
+	vertical-align: middle;
+	text-decoration:none;
+}
+
+#ndq-content a[href $='.pdf']:before, #ndq-content a[href $='.PDF']:before, a.ndq-pdf:before { content: "\e05c"; color:#df0000; }	 
+#ndq-content a[href $='.xbrl']:before, a.ndq-xbrl:before { content: "\e05d"; color:#7b41bd; }
+#ndq-content a[href $='.pptx']:before { content: "\e08b"; color:#454545;}
+#ndq-content a[href $='.ppt']:before, a.ndq-ppt:before { content: "\e08a"; color:#454545;}
+#ndq-content a[href $='.xlsx']:before, a.ndq-xlsx:before { content: "\e05b"; color:#70a81f;}
+#ndq-content a[href $='.xls']:before, a.ndq-xls:before { content: "\e05b"; color:#70a81f; }
+#ndq-content a[href $='.doc']:before, a.ndq-doc:before { content: "\e058"; color:#005194; }
+#ndq-content a[href $='.docx']:before, a.ndq-docx:before { content: "\e058"; color:#005194; }
+#ndq-content a[href $='.html']:before, a.ndq-html:before{ content: "\e055"; color:#0472bd; }
+#ndq-content a[href $='.htm']:before { content: "\e055"; color:#0472bd; }
+#ndq-content a[href $='.jpg']:before { content: "\e07f"; color:#454545;}
+#ndq-content a[href $='.gif']:before { content: "\e080"; color:#454545;}
+#ndq-content a[href $='.mp3']:before { content: "\e026"; color:#454545; }
+#ndq-content a[href $='.txt']:before { content: "\e08c"; color:#454545;}
+#ndq-content a.ndq-event:before { content: "\e03c"; color:#454545; }
+#ndq-content a[href $='filename=']:before { content: "\e015"; color:#454545;}
+#ndq-content a.ndq-audio:before { content: "\e01c"; color:#454545; }
+#ndq-content a.ndq-rss:before { content: "\e019"; color:#FB7629;}
+
+#ndq-content a.ndqicon-print {color:#454545; text-decoration:none; line-height:22px;}
+#ndq-content a.ndqicon-mail {color:#454545;  text-decoration:none; line-height:22px;}
+
+#ndq-content a.show-txt { text-decoration:none;}
+#ndq-content .hide-txt { text-indent:-9999px; left: -9999px; position: absolute; top: -9999px; }
+#ndq-content a.ndq-no-icon:before { content:normal; }

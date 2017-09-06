@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "wrcom";
+  src:url("/resources/fonts/wrcom.eot");
+  src:url("/resources/fonts/wrcom.eot?#iefix") format("embedded-opentype"),
+    url("/resources/fonts/wrcom.woff") format("woff"),
+    url("/resources/fonts/wrcom.ttf") format("truetype"),
+    url("/resources/fonts/wrcom.svg#wrcom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "wrcom" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "wrcom" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-note:before {
+  content: "a";
+}
+.icon-arrow-left-nav:before {
+  content: "b";
+}
+.icon-arrow-right-nav:before {
+  content: "d";
+}
+.icon-flame:before {
+  content: "e";
+}
+.icon-global:before {
+  content: "f";
+}
+.icon-phone-call:before {
+  content: "i";
+}
+.icon-refresh:before {
+  content: "j";
+}
+.icon-tools:before {
+  content: "k";
+}
+.icon-arrow-left-style:before {
+  content: "c";
+}
+.icon-movie:before {
+  content: "g";
+}
+.icon-news:before {
+  content: "h";
+}
+.icon-podcast:before {
+  content: "l";
+}
+.icon-calendar:before {
+  content: "m";
+}
+.icon-aircraft:before {
+  content: "n";
+}
+.icon-car:before {
+  content: "o";
+}
+.icon-robot:before {
+  content: "p";
+}
+.icon-router:before {
+  content: "q";
+}
+.icon-cloud:before {
+  content: "s";
+}
+.icon-server:before {
+  content: "r";
+}
+.icon-iot:before {
+  content: "u";
+}
+.icon-devices:before {
+  content: "v";
+}
+.icon-wrhelix:before {
+  content: "w";
+}
+.icon-helix:before {
+  content: "t";
+}
+.icon-cpu:before {
+  content: "x";
+}
+.icon-road:before {
+  content: "y";
+}

@@ -1,0 +1,2864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" dir="ltr" slick-uniqueid="3" lang="en-gb"><head>
+<!-- begin spin_special_output(head_start) -->
+<script type="text/javascript" async="" defer="defer" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/piwik.js"></script><script type="text/javascript" async="" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/ga.js"></script><script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/jquery-webdriver.js" wd_script_id="jquery-webdriver.js"></script>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/webdriver.js" wd_script_id="webdriver.js"></script>
+<script type="text/javascript">webDriver.push_jQuery();</script>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/jquery-ui.js" wd_script_id="jquery-ui.js"></script>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_resize.js" wd_script_id="wd_resize.js"></script>
+<link href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_modal.css" type="text/css" rel="stylesheet" wd_script_id="wd_modal.css">
+<link href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+<script type="text/javascript" wd_script_id="wd_modal_script">
+(function($) {
+	webDriver.resizeModal = function() {
+		$(this).find(".wd_modal").wd_modal("resize");
+//		return false;
+	}
+	
+	var modals = [];
+		
+	function _value(value, base) {
+		if (typeof value == "string" && value.indexOf("%") > 0) {
+			return  base * parseInt(value, 10) / 100;
+		} else {
+			return parseInt(value, 10);
+		}
+	}
+	
+	var wd_modal = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_modal.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.isOpen = false;
+			this.opener = null;
+			
+			this.$element = $(element);
+			this._options = {
+				autoOpen: false,
+				closeExisting: false,
+				closeOnEscape: true,
+				closeOnOverlayClick: true,
+				fadeDuration: null,
+				margin: "10%",
+				padding: 10
+			};
+			
+			this.options(options);
+			
+			this.$overlay = $("<div>").addClass("wd_modal-overlay").attr("wd_resize","resizeModal").appendTo($("body")).hide();
+			this.$outer = $("<div>").addClass("wd_modal-outer").appendTo(this.$overlay);
+			this.$inner = $("<div>").addClass("wd_modal-inner").appendTo(this.$outer).append(this.$element);
+			// Hack because I can't figure out where the extra few pixels at the bottom of the content are coming from
+			this.$inner.css("overflow-y", "hidden");
+			this.$close = $("<a class=\"wd_modal-close fa fa-times-circle\" href=\"#close\" title=\"Close\"><span class=\"wd_sr-only\">Close Dialog<\/span><\/a>")
+					.on("click", function(event) {self.close(); event.preventDefault();})
+					.appendTo(this.$outer);
+			this.$element.addClass("wd_modal");
+			
+			if (this._options.autoOpen)
+				this.open(this._options.closeExisting);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+
+				this._options.fadeDuration = parseInt(this._options.fadeDuration, 10);
+				if (isNaN(this._options.fadeDuration))
+					this._options.fadeDuration = false;
+				
+				if (!$.isArray(this._options.margin))
+					this._options.margin = [this._options.margin];
+				if (this._options.margin.length < 2)
+					this._options.margin[1] = this._options.margin[0];
+				if (this._options.margin.length < 3)
+					this._options.margin[2] = this._options.margin[0];
+				if (this._options.margin.length < 4)
+					this._options.margin[3] = this._options.margin[1];
+				
+				if (!$.isArray(this._options.padding))
+					this._options.padding = [this._options.padding];
+				if (this._options.padding.length < 2)
+					this._options.padding[1] = this._options.padding[0];
+				if (this._options.padding.length < 3)
+					this._options.padding[2] = this._options.padding[0];
+				if (this._options.padding.length < 4)
+					this._options.padding[3] = this._options.padding[1];
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+		
+		open: function(closeExisting, now) {
+			if (this.isOpen)
+				return;
+			
+			var self = this;
+			var myCloseExisting = closeExisting;
+			
+			if (!this.opener)
+				this.opener = document.activeElement;
+
+			if (closeExisting && modals.length > 0) {
+				for (var i = modals.length - 1; i >= 0; --i)
+					modals[i].close(true, true);
+			}
+
+			this.$overlay.addClass("wd_modal-current");
+			$("body").append(this.$overlay);
+
+			if (!now && this._options.fadeDuration) {
+				this.$overlay.fadeIn(this._options.fadeDuration, function() {self.open(myCloseExisting, true);});
+			} else {
+				if (modals.length == 0) {
+					$("body").css("overflow","hidden");
+					$(document).on("keydown.wd_modal", function (event) {
+						var current = modals[modals.length - 1];
+						if ((event.which == 27 || event.keyCode == 27) && current._options.closeOnEscape) {
+							current.close();
+							event.stopImmediatePropagation();
+							event.preventDefault();
+						}
+					});
+				}
+
+				if (this._options.closeOnOverlayClick) {
+					this.$overlay.on("click.wd_modal", function (event) {
+						if (event.target == this) {
+							self.close();
+							event.preventDefault();
+						}
+					});
+				}
+
+				modals.push(this);
+				
+				this.$overlay.show();
+				
+				var $focus = this.$element.find(":focusable");
+				if ($focus.length > 0)
+					$focus[0].focus();
+				
+				this.isOpen = true;
+
+				this.$element.trigger("open");
+			}
+		},
+		
+		close: function(skipCurrent, now) {
+			if (!this.isOpen)
+				return;
+			
+			this.$element.trigger("beforeClose");
+			
+			// TODO: allow closing of lower modals
+			modals.pop();
+			
+			if (modals.length == 0) {
+				$("body").css("overflow","");
+				$(document).off("keydown.wd_modal");
+			}
+			
+			this.$overlay.off("click.wd_modal");
+			
+			if (this.opener) {
+				this.opener.focus();
+				this.opener = null;
+			}
+			
+			this.isOpen = false;
+			this.$overlay.removeClass("wd_modal-current").hide();
+			
+			if (!skipCurrent && modals.length > 0)
+				modals[modals.length-1].$overlay.addClass("wd_modal-current");
+			
+			this.$element.trigger("close");
+		},
+		
+		destroy: function() {
+			this.close(false, true);
+			$("body").append(this.$element);
+			this.$overlay.remove();
+		},
+		
+		resize: function() {
+			if (!this.isOpen)
+				return;
+			
+			var self = this;
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var margin = this._options.margin;
+			var padding = this._options.padding;
+			
+			var width = winWidth - _value(margin[1], winWidth) - _value(margin[3], winWidth) - _value(padding[1], winWidth) - _value(padding[1], winWidth);
+			var height = winHeight - _value(margin[0], winHeight) - _value(margin[2], winHeight) - _value(padding[0], winHeight) - _value(padding[2], winHeight);
+			
+			this.$inner.css("max-width", width);
+			this.$inner.css("max-height", height);
+			
+			$.each(["Top", "Right", "Bottom", "Left"], function(i, v) {
+				self.$outer.css("padding" + v, _value(padding[i])+"px");
+			});
+			
+			var fixed = this.$element.find("[wd_need_fixed_container]").is(":visible");
+			
+			this.$inner.css("width", width);
+			this.$inner.css("height", height);
+
+			webDriver.doResize(this.$inner);
+			
+			if (!fixed) {
+				this.$inner.css("width", "auto");
+				this.$inner.css("height", "auto");
+				if (this.$element.outerHeight() > height)
+					this.$inner.css("height", height);
+				if (this.$element.outerWidth() > width)
+					this.$inner.css("width", width);
+			}
+		}
+	};
+
+	$.fn.wd_modal = function(options) {
+		if (options == "exists") {
+			return !!$(this).data("wd_modal");
+		} else if (typeof options == "string") {
+            var instance = $(this).data("wd_modal");
+			var args = Array.prototype.slice.call(arguments, 1);
+            return instance[options].apply(instance, args);
+        } else {
+            return this.each(function() {
+                var instance = $(this).data("wd_modal");
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_modal", new wd_modal(this, options));
+                }
+            });
+        }
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_hashchange.js" wd_script_id="wd_hashchange.js"></script>
+<script type="text/javascript" wd_script_id="asset_modal_support_script">
+			(function($) {
+				var prev_type_id = "";
+				var prev_item_id = "";
+				var prev_hash = false;
+				var on_close = "back";
+				var $modal = null;
+				function hash_update() {
+					var hash = window.location.hash || "#";
+					if (hash == prev_hash) return;
+					
+					var type_id = "";
+					var item_id = ""
+					
+					var apos = hash.indexOf("assets_");
+					if (apos >= 0) {
+						type_id = hash.substr(apos+7);
+						var cpos = type_id.indexOf(":");
+						if (cpos >= 0) {
+							item_id = type_id.substr(cpos+1);
+							type_id = type_id.substr(0, cpos);
+						}
+					}
+					
+					if (type_id == "")
+						type_id = "all";
+
+					if (type_id != prev_type_id && item_id == "") {
+						var $carousel = $(".wd_asset_carousel_list")
+						if ($carousel.length > 0)
+							$carousel.wd_carousel("filter", (type_id == "all") ? false : ".wd_asset_type_"+type_id);
+							
+						var $slideshow = $(".wd_asset_slideshow_list")
+						if ($slideshow.length > 0)
+							$slideshow.wd_slideshow("filter", (type_id == "all") ? false : ".wd_asset_type_"+type_id);
+							
+						$(".wd_asset_carousel_type_link").removeClass("wd_active");
+						$(".wd_asset_carousel_type_link.wd_asset_type_"+type_id).addClass("wd_active");
+							
+						prev_type_id = type_id;
+						on_close = "back";
+					}
+					
+					if (type_id != prev_type_id || item_id != prev_item_id) {
+						if (item_id == "")
+							hide_asset_modal();
+						else
+							load_asset_modal(type_id, item_id);
+							
+						prev_item_id = item_id;
+						
+						if (prev_hash === false)
+							on_close = "reset";
+					}
+					
+					prev_hash = hash;
+				}
+
+				function hide_asset_modal() {
+					var save_close = on_close;
+					on_close = false;
+					$("#wd_asset_modal").wd_modal("close");
+					on_close = save_close;
+				}
+				
+				function load_asset_modal(type_id, item_id) {
+					if (!$modal) {
+						$modal = $("#wd_asset_modal");
+						if ($modal.length == 0)
+							return;
+						
+						$modal.wd_modal({
+							autoOpen: false,
+						});
+						
+						$modal.show();
+
+						$modal.on("close", function() {
+							if (on_close == "back") {
+								history.back();
+							} else if (on_close == "reset") {
+								var href = window.location.href;
+								href = href.replace(/#.*$/, "#assets_all");
+								window.location.replace(href);
+							}
+						});
+					}
+					
+					var $item = $(".wd_asset_"+type_id+"-"+item_id).not(".wd_clone");
+					if ($item.length == 0 || $modal.length == 0)
+						return;
+					
+					$modal.wd_modal("open");
+
+					$item.each(function() {
+						var $list = $(this).closest(".wd_asset_carousel_list, .wd_asset_slideshow_list");
+						if ($list.hasClass("wd_asset_carousel_list"))
+							$list.wd_carousel("scrollToItem", this);
+						if ($list.hasClass("wd_asset_slideshow_list"))
+							$list.wd_slideshow("scrollToItem", this);
+					});
+				}
+				
+				$(function() {
+					setTimeout(hash_update, 10);
+					$(window).hashchange(hash_update);
+				});
+			})(webDriver.jQuery);
+		</script>
+<style type="text/css" wd_script_id="asset_modal_support_style">)
+			#wd_asset_modal .wd_captioned_image {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			#wd_asset_modal img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		</style>
+<style type="text/css" wd_script_id="asset_carousel_style">
+			.wd_asset_carousel_aspect {
+				position: relative;
+				height: 100%;
+				clear: both;
+			}
+			.wd_asset_carousel {
+				background-color: #666666;
+			}
+			.wd_asset_carousel_list .wd_asset_carousel a,
+			.wd_asset_carousel_list .wd_asset_carousel a:link,
+			.wd_asset_carousel_list .wd_asset_carousel a:visited {
+				color: inherit;
+			}
+			.wd_asset_carousel_list .wd_asset_carousel a:hover {
+				text-decoration: none;
+				background-color: inherit;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper a.wd_carousel-arrow:link,
+			.wd_carousel.wd_asset_carousel_wrapper a.wd_carousel-arrow:visited {
+				color: #aaaaaa;
+				font-size: 2em;
+				position: relative;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				transform: none;
+				margin: 10px 0;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper a.wd_carousel-arrow:hover {
+				color: #666666;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper .wd_carousel-prev {
+				float: left;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper .wd_carousel-next {
+				float: right;
+			}
+		</style>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_imagesloaded.js" wd_script_id="wd_imagesloaded.js"></script>
+<link href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_carousel.css" type="text/css" rel="stylesheet" wd_script_id="wd_carousel.css">
+<script type="text/javascript" wd_script_id="wd_carousel_script">
+(function($, undefined) {
+	webDriver.loadCarousel = function() {
+		var options = {};
+		var options_string = $(this).attr("wd_carousel_options");
+		if (options_string)
+			options = JSON.parse(options_string);
+		$(this).wd_carousel(options);
+	}
+	
+	webDriver.resizeCarousel = function() {
+		$(this).find(".wd_carousel-list").wd_carousel("resize");
+		return false;
+	}
+	
+	var wd_carousel = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_carousel.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				selector: "li",
+				center: true,
+				slideSpeed: 500,
+				slideEasing: "linear",
+				infinite: true,
+				widthMode: "content", // content, columns, width
+				heightMode: "fixed", // content, fixed
+				columns: 3,
+				minWidth: 250,
+				scrollUnit: "item", // item, page
+				scrollSize: 1,
+				dragThreshold: 10,
+				"class": "",
+				autoScroll: 0
+			};
+			
+			this.options(options);
+			
+			this.$container = $("<div>").addClass("wd_carousel").attr("wd_resize","resizeCarousel").insertBefore(this.$element);
+			if (this._options["class"])
+				this.$container.addClass(this._options["class"]);
+			this.$cropper = $("<div>").addClass("wd_carousel-cropper").appendTo(this.$container);
+			this.$element
+					.addClass("wd_carousel-list")
+					.appendTo(this.$cropper)
+					.css({position:"absolute",top:0,left:0})
+					.on("dragstart", "*", function(event) {event.preventDefault();});
+			this.$prev = $("<a class=\"wd_carousel-arrow wd_carousel-prev fa fa-chevron-left\" href=\"#prev\"><\/a>")
+					.on("click", function(event) {
+						self.stop();
+						self.prev();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			this.$next = $("<a class=\"wd_carousel-arrow wd_carousel-next fa fa-chevron-right\" href=\"#next\"><\/a>")
+					.on("click", function(event) {
+						self.stop();
+						self.next();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			
+//			this.$dragger = $("<div>")
+//					.addClass("wd_carousel-dragger")
+//					.appendTo(this.$cropper)
+			this.$cropper
+					.on("click", function(event) {
+						self.onClick(event);
+					})
+					.on("mousedown touchstart", function(event) {
+						self.dragStart(event);
+					})
+					.on("mousemove touchmove", function(event) {
+						self.dragMove(event);
+					})
+					.on("mouseup touchend mouseleave touchcancel", function(event) {
+						self.dragEnd(event);
+					});
+			this.dragging = false;
+			this.dragged = false;
+			
+			this.$items = this.$element.children(this._options.selector);
+			this.$items.addClass("wd_carousel-item");
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.navEnabled = true;
+			this.currentIndex = 0;
+			this.$currentItem = this.$items.eq(0);
+			
+			this.$clones = $([]);
+			
+			this.size_known = false;
+			this.$element.wd_imagesloaded(
+				function() {
+					self.size_known = true;					
+					self.resize();
+				},
+				"size"
+			);
+			
+			this.reset();
+			
+			this.start(this._options.autoScroll);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+
+		reset: function() {
+			this.$items.data("wd_carousel-index", null);
+			this.$clones.data("wd_carousel-index", null);
+			this.$element.children(".wd_clone").detach();
+			
+			var $children = this.$element.children();
+			this.itemCount = $children.length;
+			$children.each(function(index) {
+				$(this).data("wd_carousel-index", index);
+			});
+			
+			if (this.itemCount > 0) {
+				var $last_child = $children.eq(-1);
+				this.listWidth = $last_child.position().left + $last_child.outerWidth();
+			} else {
+				this.listWidth = 0;
+			}
+			
+			var cropperWidth = this.$cropper.innerWidth();
+			
+			if (this.itemCount < 2 || this.listWidth <= cropperWidth) {
+				var position = this._options.center ? ((cropperWidth-this.listWidth)/2) : 0;
+				this.$element.css("left", position);
+				$children.addClass("wd_carousel-current");
+				if (this.itemCount > 0 && this.size_known) {
+					this.$currentItem = this.itemAt(this.listWidth/2);
+					this.currentIndex = this.$currentItem.data("wd_carousel-index");
+				}
+				this.hideNav(true);
+			} else {
+				var left = cropperWidth;
+				for (var i = -1; i > -$children.length; --i) {
+					var $item = $children.eq(i);
+					var $clone = $item.data("wd_carousel-clone-left");
+					if (!$clone)
+						$clone = this.clone($item, "left");
+					this.$element.prepend($clone);
+					$clone.data("wd_carousel-index", i);
+					left -= $item.outerWidth();
+					if (left <= 0)
+						break;
+				}
+				
+				var right = 0;
+				for (var i = 0; i < $children.length; ++i) {
+					var $item = $children.eq(i);
+					var $clone = $item.data("wd_carousel-clone-right");
+					if (!$clone)
+						$clone = this.clone($item, "right");
+					this.$element.append($clone);
+					$clone.data("wd_carousel-index", $children.length+i);
+					right += $item.outerWidth();
+					if (right >= cropperWidth)
+						break;
+				}
+
+				this.hideNav(false);
+
+				var index = this.$currentItem.data("wd_carousel-index");
+				if (!index)
+					index = 0;
+				this.scrollToIndex(index, true);
+			}
+		},
+				
+		clone: function($item, dir) {
+			var $clone = $item.clone(true)
+				.attr("id","")
+				.addClass("wd_clone")
+				.data("wd_carousel-cloned-from", $item);
+		
+			$clone.find("[id]").each(function() {
+				$(this).attr("id", "");
+			});
+
+			$item.data("wd_carousel-clone-"+dir, $clone);
+			
+			this.$clones = this.$clones.add($clone);
+			
+			return $clone;
+		},
+				
+		hideNav: function(hide) {
+			this.$prev.toggle(!hide);
+			this.$next.toggle(!hide);
+			this.navEnabled = !hide;
+		},
+				
+		next: function() {
+			return this.scrollBy(this._options.scrollSize, this._options.scrollUnit);
+		},
+
+		prev: function() {
+			return this.scrollBy(-this._options.scrollSize, this._options.scrollUnit);
+		},
+		
+		scrollBy: function(count, unit) {
+			if (!this.navEnabled)
+				return false;
+			
+			var index;
+			if (unit == "item") {
+				index = this.currentIndex + count;
+			} else { // unit == "page"
+				var pageWidth = this.$cropper.innerWidth();
+				var offset = count;
+				if (this._options.center) {
+					pageWidth /= 2;
+					++offset;
+				}
+				var position = offset * pageWidth - this.$element.position().left;
+				var $item = this.itemAt(position);
+				index = $item.data("wd_carousel-index");
+				if (index == this.currentIndex)
+					index += (count < 0) ? -1 : 1;
+			}
+			
+			return this.scrollToIndex(index);
+		},
+				
+		_doAutoScroll() {
+			if (this.navEnabled && this.autoScrollInterval > 0) {
+				var self = this;
+				this.autoScrollTimer = setTimeout(function() {
+						self.next();
+					},
+					this.autoScrollInterval
+				);
+			}
+		},
+		
+		start: function(interval) {
+			this.pause();
+			if (interval !== undefined)
+				this.autoScrollInterval = interval;
+			this._doAutoScroll();
+		},
+		
+		pause: function() {
+			if (this.autoScrollTimer) {
+				clearTimeout(this.autoScrollTimer);
+				this.autoScrollTimer = null;
+			}
+		},
+				
+		stop: function() {
+			this.pause();
+			this.autoScrollInterval = 0;
+		},
+		
+		scrollToIndex: function(index, now) {
+			if (this.itemCount == 0 || !this.navEnabled)
+				return false;
+			
+			this.pause();
+			
+			var $children = this.$element.children().not(".wd_clone");
+			
+			index = (index + $children.length) % $children.length;
+			var $child = $children.eq(index);
+			
+			this.$element.find(".wd_carousel-current").removeClass("wd_carousel-current");
+			$child.addClass("wd_carousel-current");
+			
+			var position = -$child.position().left;
+			if (this._options.center) {
+				position += this.$cropper.innerWidth()/2 - $child.outerWidth()/2;
+			}
+			
+			if (this._options.slideEasing && !now) {
+				this.$element.stop();
+				
+				var cur_offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var cur_pos = this.$element.position().left;
+				var $cur_item = this.itemAt(cur_offset - cur_pos);
+				var cur_dist = Math.abs(position - cur_pos);
+				
+				var $clone, clone_pos, clone_dist;
+				$clone = $cur_item.data("wd_carousel-clone-left");
+				if ($clone) {
+					var clone_pos = -$clone.position().left;
+					if (this._options.center) {
+						clone_pos += this.$cropper.innerWidth()/2 - $clone.outerWidth()/2;
+					}
+					clone_dist = Math.abs(position - clone_pos);
+					if (clone_dist < cur_dist) {
+						cur_pos = clone_pos;
+						cur_dist = clone_dist;
+					}
+				}
+
+				$clone = $cur_item.data("wd_carousel-clone-right");
+				if ($clone) {
+					var clone_pos = -$clone.position().left;
+					if (this._options.center) {
+						clone_pos += this.$cropper.innerWidth()/2 - $clone.outerWidth()/2;
+					}
+					clone_dist = Math.abs(position - clone_pos);
+					if (clone_dist < cur_dist) {
+						cur_pos = clone_pos;
+						cur_dist = clone_dist;
+					}
+				}
+
+				var self = this;
+				this.$element.css("left", cur_pos);
+				this.$element.animate({left: position}, this._options.slideSpeed, this._options.slideEasing, function() {self.start();});
+			} else {
+				this.$element.css("left", position);
+				this.start();
+			}
+
+			this.currentIndex = index;
+			this.$currentItem = $child;
+		},
+				
+		scrollToItem: function(item) {
+			var index = $(item).data("wd_carousel-index");
+			if (index !== null)
+				this.scrollToIndex(index);
+		},
+				
+		makeItemCurrent: function(item) {
+			var $item = $(item);
+			if (!$item.hasClass("wd_carousel-current")) {
+				this.$element.find(".wd_carousel-current").removeClass("wd_carousel-current");
+				
+				var $clonedFrom = $item.data("wd_carousel-cloned-from");
+				if ($clonedFrom) {
+					var clone_pos = $item.position().left;
+					var item_pos = $clonedFrom.position().left;
+					var offset = clone_pos - item_pos;
+					this.$element.css("left", this.$element.css("left") + offset);
+					this.dragListX += offset;
+					$item = $clonedFrom;
+				}
+				
+				$item.addClass("wd_carousel-current");
+				this.currentIndex = $item.data("wd_carousel-index");
+				this.$currentItem = $item;
+			}
+		},
+				
+		itemAt: function(position) {
+			var $children = this.$element.children();
+			if ($children.length == 0)
+				return null;
+			
+			var $item = $children.eq(Math.floor($children.length/2));
+			var dir = 0;
+			while (true) {
+				if (position < $item.position().left) {
+					$item = $item.prev();
+					if (dir == 1)
+						break;
+					dir = -1;
+				} else if (position > $item.position().left + $item.outerWidth()) {
+					$item = $item.next();
+					if (dir == -1)
+						break;
+					dir = 1;
+				} else {
+					break;
+				}
+				if ($item.length == 0)
+					break;
+			}
+			
+			return $item;
+		},
+				
+		onClick: function(event) {
+			if (this.dragged) {
+				event.stopImmediatePropagation();
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		},
+				
+		dragStart: function(event) {
+			this.dragged = false;
+
+			if (!this.navEnabled)
+				return;
+
+			this.pause();
+			this.dragIndex = this.currentIndex;
+			
+			this.dragStartX = this.eventPosition(event);
+			if (this.dragStartX === undefined)
+				return;
+			
+			this.dragListX = this.$element.position().left;
+
+//			this.$cropper.addClass("dragging");
+			this.dragging = true;
+		},
+				
+		dragMove: function(event) {
+			if (!this.dragging)
+				return;
+			
+			event.preventDefault();
+			
+			var pos = this.eventPosition(event);
+			var delta = pos - this.dragStartX;
+			
+			if (!this.dragged && Math.abs(delta) >= this._options.dragThreshold) {
+				this.$cropper.addClass("dragging");
+				this.dragged = true;
+			}
+			
+			if (this.dragged) {
+				var list_position = this.dragListX+delta;
+				this.$element.css("left", list_position);
+				
+				var offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var position = offset - this.$element.position().left;
+				var $item = this.itemAt(position);
+				this.makeItemCurrent($item);
+			}
+		},
+				
+		dragEnd: function(event) {
+			if (!this.dragging)
+				return;
+			
+			if (this.dragged) {
+				var offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var position = offset - this.$element.position().left;
+				var $item = this.itemAt(position);
+				var index = $item.data("wd_carousel-index");
+				if (index !== null && index != this.dragIndex)
+					this.stop();
+				this.scrollToIndex(index);
+			}
+
+			this.$cropper.removeClass("dragging");
+			this.dragging = false;
+			this.start();
+		},
+				
+		eventPosition: function(event) {
+			if (event.originalEvent && event.originalEvent.touches) {
+				var touches = event.originalEvent.touches;
+				if (touches.length != 1)
+					return undefined;
+				return touches[0].pageX;
+			} else {
+				return event.pageX;
+			}
+		},
+				
+		filter: function(selector) {
+			this.$element.children().detach();
+			var $items = this.$items;
+			if (selector)
+				$items = $items.filter(selector);
+			if ($items.length > 0)
+				this.$element.append($items);
+			this.reset();
+		},
+		
+		destroy: function() {
+			this.stop();
+			this.filter(false);
+			this.$clones = $([]);
+			this.$items
+				.removeClass("wd_carousel-item")
+				.data("wd_carousel-index", null)
+				.data("wd_carousel-clone-right", null)
+				.data("wd_carousel-clone-left", null);
+			this.$element
+				.removeClass("wd_carousel-list")
+				.insertBefore(this.$container);
+			this.$container.remove();
+		},
+		
+		resize: function() {
+			if (this._options.widthMode != "content") {
+				var totalWidth = this.$cropper.innerWidth();
+				var columns = this._options.columns;
+				if (this.widthMode == "width")
+					columns = Math.max(Math.floor(totalWidth / this._options.minWidth), 1);
+				var width = totalWidth / columns;
+				this.$items.outerWidth(width);
+				this.$clones.outerWidth(width);
+			}
+			
+			webDriver.doResize(this.$element);
+			
+			if (this._options.heightMode == "content") {
+				var height = this.$element.outerHeight();
+				this.$cropper.height(height);
+			}
+			
+			this.reset();
+		}
+	};
+
+	$.fn.wd_carousel = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_carousel");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_carousel", new wd_carousel(this, options));
+                }
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_scriptloader.js" wd_script_id="wd_scriptloader.js"></script>
+<link href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_slideshow.css" type="text/css" rel="stylesheet" wd_script_id="wd_slideshow.css">
+<script type="text/javascript" wd_script_id="wd_slideshow_script">
+(function($, undefined) {
+	webDriver.resizeSlideshow = function() {
+		$(this).find(".wd_slideshow-list").wd_slideshow("resize");
+		return false;
+	}
+	
+	var wd_slideshow = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_slideshow.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				selector: "li",
+				preload: false,
+				"class": "",
+				resize: "container" // children, self, container
+			};
+			
+			this.options(options);
+			
+			this.$container = $("<div>").addClass("wd_slideshow").attr("wd_resize","resizeSlideshow").attr("tabindex","-1").insertBefore(this.$element);
+			if (this._options["class"])
+				this.$container.addClass(this._options["class"]);
+			this.$cropper = $("<div>").addClass("wd_slideshow-cropper").appendTo(this.$container);
+			this.$element
+					.addClass("wd_slideshow-list")
+					.appendTo(this.$cropper)
+			;
+			this.$prev = $("<a class=\"wd_slideshow-arrow wd_slideshow-prev fa fa-chevron-left\" href=\"#prev\" title=\"Previous\"><span class=\"wd_sr-only\">Previous Item<\/span><\/a>")
+					.on("click", function(event) {
+						self.prev();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			this.$next = $("<a class=\"wd_slideshow-arrow wd_slideshow-next fa fa-chevron-right\" href=\"#next\" title=\"Next\"><span class=\"wd_sr-only\">Next Item<\/span><\/a>")
+					.on("click", function(event) {
+						self.next();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			
+			this.$container.on("keydown.wd_slideshow", function (event) {
+				var key = event.which || event.keyCode;
+				if (key == 37) {
+					self.prev();
+					event.stopImmediatePropagation();
+					event.preventDefault();
+				}
+				if (key == 39) {
+					self.next();
+					event.stopImmediatePropagation();
+					event.preventDefault();
+				}
+			});
+
+			this.$items = this.$element.children(this._options.selector);
+			this.$items.addClass("wd_slideshow-item");
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.navEnabled = true;
+			this.currentIndex = 0;
+			this.$currentItem = this.$items.eq(0);
+			
+			if (this._options.preload)
+				this.load_next();
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.reset();
+		},
+
+		reset: function() {
+			this.$items.data("wd_slideshow-index", null);
+			
+			var $children = this.$element.children();
+			this.itemCount = $children.length;
+			$children.each(function(index) {
+				$(this).data("wd_slideshow-index", index);
+			});
+
+			this.hideNav(this.itemCount < 2);
+			
+			var index = this.$currentItem.data("wd_slideshow-index");
+			if (!index)
+				index = 0;
+			
+			this.scrollToIndex(index, false);
+		},
+				
+		hideNav: function(hide) {
+			this.$prev.toggle(!hide);
+			this.$next.toggle(!hide);
+			this.navEnabled = !hide;
+		},
+				
+		item_loaded: function(item) {
+			var $item = $(item);
+			return ($item.children().length > 0 || !$item.attr("wd_ajax_url"));
+		},
+				
+		load_next: function() {
+			var self = this;
+			var next = null;
+			var $children = this.$element.children().not(".wd_clone");
+
+			var after = this.currentIndex;
+			var before = this.currentIndex;
+			while (after < $children.length || before >= 0) {
+				if (after < $children.length && !this.item_loaded($children[after])) {
+					next = $children[after];
+					break;
+				}
+				++after;
+				if (before >= 0 && !this.item_loaded($children[before])) {
+					next = $children[before];
+					break;
+				}
+				--before;
+			}
+			
+			if (!next) {
+				var $filtered = this.$items.remove($children);
+
+				$filtered.each(function() {
+					if (!self.item_loaded(this)) {
+						next = this;
+						return false;
+					}
+				});
+			}
+			
+			if (next)
+				this.load_item(next, function() {self.load_next();});
+		},
+		
+		load_item: function(item, on_complete) {
+			var self = this;
+			var $item = $(item);
+			var complete = on_complete;
+			
+			if (!this.item_loaded($item)) {
+				$item.html("<div>Loading...</div>");
+				$item.addClass("wd_loading");
+				$item.load(
+					$item.attr("wd_ajax_url"),
+					function(response, status, xhr) {
+						webDriver.queueCallback(function() {
+							if ($item.hasClass("wd_slideshow-current"))
+								self.resize(self._options["resize"] == "container");
+							$item.removeClass("wd_loading");
+							if ($item.hasClass("wd_slideshow-current")) {
+								$item.wd_imagesloaded(
+									function() {
+										self.resize();
+									},
+									"size"
+								);
+							}
+						});
+
+						if (complete)
+							complete(response, status, xhr);
+					}
+				);
+			}
+		},
+				
+		next: function() {
+			return this.scrollBy(1);
+		},
+
+		prev: function() {
+			return this.scrollBy(-1);
+		},
+		
+		scrollBy: function(count) {
+			var index = this.currentIndex + count;
+			
+			return this.scrollToIndex(index, true);
+		},
+		
+		scrollToIndex: function(index, update_hash) {
+			var self = this;
+			var $children = this.$element.children().not(".wd_clone");
+			
+			var orig_index = index;
+			index = (index + $children.length) % $children.length;
+			var $child = $children.eq(index);
+			
+			if (update_hash && $child.attr("wd_item_hash")) {
+				var hash = "#"+$child.attr("wd_item_hash");
+				var current_hash = window.location.hash || "#";
+				if (hash != current_hash) {
+					var href = window.location.href+"#";
+					href = href.replace(/#.*$/, hash);
+					window.location.replace(href);
+					return;
+				}
+			}
+			
+			this.$element.find(".wd_slideshow-current").removeClass("wd_slideshow-current");
+			$child.addClass("wd_slideshow-current");
+			
+			if (!this.item_loaded($child))
+				this.load_item($child);
+			
+			this.$container[0].focus();
+
+			this.currentIndex = index;
+			this.$currentItem = $child;
+			
+			this.resize(this._options["resize"] == "container");
+		},
+				
+		scrollToItem: function(item) {
+			var index = $(item).data("wd_slideshow-index");
+			if (index !== null)
+				this.scrollToIndex(index, true);
+		},
+				
+		filter: function(selector) {
+			this.$element.children().detach();
+			var $items = this.$items;
+			if (selector)
+				$items = $items.filter(selector);
+			this.$element.append($items);
+			this.reset();
+		},
+		
+		destroy: function() {
+			this.filter(false);
+			this.$items
+				.removeClass("wd_slideshow-item")
+				.data("wd_slideshow-index", null)
+			;
+			this.$element
+				.removeClass("wd_slideshow-list")
+				.insertBefore(this.$container)
+			;
+			this.$container.remove();
+		},
+		
+		resize: function(resize_container) {
+			if (resize_container) {
+				webDriver.doResize(this.$container, "container");
+			} else if (this.$currentItem && !this.$currentItem.hasClass("wd_loading")) {
+				webDriver.doResize(this.$currentItem);
+			}
+		}
+	};
+
+	$.fn.wd_slideshow = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_slideshow");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (!instance) {
+					instance = new wd_slideshow(this, options);
+					$(this).data("wd_slideshow", instance);
+				}
+				
+                instance.reload(options);
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" wd_script_id="template_list_slideshow_script">
+						webDriver.jQuery(function($) {
+							$(".wd_layout-slideshow").each(function() {
+								var $slideshow = $(this);
+								$slideshow.wd_slideshow({
+									preload: true,
+									"class": "wd_asset_slideshow_wrapper"
+								});
+							});
+						});
+					</script>
+<link href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/font-awesome.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<style type="text/css" wd_script_id="template asset_carousel_item:gallery:system style">
+.wd_gallery_asset {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: #ffffff;
+	min-height: 100px;
+	min-width: 100px;
+}
+.wd_gallery_asset .wd_asset_image {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 0px;
+}
+.wd_gallery_asset .wd_asset_image img {
+	max-width: 100%;
+	max-height: 100%;
+	flex-shrink: 0;
+	margin: 0;
+	float: none;
+}
+.wd_gallery_asset .wd_icon_overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .75) none center center no-repeat;
+	visibility: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_link_underlay {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.wd_gallery_asset .wd_icon_overlay a.wd_link_underlay:hover {
+	background-color: transparent;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container {
+	font-size: 50px;
+	position: relative;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a {
+	color: #cccccc;
+}
+.wd_gallery_asset .wd_title_overlay {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	pointer-events: none;
+	visibility: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	-moz-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+.wd_gallery_asset:hover .wd_icon_overlay,
+.wd_gallery_asset:hover .wd_title_overlay {
+	visibility: visible;
+}</style>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_load.js" wd_script_id="wd_load.js"></script>
+<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_fixed_aspect_ratio.js" wd_script_id="wd_fixed_aspect_ratio.js"></script>
+<script type="text/javascript" wd_script_id="move_content_script">
+				(function($) {
+					function wd_move_content() {
+						$("[wd_move_after]").each(function() {
+							var $this = $(this);
+							var selectors = $this.attr("wd_move_after").split("|");
+							for (var i = 0; i < selectors.length; ++i) {
+								var $dest = $(selectors[i]);
+								if ($dest.length > 0) {
+									$this.insertAfter($dest.eq(0));
+									break;
+								}
+							}
+						});
+					}
+					
+					$(function() {
+						wd_move_content();
+					});
+				})(webDriver.jQuery);
+			</script>
+<script type="text/javascript" wd_script_id="view_printable_script">
+	function view_printable() {
+		var loc = window.location;
+		var sep = (loc.search == "") ? "?" : "&";
+		var url = loc.protocol+"//"+loc.host+loc.pathname+loc.search+sep+"printable"+loc.hash;
+		window.open(url, "_blank", "");
+	}
+</script>
+<script type="text/javascript" wd_script_id="format_news_script">
+(function($) {
+	webDriver.formatNews = function() {
+		var $news = $(this);
+		var print_url = $news.attr("wd_print_url");
+		$news.find("table").each(function() {
+			var $table = $(this);
+			var $parent = $table.parent();
+			if ($parent.innerWidth() < $table.outerWidth()) {
+				if ($parent.hasClass("wd_news_table")) {
+					$parent.find(".fullscreen-button").show();
+				} else {
+					var $btn = $("<div>View News Release Full Screen</div>")
+						.addClass("fullscreen-button")
+						.on("click", function() {
+							if (print_url)
+								window.open(print_url, "_blank", "");
+							else
+								view_printable();
+						})
+					;
+
+					var $div = $("<div></div>)")
+						.addClass("wd_news_table")
+						.css("overflow-x", "auto")
+						.append($btn)
+					;
+
+					$table.replaceWith($div);
+					$div.append($table);
+				}
+			} else {
+				if ($parent.hasClass("wd_news_table"))
+					$parent.find(".fullscreen-button").hide();
+			}
+		});
+	}
+})(webDriver.jQuery);
+</script>
+<style type="text/css" wd_script_id="template detail:newsfeed_releases:system style">
+.wd_title {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.wd_subtitle {
+	font-weight: bold;
+}
+table.wd_extimagetable {
+	border-style: none; 
+	border-spacing:0px;
+	clear: right; 
+	float: right; 
+}
+td.wd_extimagecell {
+	text-align: right; 
+	margin: 0px 0px 5px 5px;
+	padding:0px;
+}
+td.wd_extimagecell img {
+	padding-left:10px;
+	padding-bottom:10px;
+	border-style: none; 
+}
+blockquote.wd_pullquote {
+	font-style: italic;
+	width:200px;
+	margin:0 0 20px 20px;
+	line-height: 1.8em;
+	float: right;
+	clear: right;
+}
+blockquote.wd_pullquote:before {
+	content: "“ ";
+	font-size: xx-large;
+}
+blockquote.wd_pullquote:after {
+	content: " ”";
+	font-size: xx-large;
+	float: right;
+}
+.fullscreen-button {
+	border: 1px solid #d1d1d1;
+	background: #e3e3e3 url(images/webdriver/view_full_screen_button_background.png) no-repeat;
+	padding: 3px 3px 3px 30px;
+	margin: 5px 0px 5px 0px;
+	color: #727272;
+	width: 220px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wd_contact {
+	margin: 1em 0;
+}
+.wd_release_data {
+	margin: 1em 0;
+}
+.wd_caption {
+	text-align: center;
+	font-size: 0.72em;
+	font-style: italic;
+	margin: 1em 0 0 0;
+}
+</style>
+<style type="text/css" wd_script_id="addthis_WCAG_style">
+		#at15s .at4-icon {
+			height: auto !important;
+			line-height: auto !important;
+			min-height: 16px;
+		}
+		span.wd_page_tool .at-share-tbx-element .at-share-btn {
+			margin: 0;
+		}
+		span.wd_page_tool .at-share-tbx-element .at-share-btn + .at-share-btn {
+			margin-left: 2ex;
+		}
+		div.wd_page_toolbar td span.wd_page_tool .at-share-tbx-element .at-share-btn + .at-share-btn {
+			margin-left: 4px;
+		}
+		li.wd_tool .at-resp-share-element .at-share-btn {
+			margin: 0;
+		}
+		li.wd_tool .at-resp-share-element .at-share-btn + .at-share-btn {
+			margin-left: 2px;
+		}
+	</style>
+<style type="text/css" wd_script_id="toolbar_style">
+			span.wd_page_tool {display: inline-block; margin: 0px; padding: 0px; vertical-align: middle;}
+			div.wd_page_toolbar td span.wd_page_tool {margin: 2px;}
+			div.wd_page_toolbar td {text-align: center;}
+			span.wd_page_tool a {display: inline-block; height: 16px; margin: 0px; padding: 0px; vertical-align: middle;}
+			span.wd_page_tool a span {display: inline-block; margin: 0px; padding: 0px; vertical-align: middle;}
+		</style>
+<script type="text/javascript">webDriver.pop_jQuery();</script>
+
+<!-- end spin_special_output(head_start) -->
+
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	  <meta name="keywords" content="">
+	  <meta name="rights" content="Microsemi Corporation">
+	  <meta name="description" content="">
+	  
+	  <title>Microsemi Corporation to Acquire Vitesse Semiconductor Corporation - Mar 18, 2015</title>
+		
+ <meta name="keywords" content="">
+ <meta name="description" content="Microsemi Corporation InvestorRoom  ">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Microsemi Corporation to Acquire Vitesse Semiconductor Corporation">
+ <meta name="twitter:description" content="Microsemi Corporation (Nasdaq: MSCC), a leading provider of semiconductor solutions differentiated by power, security, reliability and performance, and Vitesse Semiconductor Corporation (Nasdaq:... ">
+ <meta name="twitter:image" content="http://photos.prnewswire.com/prnvar/20110909/MM66070LOGO">
+ <meta property="og:site_name" content="Microsemi Corporation InvestorRoom ">
+ <meta property="og:url" content="https://investor.microsemi.com/2015-03-18-Microsemi-Corporation-to-Acquire-Vitesse-Semiconductor-Corporation">
+ <meta property="og:title" content="Microsemi Corporation to Acquire Vitesse Semiconductor Corporation">
+ <meta property="og:description" content="Microsemi Corporation (Nasdaq: MSCC), a leading provider of semiconductor solutions differentiated by power, security, reliability and performance, and Vitesse Semiconductor Corporation (Nasdaq:... ">
+ <meta property="og:image" content="http://photos.prnewswire.com/prnvar/20110909/MM66070LOGO">
+	
+	  <link href="https://www.microsemi.com/index.php?option=com_search&amp;Itemid=4038&amp;catid=3627&amp;id=3139&amp;lang=en&amp;view=article&amp;format=opensearch" rel="search" title="Search Microsemi SANDBOX" type="application/opensearchdescription+xml">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/style.css" type="text/css">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/cck.css" type="text/css">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/content.css" type="text/css">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/screen.css" type="text/css" media="screen">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/print.css" type="text/css" media="print">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/micro-sites.css" type="text/css" media="screen">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/custom_stylesheet_13.css" type="text/css" media="screen">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/style_002.css" type="text/css">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/style2.css" type="text/css">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/print.css" type="text/css" media="print">
+	  <link rel="stylesheet" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/micro-sites.css" type="text/css" media="screen">
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/mootools-core.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/core.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/caption.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/jquery-1.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/jquery-no-conflict.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/rendering.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/mootools-more.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/jquery.js" type="text/javascript"></script>
+	  <script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/default.js" type="text/javascript"></script>
+
+	  <meta name="copyright" content="Microsemi Dev">
+	  <meta name="dbg_base" content="https://www.microsemi.com/">
+
+	  				<script> 
+		jQuery(document).ready(function() { 
+		  jQuery('a.doclink').attr('target','_blank');
+		});
+		</script>
+
+		<script type="text/javascript">
+		 var _gaq = _gaq || [];
+		 _gaq.push(['_setAccount', 'UA-20085-2']);
+		_gaq.push(['_trackPageview']);
+		 (function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		 })();
+		</script>
+		<link rel="stylesheet" type="text/css" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wdcontent.css">
+		<link rel="stylesheet" type="text/css" href="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_media_query.css">
+
+		<link rel="alternate" href="https://investor.microsemi.com/releases?pagetemplate=rss" type="application/rss+xml" title="Microsemi Corporation InvestorRoom ">		
+	<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/wd_distribute_height.js" wd_script_id="wd_distribute_height.js"></script></head>
+
+	<body class="left-1-main" id="43">
+		<div id="header" class="clear clearfix">
+			<div class="gutter clearfix">
+				<div class="headnew">
+					<div class="logoNew">
+						<div id="logo"><a href="https://www.microsemi.com/" title="Microsemi SANDBOX">Microsemi</a></div>
+					</div>
+					<div class="newLogin">
+						<div class="moduletable_tmenu clearfix">
+							<ul class="menu last-child">
+								<li class="item-509"><a href="https://www.microsemi.com/company/quality">Quality</a></li>
+								<li class="item-511"><a href="http://investor.microsemi.com/">Investors</a></li>
+								<li class="item-3701"><a href="https://www.microsemi.com/salescontacts">Sales Contacts</a></li>
+								<li class="item-508 lastmenu"><a href="https://www.microsemi.com/parametricsearch">Parametric Search</a></li>
+							</ul>
+
+						</div>
+						<div class="moduletable_loginmod clearfix">
+							<div id="btl">
+								<div class="btl-panel">
+									<span id="btl-panel-login" style="color:#ffffff;" class="btl-modal"><a href="https://www.microsemi.com/log-in" style="color:#fff;">MyMicrosemi Login</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="headsearchNew">
+						<div class="moduletable_sbox clearfix">
+							<script type="text/javascript">
+							jQuery(document).ready(function() {
+								jQuery('#mod_search_button').click(function (e) {
+									e.preventDefault();
+									if (jQuery('#mod-search-searchword').val() == 'Search by part # or keyword') {
+										jQuery('#mod-search-searchword').val('');
+									}
+									jQuery('#mod_search_form').submit();
+								});
+							});
+							</script>
+
+							<form action="https://search.microsemi.com/Reports/AdvancedWebSearch.aspx" method="post" id="mod_search_form">
+							<div class="search_sbox">
+							<label for="mod-search-searchword"> </label><input name="searchTerm" id="mod-search-searchword" maxlength="150" class="inputbox_sbox" size="20" value="Search by part # or keyword" onblur="if (this.value=='') this.value='Search by part # or keyword';" onfocus="if (this.value=='Search by part # or keyword') this.value='';" type="text"><input id="mod_search_button" value="Search" class="button_sbox" onclick="if (this.value=='Search by part # or keyword') this.value=''; this.form.searchword.focus();" type="submit"><!--input type="hidden" name="task" value="search" / -->
+							</div>
+							</form>
+						</div>
+					</div>
+					<div class="clearing"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Navigation --->
+        <div id="nav" class="clear clearfix">
+            <div class="noindex">
+                <div class="mainnavnew">
+              		<div class="moduletable">
+					<!-- Available in two variations: "light" and "dark" | Change <header> class to see impact. -->
+						<header class="light">
+						  <nav role="navigation">
+							<a href="javascript:void(0);" class="ic menu">
+							  <span class="line"></span>
+							  <span class="line"></span>
+							  <span class="line"></span>
+							</a>
+							<a href="javascript:void(0);" class="ic close"></a>
+							<ul class="main-nav">
+										<li class="top-level-link">
+															<a href="https://www.microsemi.com/products/"><span>Products</span></a>
+															<div class="sub-menu-block">
+											  <div class="mega_row">
+											  <div class="mega_row_box" style="width:630px;"><ul class="sub-menu-lists">		<div class="moduletable">
+											<h3>Browse Products</h3>
+											<style>
+						.prod_div_mod {width:300px;float:left;}
+						.prod_div_mod ul li a {color:#2E5291 !important;}
+						</style>
+						<div class="prod_div_mod">
+						<ul>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/products/audio-voice/audio-voice">Audio &amp; Voice</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/3590-circuit-protection">Circuit Protection</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/809-ics">Drivers, Interfaces, and PCIe Switches</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions">Ethernet and PoE Solutions</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/products/fpga-soc/fpga-and-soc">FPGA &amp; SoC</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/1758-high-reliability">High-Reliability</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/products/optical-networking/optical-networking">Optical Networking</a>
+						</li>
+						</ul>
+						</div>
+						<div class="prod_div_mod">
+						<ul>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/606-discretes">Power Discretes &amp; Modules</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/ics/853-power-management">Power Management</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/973-rf-microwave-a-millimeter-wave">RF, Microwave &amp; Millimeter Wave</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/design-support/services-support">Services</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/products/storage/storage">Storage Solutions</a>
+						</li>
+						<li style="list-style:none;line-height: 25px;">
+							<a href="https://www.microsemi.com/product-directory/3425-timing-synchronization">Timing &amp; Synchronization</a>
+						</li>
+						</ul>
+						</div>
+						<div style="clear:both;"></div>		</div>
+							</ul></div><div class="mega_row_box" style="width:630px;"><ul class="sub-menu-lists"><li><div style="width: 700px; border-left: 1px dotted #e1e8ed; padding-left: 30px;">
+						<div><strong>New Product</strong></div>
+						<div style="width: 250px; float: left;"><img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/PDS-EM-8100.png" height="163" width="250" border="0"></div>
+						<div style="width: 430px; float: left; padding: 0 10px;"><strong>PDS-EM-8100 – 2.5Gbps NBASE-T PoE Mux<br><br></strong></div>
+						<ul style="list-style-position: inside; padding-left: 5px;">
+						<li>Optimal solution for 802.11ac wave II 2.5G Access points</li>
+						<li>Upgrades existing 1G switch to 2.5G interface</li>
+						<li>2 x 1G ports , 1 x 2.5G port with 30W PoE</li>
+						<li>Plug and Play – zero configuration</li>
+						</ul>
+						<div style="float: right;"><a href="https://www.microsemi.com/products/poe-systems/pds-em-8100-2-5gbps-nbase-t-poe-mux" style="text-decoration: underline;">Learn More</a></div>
+						</div></li></ul></div><div class="mega_row_box" style="width:630px;"><ul class="sub-menu-lists"></ul></div>						<div class="clearing"></div>
+											  </div>
+											</div>
+									</li>
+											<li class="top-level-link">
+															<a href="https://www.microsemi.com/applications/"><span>Applications</span></a>
+															<div class="sub-menu-block">
+											  <div class="mega_row">
+											  <div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists">		<div class="moduletable">
+											<style>
+						.app_div_mod {width:265px;float:left; min-height:272px;}
+						.app_div_mod_ul li a {color:#2E5291 !important;}
+						</style>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/automotive" style="color: #646464;">Automotive</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/automotive/adas">Advanced Driver Assist Systems (ADAS)</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/automotive/body-electronics">Body Electronics</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/automotive/infotainment">Infotainment</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/automotive/powertrain">Powertrain &amp; EV Charging</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/commercial-aviation" style="color: #646464;">Commercial Aviation</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/commercial-aviation/actuation-systems">Actuation Systems</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/commercial-aviation/aviation-center-of-excellence">Aviation Center Of Excellence</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/commercial-aviation/cabin-management-systems">Cabin Management Systems</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/commercial-aviation/cockpit-avionics">Cockpit Avionics</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/commercial-aviation/engine-systems-controls">Engine Systems &amp; Controls</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/commercial-aviation/rf-avionics-systems">RF &amp; Microwave Systems</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/communications" style="color: #646464;">Communications</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/communications/access-metro-network">Access Network</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/communications/customer-premise-equipment">Broadband Home / CPE</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/communications/broadcast-video">Broadcast Video</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/communications/cellular-infrastructure">Cellular Infrastructure</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/communications/enterprise-infrastructure">Enterprise Infrastructure</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/communications/core-network">Metro / Core / DCI Network</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/data-center" style="color: #646464;">Data Centers</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/data-center/data-protection-security">Data Protection &amp; Security</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/data-center/motherboard-rack-infrastructure">Motherboard &amp; Rack Infrastructure </a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/data-center/nvm-storage">NVMe Storage</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/data-center/rack-scale-infrastructure">Rack Scale Architecture</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/data-center/servers">Storage Servers</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/data-center/storage-systems">Storage Systems</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/defense" style="color: #646464;">Defense</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/defense/integrated-vehicle-systems">Integrated Vehicle Systems</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/defense/military-communications">Military Communications</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/defense/radar-ew">Radar Electronic Warfare</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/industrial" style="color: #646464;">Industrial</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/hmi">HMI (Human Machine Interface)</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/industrial-ethernet">Industrial Ethernet Networking</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/industrial-imaging">Industrial Imaging</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/more-industrial-applications">More Industrial Applications</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/motor-control">Motor Control</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/physical-security">Physical Security</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industry-solutions/programmable-logic-controllers">Programmable Logic Control</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/safety-heritage">Safety Heritage</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/smart-energy">Smart Energy</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/test-scientific-and-measurement">Test, Scientific and Measurement</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/medical" style="color: #646464;">Medical</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/medical-instrumentation/imaging">Medical Imaging</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/medical/medical-instrumentation">Medical Instrumentation</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/medical/medical-implantable-ingestible">Medical-Implantable/Ingestible</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/medical/medical-wearable-wireless">Medical-Wearable Wireless</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/space" style="color: #646464;">Space</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/satellite-bus-platform/altitude-orbit-control">Attitude &amp; Orbit Control</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/satellite-payloads/digital-communications-payload">Digital Communications Payload</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/satellite-bus-platform/power-distribution-control">Electrical Power Systems</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/landers/instrument-payload">Remote Sensing Payload</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/launchers/telemetry-tracking-control">Telemetry Tracking &amp; Control</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/satellite-payloads/rf-repeater-payload">Transparent RF Transponder</a>
+							</li>
+							</ul>
+						</div>
+						<div class="app_div_mod">
+						<h3><a href="https://www.microsemi.com/applications/system-solutions" style="color: #646464;">System Solutions</a></h3>
+						<ul class="app_div_mod_ul">
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industry-solutions/education">Education</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/enterprise/financial-services">Financial Services</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/defense/timing-solutions">Government</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/enterprise/healthcare">Healthcare</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industrial/power-utilities">Power Utilities</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/industry-solutions/retail">Retail</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/system-solutions/stadiums-arenas">Stadiums-Arenas</a>
+							</li>
+								<li style="list-style:none;line-height: 25px;">
+								<a href="https://www.microsemi.com/applications/enterprise/transportation">Transportation</a>
+							</li>
+							</ul>
+						</div>
+						<div style="clear:both;"></div>
+								</div>
+							</ul></div><div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"></ul></div>						<div class="clearing"></div>
+											  </div>
+											</div>
+									</li>
+											<li class="top-level-link">
+															<span class="separator">Design Tools</span>
+															<div class="sub-menu-block">
+											  <div class="mega_row">
+											  <div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+						<h3>Documentation</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/design-support/application-notes">Application Notes</a></li>
+						<li><a href="https://www.microsemi.com/design-tools/product-briefs">Product Briefs</a></li>
+						<li><a href="https://www.microsemi.com/design-support/product-brochures">Product Brochures</a></li>
+						<li><a href="https://www.microsemi.com/design-support/white-papers-support">White Papers</a></li>
+						</ul>
+						</div>
+						<div class="main_menu_custom_box">
+						<h3>Technology</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/products/fpga-soc/design-support/fpga-soc-design">FPGA &amp; SoC Design</a></li>
+						<li><a href="https://www.microsemi.com/design-tools/technical-articles">Technical Articles</a></li>
+						<li><a href="https://www.microsemi.com/design-support/technology">Technology</a></li>
+						</ul>
+						</div>
+						<div class="main_menu_custom_box">
+						<h3>Quality &amp; Packaging</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/company/quality">Quality</a></li>
+						<li><a href="https://www.microsemi.com/packaging-information/partpackage/list">Packaging Information</a></li>
+						</ul>
+						</div>
+						<div class="clearing"> </div></li></ul></div><div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"></ul></div>						<div class="clearing"></div>
+											  </div>
+											</div>
+									</li>
+											<li class="top-level-link">
+															<a href="https://www.microsemi.com/salescontacts"><span>Ordering</span></a>
+															<div class="sub-menu-block">
+											  <div class="mega_row">
+											  <div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+						<h3>How to Buy</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/msccstore">Available Stock Search</a></li>
+						<li><a href="https://www.microsemi.com/global-support-center/quote-or-sample-request">Request a Quote or Samples</a></li>
+						<li><a href="https://www.microsemi.com/salescontacts">Sales Contacts</a></li>
+						</ul>
+						</div>
+						<div class="clearing"> </div></li></ul></div><div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"></ul></div>						<div class="clearing"></div>
+											  </div>
+											</div>
+									</li>
+											<li class="top-level-link">
+															<a href="https://www.microsemi.com/company/about-us"><span>Company</span></a>
+															<div class="sub-menu-block">
+											  <div class="mega_row">
+											  <div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+						<h3>Company</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/company/about-us">About Us</a></li>
+						<li><a href="https://www.microsemi.com/corporate-contacts">Corporate Contacts</a></li>
+						<li><a href="http://investor.microsemi.com/releases">Press</a></li>
+						<li><a href="https://www.microsemi.com/company/quality">Quality</a></li>
+						</ul>
+						</div>
+						<div class="main_menu_custom_box">
+						<h3> </h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/design-support/partners">Partners</a></li>
+						<li><a href="https://www.microsemi.com/design-support/partners/empower-resellers">Empower Channel Partners</a></li>
+						<li><a href="https://www.microsemi.com/company/acquisitions">Acquisitions</a></li>
+						<li><a href="https://www.microsemi.com/company/careers">Careers</a></li>
+						</ul>
+						</div>
+						<div class="main_menu_custom_box">
+						<h3> </h3>
+						<ul>
+						<li><a href="http://investor.microsemi.com/">Investors</a></li>
+						<li><a href="https://www.microsemi.com/eventlist">Events</a></li>
+						<li><a href="https://www.microsemi.com/locations">Locations</a></li>
+						</ul>
+						</div>
+						<div class="clearing"> </div></li></ul></div><div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"></ul></div>						<div class="clearing"></div>
+											  </div>
+											</div>
+									</li>
+											<li class="top-level-link">
+															<a href="https://www.microsemi.com/design-support/services-support"><span>Services &amp; Support</span></a>
+															<div class="sub-menu-block">
+											  <div class="mega_row">
+											  <div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+						<h3>Services</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/products/fpga-soc/design-support/fpga-soc-design">FPGA &amp; SoC Design</a></li>
+						<li><a href="https://www.microsemi.com/design-support/information-assurance">Information Assurance Services</a></li>
+						<li><a href="https://www.microsemi.com/design-support/mixed-signal-asic-design">Mixed-Signal ASIC Design</a></li>
+						<li><a href="https://www.microsemi.com/design-support/module-hybrid-design">Module &amp; Hybrid Design</a></li>
+						<li><a href="https://www.microsemi.com/design-support/multi-chip-package-design-services">Multi-Chip Package Design</a></li>
+						</ul>
+						</div>
+						<div class="main_menu_custom_box">
+						<h3> </h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/design-support/package-miniaturization-services">Miniaturization Services</a></li>
+						<li><a href="https://www.microsemi.com/design-support/rf-semiconductor-and-module-design">RF Semicond. and Module Design</a></li>
+						<li><a href="https://www.microsemi.com/design-support/rugged-power-supply-design">Rugged Power Supply Design</a></li>
+						<li><a href="https://www.microsemi.com/products/timing-synchronization-systems/time-frequency-references/time-frequency-systems/custom-timing-systems">Timing Systems Services</a></li>
+						</ul>
+						</div>
+						<div class="main_menu_custom_box">
+						<h3>Support</h3>
+						<ul>
+						<li><a href="https://www.microsemi.com/design-support/global-support-center">Product &amp; General Support</a></li>
+						</ul>
+						</div>
+						<div class="clearing"> </div></li></ul></div><div class="mega_row_box" style="width:100%;"><ul class="sub-menu-lists"></ul></div>						<div class="clearing"></div>
+											  </div>
+											</div>
+									</li>
+									</ul>
+						  </nav>
+
+						</header>
+					</div>
+	            </div>
+            </div>
+		</div>
+        <!-- end nav-->
+		<div id="footer-push">
+			<div class="wrapper">
+				<div class="inner_wrapper">
+					<div class="container_main">
+						<div id="body-container">
+							<div id="content-container2">
+								<div id="content-left" class="clearfix">
+									<div id="left" class="count-1">
+										<div class="gutter clearfix">
+											<div class="moduletable-first clearfix">
+												<h3 class="je-header">Investors</h3>
+												<ul class="menu">
+													
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="">
+	<a href="https://investor.microsemi.com/investor-relations" target="_self">
+		Investor Relations	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="">
+	<a href="https://investor.microsemi.com/overview" target="_self">
+		Corporate Profile	</a>
+</li>
+
+
+
+
+<li class="current active ">
+	<a href="https://investor.microsemi.com/releases" target="_self">
+		News Releases	</a>
+	</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="">
+	<a href="https://investor.microsemi.com/events-and-presentations" target="_self">
+		IR Events &amp; Presentations	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="deeper parent">
+	<a href="https://investor.microsemi.com/governance" target="_self">
+		Corporate Governance	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="deeper parent">
+	<a href="https://investor.microsemi.com/financial-information" target="_self">
+		Financial Information	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="deeper parent">
+	<a href="https://investor.microsemi.com/stock-quote" target="_self">
+		Stock Information	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="">
+	<a href="https://investor.microsemi.com/document-download" target="_self">
+		Document Download	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="">
+	<a href="https://investor.microsemi.com/faq" target="_self">
+		Investor FAQs	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="">
+	<a href="https://investor.microsemi.com/contact-us" target="_self">
+		Contact Us	</a>
+</li>
+
+
+
+
+<!--<li class="item-4038 current active deeper parent"><a href="http://dev.microsemi.com/products/ethernet-solutions/ethernet-and-poe-solutions" >Level-1</a>-->
+<li class="deeper parent">
+	<a href="https://investor.microsemi.com/investor-alerts" target="_self">
+		Investor Alerts	</a>
+</li>
+
+
+</ul>
+
+
+												
+											</div>
+																														<form method="post" action="https://investor.microsemi.com/index.php?s=82" style="">
+											<input class="searchinput" size="15" name="query">
+											<input class="submit" value="Search »" type="submit">
+										</form>
+										</div>
+									</div>
+								</div>							
+								<div id="load-first" class="clearfix"> <a id="content" name="content"></a>
+									<div id="content-main">
+										<div class="gutter">
+											<div class="slideNew">
+												<div id="image-slider" class="clear clearfix">
+													<div style="border: 0; width:960px; height:137px; background-size: 100%; background-image:url(https://www.microsemi.com/images/header-images/header-default-wide.png);"></div>
+												</div>
+											</div>
+											<div id="content-top" class="clearfix">
+												<div id="top" class="count-1">
+													<div class="moduletable gutter clearfix">
+														<ol class="breadcrumb">
+															<li><a href="https://investor.microsemi.com/releases" target="_self">News Releases</a></li>
+															<!--<li><a href="/" >Home</a></li>
+															<li><a href="/" >Subitem with link</a></li>
+															<li class="active">Active Sub Item</li>-->
+														</ol>
+													</div>
+												</div>
+												<div class="item-page">
+													<div id="wd_printable_content">
+<div class="wd_newsfeed_releases-detail">
+<div class="wd_title wd_language_left">Microsemi Corporation to Acquire Vitesse Semiconductor Corporation</div>
+<div class="wd_subtitle wd_language_left">-- Expands differentiated technology offering for strategic communication infrastructure applications and customers</div><div class="wd_subtitle wd_language_left">-- Increases traction in carrier, enterprise and industrial-IoT markets enabling broader solution sale</div><div class="wd_subtitle wd_language_left">-- Delivers immediate EPS accretion and synergies</div>
+
+
+
+
+			
+		
+
+			
+		
+
+<style type="text/css">
+
+
+/* Style Definitions */
+span.prnews_span
+{
+font-size:8pt;
+font-family:"Arial";
+color:black;
+}
+a.prnews_a
+{
+color:blue;
+}
+li.prnews_li
+{
+font-size:8pt;
+font-family:"Arial";
+color:black;
+}
+p.prnews_p
+{
+font-size:0.62em;
+font-family:"Arial";
+color:black;
+margin:0in;
+}
+
+				span.prnews_span{
+					font-size:inherit;
+					font-family:inherit;
+				}
+				li.prnews_li{
+					font-size: inherit;
+					font-family: inherit;           
+				}
+				p.prnews_p{
+					font-size: inherit;
+					font-family: inherit;           
+				}
+			
+			div.wd_news_body img {
+				margin: 0 0 20px 20px;
+				float:right;
+				max-width: 250px;
+				max-height: 250px;
+				width: auto !important;
+				height: auto !important;
+			}
+		
+				div.PRN_ImbeddedAssetReference{
+					display: none;
+				}
+				div[id^="prni_dvprne"]{
+					display: none;
+				}
+			</style>
+
+<div class="wd_body wd_news_body" wd_resize="formatNews" wd_print_url="https://investor.microsemi.com/2015-03-18-Microsemi-Corporation-to-Acquire-Vitesse-Semiconductor-Corporation?printable=1"><p><span class="xn-location">ALISO VIEJO, Calif.</span> and <span class="xn-location">CAMARILLO, Calif.</span>, <span class="xn-chron">March 18, 2015</span> /<a href="http://www.prnewswire.com/" target="_blank">PRNewswire</a>/ -- <b>Microsemi Corporation (Nasdaq: MSCC)</b>,
+ a leading provider of semiconductor solutions differentiated by power, 
+security, reliability and performance, and Vitesse Semiconductor 
+Corporation (Nasdaq: VTSS), jointly announced today that Microsemi has 
+entered into a definitive agreement to acquire Vitesse for <span class="xn-money">$5.28</span>
+ per share through a cash tender offer, representing a premium of 32 
+percent based on the average closing price of Vitesse's shares of common
+ stock during the 30 trading days ended <span class="xn-chron">March 17, 2015</span>.
+ The board of directors of Vitesse unanimously recommends that Vitesse's
+ stockholders tender their shares in the tender offer. The total 
+transaction value is approximately <span class="xn-money">$389 million</span>.</p>
+
+<div id="prni_dvprnejpg41c3left" style="TEXT-ALIGN: left; WIDTH: 100%"><img alt="Microsemi Corporation" id="prnejpg41c3left" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/MM66070LOGO.jpg" title="Microsemi Corporation" border="0" align="middle"></div>
+
+<p>Headquartered in <span class="xn-location">Camarillo, California</span>,
+ Vitesse designs a diverse portfolio of high-performance semiconductors,
+ application software, and integrated turnkey systems solutions for 
+carrier, enterprise and Internet of Things (IoT) networks worldwide. 
+Vitesse's products enable the fastest-growing network infrastructure 
+markets including mobile access/IP edge, enterprise cloud access, and 
+industrial-IoT networking.</p><div wd_move_after=".wd_body &gt; p ~ p|.wd_body &gt; p">
+			<div id="wd_asset_modal" style="display:none;">
+				<div class="wd_slideshow wd_asset_slideshow_wrapper" wd_resize="resizeSlideshow" tabindex="-1"><div class="wd_slideshow-cropper"><ul class="wd_layout-slideshow wd_asset_slideshow_list wd_slideshow-list"><li class="wd_asset_slideshow wd_asset_type_3 wd_asset_3-70 wd_slideshow-item wd_slideshow-current" wd_item_hash="assets_3:70" wd_ajax_url="https://investor.microsemi.com/releases?gallery=70&amp;ajax=ajax&amp;op=modal">
+<div class="wd_gallery-modal">
+<style type="text/css">
+
+.wd_gallery_modal {
+	height: 100%;
+	width: 100%;
+}
+.wd_gallery_modal .wd_info {
+	overflow: auto;
+}
+.wd_gallery_modal .wd_image {
+	height: 75%; /* will be overridden when load complete */
+}
+.wd_gallery_modal .wd_image img {
+	max-width: 100%;
+	max-height: 100%;
+}
+</style>
+<div class="wd_gallery_modal" wd_resize="distributeHeight">
+	<div class="wd_image" wd_proportion="2" wd_fix_height="1" style="height: 0px;">
+		<img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/182868LOGO_003" border="0">
+	</div>
+	<div class="wd_info" wd_max_height="200" style="height: auto;">
+		
+		
+		<div class="wd_hi_res_link_wrapper">Download: <a href="https://photos.prnewswire.com/prnvar/20150318/182868LOGO?max=10000" target="" class="wd_hi_res_link">Hi Res</a></div>
+	</div>
+</div>
+
+</div>
+
+			<script type="text/javascript">
+				if (webDriver && webDriver.loadScripts)
+					webDriver.loadScripts([{"type":"script_url","url":"js\/jquery-webdriver.js","id":"jquery-webdriver.js"},{"type":"script_url","url":"js\/webdriver.js","id":"webdriver.js"},{"type":"script_url","url":"js\/wd_resize.js","id":"wd_resize.js"},{"type":"script_url","url":"js\/wd_distribute_height.js","id":"wd_distribute_height.js"}]);
+			</script>
+		</li><li class="wd_asset_slideshow wd_asset_type_3 wd_asset_3-69 wd_slideshow-item" wd_item_hash="assets_3:69" wd_ajax_url="https://investor.microsemi.com/releases?gallery=69&amp;ajax=ajax&amp;op=modal">
+<div class="wd_gallery-modal">
+<style type="text/css">
+
+.wd_gallery_modal {
+	height: 100%;
+	width: 100%;
+}
+.wd_gallery_modal .wd_info {
+	overflow: auto;
+}
+.wd_gallery_modal .wd_image {
+	height: 75%; /* will be overridden when load complete */
+}
+.wd_gallery_modal .wd_image img {
+	max-width: 100%;
+	max-height: 100%;
+}
+</style>
+<div class="wd_gallery_modal" wd_resize="distributeHeight">
+	<div class="wd_image" wd_proportion="2" wd_fix_height="1">
+		<img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/MM66070LOGO_003.jpg" border="0">
+	</div>
+	<div class="wd_info" wd_max_height="200">
+		
+		
+		<div class="wd_hi_res_link_wrapper">Download: <a href="http://photos.prnewswire.com/prnvar/20110909/MM66070LOGO?max=10000" target="" class="wd_hi_res_link">Hi Res</a></div>
+	</div>
+</div>
+
+</div>
+
+			<script type="text/javascript">
+				if (webDriver && webDriver.loadScripts)
+					webDriver.loadScripts([{"type":"script_url","url":"js\/jquery-webdriver.js","id":"jquery-webdriver.js"},{"type":"script_url","url":"js\/webdriver.js","id":"webdriver.js"},{"type":"script_url","url":"js\/wd_resize.js","id":"wd_resize.js"},{"type":"script_url","url":"js\/wd_distribute_height.js","id":"wd_distribute_height.js"}]);
+			</script>
+		</li></ul></div><a class="wd_slideshow-arrow wd_slideshow-prev fa fa-chevron-left" href="#prev" title="Previous"><span class="wd_sr-only">Previous Item</span></a><a class="wd_slideshow-arrow wd_slideshow-next fa fa-chevron-right" href="#next" title="Next"><span class="wd_sr-only">Next Item</span></a></div>
+			</div>
+		
+			<div class="wd_asset_carousel_aspect" wd_resize="adjustAspectRatio" wd_fixed_aspect="height:32:9:50:200" style="height: 200px;">
+			<div class="wd_carousel wd_asset_carousel_wrapper" wd_resize="resizeCarousel"><div class="wd_carousel-cropper"><ul class="wd_layout-carousel wd_asset_carousel_list wd_carousel-list" wd_carousel_options="{&quot;class&quot;:&quot;wd_asset_carousel_wrapper&quot;}" wd_onload="loadCarousel" style="position: absolute; top: 0px; left: 130px;"><li class="wd_asset_carousel wd_asset_type_3 wd_asset_3-70 wd_carousel-item wd_carousel-current" style="height: 100%;">
+					
+						<div class="wd_gallery_asset">
+	<div class="wd_asset_image">
+		<img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/182868LOGO_002" border="0">
+	</div>
+	<div class="wd_icon_overlay">
+		<a href="#assets_3:70" class="wd_link_underlay"></a>
+		<div class="wd_icon_container"><a href="#assets_3:70"><span class="fa fa-search-plus"></span> </a><a href="https://photos.prnewswire.com/prnvar/20150318/182868LOGO?max=10000" target=""><span class="fa fa-download"></span></a></div>
+	</div>
+	
+</div>
+
+					
+				</li><li class="wd_asset_carousel wd_asset_type_3 wd_asset_3-69 wd_carousel-item wd_carousel-current" style="height: 100%;">
+					
+						<div class="wd_gallery_asset">
+	<div class="wd_asset_image">
+		<img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/MM66070LOGO_002.jpg" border="0">
+	</div>
+	<div class="wd_icon_overlay">
+		<a href="#assets_3:69" class="wd_link_underlay"></a>
+		<div class="wd_icon_container"><a href="#assets_3:69"><span class="fa fa-search-plus"></span> </a><a href="http://photos.prnewswire.com/prnvar/20110909/MM66070LOGO?max=10000" target=""><span class="fa fa-download"></span></a></div>
+	</div>
+	
+</div>
+
+					
+				</li></ul></div><a class="wd_carousel-arrow wd_carousel-prev fa fa-chevron-left" href="#prev" style="display: none;"></a><a class="wd_carousel-arrow wd_carousel-next fa fa-chevron-right" href="#next" style="display: none;"></a></div>
+			</div>
+			
+		</div>
+
+<p>"This acquisition is further evidence of Microsemi's continuing 
+commitment to grow as a communications semiconductor company," stated <span class="xn-person">James J. Peterson</span>,
+ Microsemi chairman and CEO. "Vitesse's highly complementary technology 
+suite will expand our product offering and accelerate growth with 
+differentiated technology in emerging markets, while benefitting from 
+the increased scale, consolidated infrastructure and cost savings of the
+ combined entity."</p>
+
+<p>"The proposed acquisition of Vitesse by Microsemi will create a powerful combination," said <span class="xn-person">Chris Gardner</span>,
+ Vitesse's chief executive officer. "I believe Microsemi will be able to
+ leverage Vitesse's Ethernet technology and capabilities further into 
+the communications market and has the scale to implement the adoption of
+ our industrial IoT strategy."</p>
+
+<p>Microsemi expects significant synergies from this transaction and 
+expects to see immediate accretion in the first full quarter of 
+completion. Based on current assumptions, Microsemi expects the 
+acquisition to be <span class="xn-money">$0.16 to $0.20</span> per share accretive in its first full fiscal year ending <span class="xn-chron">September 30, 2016</span>.</p>
+
+<p>As of this date, Microsemi remains comfortable with its <span class="xn-chron">Jan. 22, 2015</span> non-GAAP guidance for its second fiscal quarter of 2015, ending <span class="xn-chron">March 29, 2015</span>. Microsemi currently intends to announce its second fiscal quarter results on <span class="xn-chron">April 23, 2015</span>. Further details will be forthcoming.</p>
+
+<p><b>Tender Offer and Closing</b></p>
+
+<p>Under the terms of the definitive acquisition agreement, Microsemi 
+will commence a cash tender offer to acquire Vitesse's outstanding 
+shares of common stock at <span class="xn-money">$5.28</span> per share,
+ net to each holder in cash. Upon satisfaction of the conditions to the 
+tender offer and after such time as all shares tendered in the tender 
+offer are accepted for payment, the agreement provides for the parties 
+to effect, as promptly as practicable, a merger which would result in 
+all shares not tendered in the tender offer being converted into the 
+right to receive <span class="xn-money">$5.28</span> per share in cash. 
+The tender offer is subject to customary conditions, including the 
+tender of at least a majority of the outstanding shares of Vitesse's 
+common stock on a modified fully diluted basis and certain regulatory 
+approvals, including the expiration or termination of the applicable 
+waiting period under the Hart-Scott-Rodino Antitrust Improvements Act, 
+and is expected to close in Microsemi's fiscal third quarter, ending <span class="xn-chron">June 28, 2015</span>.
+ No approval of the stockholders of Microsemi is required in connection 
+with the proposed transaction. Terms of the agreement were unanimously 
+approved by the boards of directors of both Microsemi and Vitesse. 
+Microsemi has received support agreements from Vitesse stockholders 
+holding approximately 22 percent of Vitesse's outstanding common shares.
+ Under the terms of the support agreements, these stockholders have 
+agreed to tender their shares in the tender offer.</p>
+
+<p>Under the terms of the merger agreement, Vitesse may solicit superior
+ proposals from third parties for a "go shop" period of 21 calendar days
+ continuing through <span class="xn-chron">April 7, 2015</span>. It is 
+not anticipated that any developments will be disclosed with regard to 
+this process unless and until Vitesse's board of directors makes a 
+decision to pursue a potential superior proposal. Deutsche Bank will 
+assist Vitesse with its go shop process. There are no guarantees that 
+this process will result in a superior proposal. The merger agreement 
+provides Microsemi with a customary right to match a superior proposal. 
+The agreement also provides for certain break-up fees payable to 
+Microsemi in connection with the termination of the agreement in certain
+ circumstances.</p>
+
+<p>BofA Merrill Lynch is providing customary committed debt financing 
+for the acquisition.&nbsp; BofA Merrill Lynch and RBC Capital Markets 
+acted as financial advisors, and O'Melveny &amp; Myers LLP is acting as 
+legal adviser to Microsemi. Deutsche Bank and Needham &amp; Company are 
+acting as financial advisors and Stubbs Alderton &amp; Markiles, LLP is 
+acting as legal advisor to Vitesse.</p>
+
+<p><b>Webcast</b></p>
+
+<p>Microsemi is hosting an analyst day today in <span class="xn-location">New York</span>,
+ and will briefly address details of the transaction at that event. A 
+live webcast and the accompanying presentation relating to the 
+transaction will be available in the "Investors" section of Microsemi's 
+website at <a href="http://www.microsemi.com/" rel="nofollow" target="_blank">www.microsemi.com</a>.</p>
+
+<p>Webcast date: <span class="xn-chron">March 18, 2015</span><br>
+Time: <span class="xn-chron">9-11:30 a.m. EDT</span><br>
+Webcast link: <a href="http://investor.microsemi.com/Microsemi-s-Analyst-Day-2015" rel="nofollow" target="_blank">http://investor.microsemi.com/Microsemi-s-Analyst-Day-2015</a></p>
+
+<p>A replay of the company's analyst day webcast will also be available in the "Investors" section of Microsemi's website. &nbsp;</p>
+
+<p><b>About Microsemi</b></p>
+
+<p>Microsemi Corporation (Nasdaq: MSCC) offers a comprehensive portfolio
+ of semiconductor and system solutions for communications, defense &amp;
+ security, aerospace and industrial markets. Products include 
+high-performance and radiation-hardened analog mixed-signal integrated 
+circuits, FPGAs, SoCs and ASICs; power management products; timing and 
+synchronization devices and precise time solutions, setting the world's 
+standard for time; voice processing devices; RF solutions; discrete 
+components; security technologies and scalable anti-tamper products; 
+Power-over-Ethernet ICs and midspans; as well as custom design 
+capabilities and services. Microsemi is headquartered in <span class="xn-location">Aliso Viejo, Calif.</span>, and has approximately 3,400 employees globally. Learn more at <a href="http://www.microsemi.com/" rel="nofollow" target="_blank">www.microsemi.com</a>.</p>
+
+<p>Microsemi and the Microsemi logo are registered trademarks or service
+ marks of Microsemi Corporation and/or its affiliates. Third-party 
+trademarks and service marks mentioned herein are the property of their 
+respective owners.</p>
+
+<p><b>About Vitesse</b></p>
+
+<p><a href="https://www.vitesse.com/" rel="nofollow" target="_blank">Vitesse</a>
+ (Nasdaq: VTSS) designs a diverse portfolio of high-performance 
+semiconductors, application software, and integrated turnkey systems 
+solutions for Carrier, Enterprise and Internet of Things (IoT) networks 
+worldwide. Vitesse products enable the fastest-growing network 
+infrastructure markets including Mobile Access/IP Edge, Cloud Access and
+ Industrial-IoT Networking. Visit <a href="https://www.vitesse.com/" rel="nofollow" target="_blank">www.vitesse.com</a> or follow us on Twitter <a href="https://twitter.com/VitesseSemi" rel="nofollow" target="_blank">@VitesseSemi</a>.</p>
+
+<p>Vitesse is a registered trademark of Vitesse Semiconductor Corporation in <span class="xn-location">the United States</span>
+ and other jurisdictions. All other trademarks or registered trademarks 
+mentioned herein are the property of their respective holders.</p>
+
+<p><b>Microsemi Safe Harbor State</b><b>ment</b></p>
+
+<p>"Safe Harbor" Statement under the Private Securities Litigation 
+Reform Act of 1995: This release contains forward-looking statements 
+based on current expectations or beliefs, as well as a number of 
+assumptions about future events, and these statements are subject to 
+factors and uncertainties that could cause actual results to differ 
+materially from those described in the forward-looking statements. The 
+reader is cautioned not to put undue reliance on these forward-looking 
+statements, which are not a guarantee of future performance and are 
+subject to a number of uncertainties and other factors, many of which 
+are outside the control of Microsemi and Vitesse. The forward-looking 
+statements in this release address a variety of subjects including, for 
+example, the expected date of closing of the acquisition, the potential 
+benefits of the merger, including the potentially accretive and 
+synergistic benefits, Microsemi's revenue and earnings guidance, and any
+ other statements of belief or about the Microsemi's plans, beliefs or 
+expectations. The following factors, among others, could cause actual 
+results to differ materially from those described in these 
+forward-looking statements: the risk that Vitesse's business will not be
+ successfully integrated with Microsemi's business or complement its 
+products, including product mix and acceptance, gross margins and 
+operational and other cost synergies; costs associated with the merger, 
+tender offer and financing; the unsuccessful completion of the tender 
+offer; matters arising in connection with the parties' efforts to comply
+ with and satisfy applicable regulatory approvals and closing conditions
+ relating to the transaction; increased competition and technological 
+changes in the industries in which Microsemi and Vitesse compete; 
+Microsemi's reliance on government contracts for a portion of its sales,
+ including impacts of any federal government shutdown; Microsemi's 
+failure to continue to move up the value chain in its customer 
+offerings; negative or worsening worldwide economic conditions or market
+ instability; downturns in the highly cyclical semiconductor industry; 
+intense competition in the semiconductor industry and resultant downward
+ price pressure; inability to develop new technologies and products to 
+satisfy changes in customer demand or the development by the company's 
+competitors of products that decrease the demand for Microsemi's 
+products; unfavorable or declining conditions in end markets; inability 
+of Microsemi's compound semiconductor products to compete successfully 
+with silicon-based products; production delays related to new compound 
+semiconductors; variability of the company's manufacturing yields; the 
+concentration of the factories that service the semiconductor industry; 
+delays in beginning production, implementing production techniques, 
+resolving problems associated with technical equipment malfunctions, or 
+issues related to government or customer qualification of facilities; 
+potential effects of system outages; the effect of events such as 
+natural disasters and related disruptions on our operations; inability 
+by Microsemi to fulfill customer demand and resulting loss of customers;
+ variations in customer order preferences; difficulties foreseeing 
+future demand; rises in inventory levels and inventory obsolescence; 
+potential non-realization of expected orders or non-realization of 
+backlog; failure to make sales indicated by the company's book-to-bill 
+ratio; risks related to the company's international operations and 
+sales, including availability of transportation services, political 
+instability and currency fluctuations; increases in the costs of credit 
+and the availability of credit or additional capital only under more 
+restrictive conditions or not at all; unanticipated changes in 
+Microsemi's tax provisions, results of tax examinations or exposure to 
+additional income tax liabilities; changes in generally accepted 
+accounting principles; principal, liquidity and counterparty risks 
+related to Microsemi's holdings in securities; environmental or other 
+regulatory matters or litigation, or any matters involving contingent 
+liabilities or other claims; the uncertainty of litigation, the costs 
+and expenses of litigation, the potential material adverse effect 
+litigation could have on Microsemi's business and results of operations 
+if an adverse determination in litigation is made, and the time and 
+attention required of management to attend to litigation; uncertainty as
+ to the future profitability of acquired businesses, and delays in the 
+realization of, or the failure to realize, any accretion from 
+acquisition transactions; any circumstances that adversely impact the 
+end markets of acquired businesses; and difficulties in closing or 
+disposing of operations or assets or transferring work, assets or 
+inventory from one plant to another. In addition to these factors and 
+any other factors mentioned elsewhere in this news release, the reader 
+should refer as well to the factors, uncertainties or risks identified 
+in the company's most recent Form 10-K and all subsequent Form 10-Q 
+reports filed by Microsemi with the SEC. Additional risk factors may be 
+identified from time to time in Microsemi's future filings. The 
+forward-looking statements included in this release speak only as of the
+ date hereof, and Microsemi does not undertake any obligation to update 
+these forward-looking statements to reflect subsequent events or 
+circumstances. Guidance is provided only on a non-GAAP basis due to the 
+inherent difficulty of forecasting the timing or amount of certain items
+ that have been excluded from the forward-looking non-GAAP measures, and
+ a reconciliation to the comparable GAAP guidance has not been provided 
+because certain factors that are materially significant to Microsemi's 
+ability to estimate the excluded items are not accessible or estimable 
+on a forward-looking basis.</p>
+
+<p><b>Vitesse Safe Harbor Statement</b></p>
+
+<p>Certain statements either contained in or incorporated by reference 
+into this press release, other than purely historical information, 
+including estimates, projections and statements relating to Vitesse's 
+business plans and objectives, and the assumptions upon which those 
+statements are based, are "forward-looking statements." These 
+forward-looking statements generally include statements that are 
+predictive in nature and depend upon or refer to future events or 
+conditions, and include words such as "believes," "plans," 
+"anticipates," "projects," "estimates," "expects," "intends," 
+"strategy," "future," "opportunity," "may," "will," "should," "could," 
+"potential," or similar expressions. Such forward-looking statements 
+include the ability of Vitesse and Microsemi to complete the 
+transactions contemplated by the merger agreement, including the 
+parties' ability to satisfy the conditions to the consummation of the 
+tender offer and the other conditions set forth in the merger agreement 
+and the possibility of any termination of the merger agreement. The 
+forward-looking statements contained in this release are based on 
+current expectations and assumptions that are subject to risks and 
+uncertainties which may cause actual results to differ materially from 
+the forward-looking statements. Actual results may differ materially 
+from current expectations because of risks associated with uncertainties
+ as to the timing of the tender offer and the subsequent merger; 
+uncertainties as to how many of Vitesse's stockholders will tender their
+ shares in the tender offer; the risk that competing offers or 
+acquisition proposals will be made; the possibility that various 
+conditions to the consummation of the tender offer or the merger may not
+ be satisfied or waived, including that a governmental entity may 
+prohibit, delay or refuse to grant approval for the consummation of the 
+tender offer or the merger; the effects of disruption from the 
+transactions contemplated by the merger agreement on Vitesse's business 
+and the fact that the announcement and pendency of the transactions may 
+make it more difficult to establish or maintain relationships with 
+employees, suppliers and other business partners; the risk that 
+stockholder litigation in connection with the tender offer or the merger
+ may result in significant costs of defense, indemnification and 
+liability; other uncertainties pertaining to the business of Vitesse, 
+including those set forth in Vitesse's filings with the SEC, especially 
+in "Item 1A. Risk Factors" of Vitesse's Annual Report on Form 10-K for 
+the year ended <span class="xn-chron">September 30, 2014</span> filed with the SEC on <span class="xn-chron">December 4, 2014</span>
+ and in other periodic reports and filings with the SEC from time to 
+time, including Vitesse's Quarterly Reports on Form 10-Q. The reader is 
+cautioned not to unduly rely on these forward-looking statements. 
+Vitesse expressly disclaims any intent or obligation to update or revise
+ publicly these forward-looking statements except as required by law.</p>
+
+<p><b>Notice to Investors </b></p>
+
+<p>The tender offer for the outstanding shares of common stock of 
+Vitesse has not yet commenced. This press release is for informational 
+purposes only and no statement in this press release is an offer to 
+purchase or a solicitation of an offer to sell securities. At the time 
+the tender offer is commenced, Microsemi Corporation and a wholly-owned 
+subsidiary of Microsemi Corporation will file a tender offer statement 
+on Schedule TO with the Securities and Exchange Commission, and Vitesse 
+will file a solicitation/recommendation statement on Schedule 14D-9 with
+ respect to the tender offer. The tender offer statement (including an 
+offer to purchase, a related letter of transmittal and other offer 
+documents) and the solicitation/recommendation statement will contain 
+important information that should be read carefully before any decision 
+is made with respect to the tender offer. Such materials will be made 
+available to Vitesse's stockholders at no expense to them. In addition, 
+such materials (and all other offer documents filed with the SEC) will 
+be available at no charge on the SEC's Web site: <a href="http://www.sec.gov/" rel="nofollow" target="_blank">www.sec.gov</a>.</p>
+
+<p>VTSS-F</p>
+
+<div assettitle="Vitesse Logo" hostedurl="https://photos.prnewswire.com/prnvar/20150318/182868LOGO" id="prni_dvprnejpg8815leftMSAsset340998" style="TEXT-ALIGN: left; WIDTH: 100%"><img alt="Microsemi Corporation to Acquire Vitesse Semiconductor Corporation" id="prnejpg8815leftMSAsset340998" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/182868LOGO" title="Microsemi Corporation to Acquire Vitesse Semiconductor Corporation" border="0" align="middle"></div>
+
+<p>Logo - <a href="http://photos.prnewswire.com/prnh/20110909/MM66070LOGO" rel="nofollow" target="_blank">http://photos.prnewswire.com/prnh/20110909/MM66070LOGO</a><br>
+Logo - <a href="http://photos.prnewswire.com/prnh/20150318/182868LOGO" rel="nofollow" target="_blank">http://photos.prnewswire.com/prnh/20150318/182868LOGO</a></p>
+
+<p>&nbsp;</p>
+
+<p id="PURL">To view the original version on PR Newswire, visit:<a href="http://www.prnewswire.com/news-releases/microsemi-corporation-to-acquire-vitesse-semiconductor-corporation-300052261.html" id="PRNURL" rel="nofollow">http://www.prnewswire.com/news-releases/microsemi-corporation-to-acquire-vitesse-semiconductor-corporation-300052261.html</a></p>
+
+<p>SOURCE Microsemi Corporation; Vitesse Semiconductor Corporation</p>
+</div>
+
+<div class="wd_contact">For further information: MICROSEMI FINANCIAL, 
+John W. Hohener, Executive Vice President and CFO, (949) 380-6100, or 
+MICROSEMI INVESTOR, Robert C. Adams, Vice President of Corporate 
+Development, (949) 380-6100; or VITESSE FINANCIAL, Marty McDermut, CFO, 
+(805) 388-3700, invest@vitesse.com; or VITESSE INVESTOR AND MEDIA, Ronda
+ Grech, Vice President, Communications, (805) 388-3700, 
+pressrelations@vitesse.com</div>
+
+
+
+<!-- ITEMDATE: 2015-03-18 07:00:00 EDT -->
+
+</div>
+</div><br clear="all"><div class="wd_page_toolbar">
+
+
+
+
+<table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><span class="wd_page_tool"><a href="https://investor.microsemi.com/2015-03-18-Microsemi-Corporation-to-Acquire-Vitesse-Semiconductor-Corporation?asPDF=1"><img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/pdf.gif" alt="pdf" title="pdf" border="0"></a></span></td>
+<td><span class="wd_page_tool"><a onclick="view_printable(); return false;" rel="nofollow" href="#print"><img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/print.gif" alt="print" title="print" border="0"></a></span></td>
+<td><span class="wd_page_tool"><a onclick="window.location.href = 'mailto:?subject=Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018%2C%202015&amp;body='+encodeURIComponent(window.location.href);return false;" href="#email"><img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/email.gif" alt="email" title="email" border="0"></a></span></td>
+<td><span class="wd_page_tool"><a href="https://investor.microsemi.com/all-rss-feeds?rsspage=43"><img src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/rss.gif" alt="rss" title="rss" border="0"></a></span></td>
+<td><span class="wd_page_tool"><a class="addthis_sharing_toolbox"></a></span></td>
+</tr></tbody></table>
+		<script type="text/javascript">
+			var addthis_config = {
+				"data_track_clickback": true,
+				"pubid" : "thefuelteam",
+				"ui_language" : "en"
+			};
+		</script>
+		<script type="text/javascript" src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/addthis_widget.js" async="async"></script>
+	</div>												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div> 
+					</div>  
+				</div>
+			</div> 
+		</div>	
+		<div id="msccfooter">
+			<div id="footer" class="clear clearfix">
+				<div class="gutter clearfix">
+					<div class="moduletable clearfix">
+						<div class="custom">
+							<a href="https://www.microsemi.com/products">Products</a> | 
+							<a href="https://www.microsemi.com/applications">Applications</a> | 
+							<a href="https://www.microsemi.com/company/about-us">Company</a> | 
+							<a href="https://www.microsemi.com/company/careers/careers">Careers</a> | 
+							<a href="http://investor.microsemi.com/">Investors</a> | 
+							<a href="https://www.microsemi.com/survey">Survey</a> | 
+							<a href="https://www.microsemi.com/company/private-policy">Privacy Policy</a> | 
+							<a href="https://www.microsemi.com/company/terms-and-conditions">Terms &amp; Conditions</a> | 
+							<a href="https://www.microsemi.com/company/product-disclaimer-notice">Product Disclaimer</a> | 
+							<a href="https://www.microsemi.com/company/terms-of-use">Terms of Use</a>
+						</div>
+					</div>
+					<div class="moduletable copyright clearfix">
+						<div class="custom copyright">
+							<p style="margin-left: 27px;">Copyright © 2017 Microsemi 
+Corporation. All rights reserved. The Microsemi logo is a registered 
+trademark of Microsemi Corporation.<br><span><script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/docicons.js" type="text/javascript"></script></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			jQuery( document ).ready( function ( $ ) {
+			// Add first and last menu item classes
+			$('ul.first-child li:first-child').addClass( 'first_item' );
+			$('ul.last-child li:last-child').addClass( 'last_item' );
+			$('.wd_featureboxes_right .wd_featurebox_title:first-child').addClass('je-header');
+			});
+
+			</script>
+					<script>
+			var wd_all_subcats = document.getElementById('wd_subcategories_1_all');
+			if (wd_all_subcats) {
+				document.getElementById('wd_subcategories_1_all').lastChild.style.display='none';
+			}
+			</script>
+				<script type="text/javascript"> 
+      var cdJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+      document.write(unescape("%3Cscript src='" + cdJsHost + "analytics.clickdimensions.com/ts.js' type='text/javascript'%3E%3C/script%3E")); 
+		</script><script src="Microsemi%20Corporation%20to%20Acquire%20Vitesse%20Semiconductor%20Corporation%20-%20Mar%2018,%202015_files/ts.js" type="text/javascript"></script>  
+		<script type="text/javascript"> 
+		      var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com'); 
+		      cdAnalytics.setAccountKey('a46Nw0xpj0EK2DNsxtrIqL'); 
+		      cdAnalytics.setDomain('microsemi.com'); 
+		      cdAnalytics.setScore(typeof(cdScore) == "undefined" ? 0 : (cdScore == 0 ? null : cdScore)); 
+		      cdAnalytics.trackPage(); 
+		</script> 		
+	
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- Piwik Tracking Code -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+
+  _paq.push(["setCustomVariable", 4, "News Release Feed ID", "201503180700PR_NEWS_USPR_____LA58101", "page"]);
+
+  _paq.push(["setCustomVariable", 1, "Content Type", "News Releases Feed", "page"]);
+
+  _paq.push(["setCustomVariable", 3, "Navigation Page", "News Releases", "page"]);
+
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//stats.drivetheweb.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", 1816]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+	<img src="https://stats.drivetheweb.com/piwik.php?idsite=1816&rec=1" style="border:0" alt="" />
+</noscript>
+<!-- End Piwik Tracking Code -->
+		
+<!-- end spin_special_output(body_end) -->
+
+
+</body></html>

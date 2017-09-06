@@ -1,0 +1,2780 @@
+﻿.page-border, 
+.content {
+    overflow: hidden;
+}
+
+.pageWidth {
+	width: 3px;
+}
+
+h1 {
+	padding-bottom: 20px;
+}
+
+#s4-workspace {
+	margin-top: 0;
+}
+
+#s4-bodyContainer {
+
+}
+
+/* Header */
+
+.mastheadTop {
+    height: 0;
+}
+
+#masthead {
+	margin-top: 0 !important;
+	position: relative;	
+	border-bottom: 1px solid #ccc;
+}
+
+#logo {
+    float: left;
+    padding: 25px 0 25px 3%;
+    /* width: 47%; */
+}
+
+.tagline {
+	display: none;
+}
+
+.breadcrumb {
+	display: none;
+	margin: 2px;
+}
+
+#hide_rwd {
+    width: 45%;
+}
+
+.rwd_menu {
+    padding: 30px 5%;
+}
+
+/* Footer */
+
+.footerAccordion {
+    padding-left: 3%;
+}
+
+.pageFooter { 
+	padding-left: 3%;         
+}
+
+.footer {
+    margin-top: 0;
+}
+
+.footer-main {
+    padding: 22px 3% 0 3%;
+}
+
+.footer-main #hide_rwd {
+    width: 100%;
+}
+
+.followContainer {
+    width: 94%;
+    float: none;
+    position: relative;
+    padding-bottom: 17px;
+    padding-left: 3%;	
+}
+
+.labor {
+    display: block;
+    left: 3.7%;
+    top: 10px;
+    padding: 0;
+}
+
+.footer-links {
+    display: block;
+    float: left;
+    padding: 19px 3% 13px 3%;
+}
+
+.footer #sitesearch {
+  	float: left;
+  	margin: 0;
+  	width: 94%;
+}
+
+.footer .ms-sbplain {
+ 	width: 93%;
+}
+
+.wechatPopup {
+    display: none !important;
+}
+
+#ctl00_LiteralTranslationLabel42 {
+	display: none;
+}
+
+/* Home Page */
+
+/*
+.HeroItem {
+    min-height: 310px;
+}
+*/
+
+.homePageContentFull {
+	padding: 0;
+	width: 100%;
+}
+
+.homePageHeroContent {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+    position: relative;
+}
+
+.homePageHeroContainer .homePageHero {
+	background-size: auto 300px;
+    width: 100%;
+}
+
+.homePageHeroText {
+	margin-top: 300px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 94%;    
+}
+
+.HeroItem.homePageHeroContainer.video video {
+	display: none;
+}
+
+.homePageHeroImage.video {
+	display: inline-block;
+}
+
+#homePageHeroMult .pageContentFull .HeroItem {
+	margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+#homePageHeroMult .homePageHeroContainer {
+    /* float: left; */
+}
+
+#homePageHeroMult .homePageMainHero,
+#homePageHeroMult .homePageSecondHero,
+#homePageHeroMult .homePageThirdHero {
+    height: auto;  
+}
+
+#homePageHeroMult .homePageEndTile {
+    height: auto;
+	position: relative;
+	float: left; 
+	padding: 0; 
+	width: 100%; 
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroContentContainer {
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-top: 330px;
+    margin-left: 0;    
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroContent,
+#homePageHeroMult .homePageEndTile .homePageHeroContent.right {
+	background-color: #000;
+	text-align: center;
+	margin-top: 0;
+	width: 100%;
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroContent h2,
+#homePageHeroMult .homePageEndTile .homePageHeroContent p {
+	color: #fff;
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroImage,
+#homePageHeroMult .homePageEndTile .homePageHeroImage.right {
+	position: absolute;
+    top: 0;
+    margin-left: 0;
+    transform: none;
+    left: auto;
+    padding: 0 7%;
+    width: 86%;
+    height: 330px;  
+}
+
+#homePageHeroMult .homePageEndTile .homePageHeroImage img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;   
+}
+
+#homePageHeroMult .homePageHeroVideo {
+	display: none;
+}
+
+#homePageHeroMult .homePageHeroContentContainer,
+#homePageHeroMult .homePageMainHero .homePageHeroContentContainer {
+    position: relative;
+    float: left;
+}
+
+#homePageHeroMult .homePageHeroContent,
+#homePageHeroMult .homePageHeroContent.right {
+    margin-top: 330px;
+	display: inline-block;
+	height: auto;
+	/* width: 94%; */
+}
+
+#homePageHeroMult .homePageHeroText,
+#generalContentHero .homePageHeroText {
+    padding-left: 0;
+    padding-right: 0;
+    /* width: 100%; */
+}
+
+#homePageHeroMult .homePageHeroContent h1,
+#generalContentHero .homePageHeroContent h1 {
+	margin-top: 0;
+}
+
+#generalContentHero .homePageHeroContent {
+    height: auto;
+}
+
+#homePageHeroMult .HeroItem h1,
+#homePageHeroMult .HeroItem h2,
+#generalContentHero .homePageMainHero .homePageHeroContent h1 {
+	font-size: 45px;
+	line-height: 45px;
+}
+
+#homePageHeroMult .homePageHeroContent.Black h1,
+#homePageHeroMult .homePageHeroContent.Black p {
+    color: #fff;	
+}
+
+#homePageHeroMult .homePageHeroLink {
+    float: none;
+    margin-top: 10px;
+}
+
+#homePageHeroMult .homePageHeroContent.Black .homePageHeroLink a {
+    background-image: url("Images/button-arrow-white.png");
+    color: #fff;
+    border: 2px solid #fff;    
+}
+
+#homePageHeroMult .homePageHeroImage {
+	height: 330px;
+    left: 50%;
+    margin-left: -588px; 	
+}
+
+#generalContentHero .homePageHeroImage {
+	height: 330px;
+    left: 50%;
+    margin-left: -530px; 	
+}
+
+#homePageHeroMult .homePageMainHero .homePageHeroImage.video {
+	height: 330px;
+    left: 50%;
+    margin-left: -588px; 	
+}
+
+
+#homePageHeroMult .homePageMainHero .homePageHeroImage {
+    display: inline-block !important;  	
+}
+
+/*
+#homePageHeroMult .homePageMainHero .homePageHeroImage.video {
+    margin-left: 0;
+    left: auto;
+    right: 0;	
+}
+*/
+
+#homePageHeroMult .homePageHeroImage.right {
+    margin-left: -350px;
+}
+
+#homePageHeroMult .homePageHeroImage img {
+	height: 330px;
+}
+
+#generalContentHero .homePageHeroImage {
+    height: 300px;
+}
+
+#homePageHeroMult .quickNavContainer {
+    width: 100%;
+    border-right: none;
+}
+
+#homePageHeroMult .quickNavContent {
+    width: 100%;
+}
+
+#homePageHeroMult .quickNavIcon {
+    display: none;
+}
+
+#homePageHeroMult .quickNavTitle {
+	display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 15px;
+    width: 50%;
+    padding-top: 0;  	
+}
+
+#homePageHeroMult .quickNavTitle h3 {
+	display: inline-block;
+	padding-bottom: 0;
+	padding-top: 5px;
+}
+
+#homePageHeroMult .quickNavContainer.drivers .quickNavButtonContainer {
+    padding-left: 0;
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+
+#homePageHeroMult .quickNavButton {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle; 
+}
+
+#homePageHeroMult .quickNavContainer.drivers .quickNavButton {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+#homePageHeroMult a.iCafe, 
+#homePageHeroMult .quickNavContainer .quickNavWrapper:hover a.iCafe {
+	float: left;
+    clear: both;
+}
+
+#homePageHeroMult .quickNavCopy {
+	display: table;	
+	width: 100%;    
+}
+
+#homePageHeroMult .quickNavButton.iCafe {
+    display: none; 
+}
+
+.pointerFeature {
+    vertical-align: top;
+}
+
+.pointerFeatureBtn {
+    margin-top: 15px;
+}
+
+.teamColumns .pointerFeature {
+    margin: 0;    
+}
+
+.pointerFeature img {
+    width: 100%;
+}
+
+.pointerFeature p, 
+.pointerFeature:hover p, 
+.pointerFeature.active p {
+    color: #000;
+    font-family: 'KlavikaMediumCondensedItalic', Calibri, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 19px;
+    margin-bottom: 0;
+}
+
+.pointerFeatureCopy {
+    vertical-align: top;
+}
+
+.teamColumns .pointerFeatureCopy {
+    margin: 0;
+    width: 100%;
+}
+
+.pointerFeatureCopy h3, 
+.pointerFeatureCopy.active h3 {
+    color: #000;
+    font-family: 'KlavikaMediumCondensed', Calibri, Arial, sans-serif;
+	font-family: Calibri, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: normal;
+    margin-bottom: 0;    
+}
+
+.teamColumns .pointerFeatureCopy h3, 
+.teamColumns .pointerFeatureCopy.active h3 {
+	font-family: 'KlavikaMediumCondensed', Calibri, Arial, sans-serif;
+    font-size: 25px;
+    margin: 0 0 15px 0;
+    font-weight: normal;
+    line-height: 26px;  
+}
+
+
+.pointerFeatureCopy a, 
+.pointerFeatureCopy.active a {
+	color: #f26621;
+    border: none;
+    background-image: none;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 19px;    
+    font-weight: bold;
+    padding: 0;
+    text-transform: none;
+    margin-right: 0;
+    margin-top: 15px;     
+}
+
+.pointerFeaturePointer img {
+    width: 59px;
+}
+
+.pointerFeaturesCopyContainer {   
+    width: 100%;
+}
+
+#gameHomePage h1 {
+	margin-left: 3%;
+	padding-top: 20px;
+}
+
+#gameHomePageHero .homePageHeroImage {
+    margin-left: -870px;
+}
+
+#gameHomePage .homePageHeroText {
+    width: 87%;    
+}
+
+.homePageHeroLink {
+    float: none;
+}
+
+#gameHomePage .gameFeaturedHubPromoContainer .gamePromo {
+    width: 100%;
+    margin-right: 0;
+}
+
+#gameHomePage .gameFeaturedHubPromoContainer .gamePromo .gamePromoContent {
+    padding-left: 3%;
+    padding-right: 3%; 
+    padding-bottom: 30px;   
+}
+
+
+
+
+.homePageHeroImage {
+    height: 300px;
+	/* margin: 0 -590px; */
+	left: -600px;
+}
+
+
+
+.homePageHeroImage img {
+    height: 300px;
+}
+
+.heroVidBtn {
+	right: 25%;
+}
+
+.HeroItem {
+    min-height: 240px;
+}
+
+.pageContent#game .HeroItem {
+	min-height: 0;
+    width: 109%;
+    margin-left: -6%;	
+}
+
+#heronav {
+    padding-left: 0;
+}
+
+/*
+.HeroItem .videoContainer {
+    height: auto !important;
+    overflow: visible;
+    min-height: 100px;
+}
+
+*/
+
+.homePageHeroContainer .homePageHero {
+	width: 100%;
+    background-position: 70% 0;
+    background-repeat: no-repeat;	
+    height: 300px;    
+}
+
+.homePageHeroContainer .vidhero {
+	display: none;
+}
+
+
+.homeHeroVidClose {
+	top: -40px;
+}
+
+.HeroItem .videoContainer iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.HeroItem h1 {
+	font-size: 45px;
+	line-height: 45px;
+	padding-bottom: 15px;
+	padding-left: 0;	
+}
+
+#homePage .homepage-hero-img {
+    height: auto;
+    width: 100%;	
+}
+
+#homePage .homepage-hero-text {
+    float: left;
+    font-size: 18px;
+    height: auto;
+    line-height: 25px;
+    margin-top: 0;
+    padding: 20px 4%;
+    position: relative;
+    width: 95%;	
+}
+
+.homePageHeroContainer {
+    height: 300px;
+}
+
+.homePageHeroImage {
+    height: auto;
+    left: auto;
+}
+
+.homePageHeroCenteredStackedContent .homePageHeroImage img {
+    height: auto;
+    width: 100%;
+}
+
+.homePageHeroCenteredStackedContent .homePageHeroText {
+    width: 100%;
+}
+
+.saLandingPageHeroContainer .saLandingPageHero {
+    background-position: 70% 0;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    background-size: auto 300px;
+}
+
+.saLandingPageHeroText {
+    margin-top: 300px;
+	margin-bottom: 30px;    
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 98%;
+}
+
+.saLandingPageInfo {
+	margin-top: 0;
+}
+
+#saLandingPage .HeroItem.stacked .heroBg {
+	background-position: 65% 0;
+}
+
+
+.landingPageThreeColumn.saLandingPage,
+.landingPageThreeColumnLast.saLandingPage {
+	width: 100%;
+}
+
+.saLandingPagePromo .saLandingPagePromoImg {
+    width: 100%;
+}
+
+.saLandingPagePromo .saLandingPagePromoText {
+	width: 94%;
+}
+
+.saLandingPageInfo {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.saLandingPagePromoContainer .saLandingPageInfo {
+    padding-left: 3%;
+    width: 94%;
+}
+
+.saLandingPagePromoContainer {
+    padding-bottom: 30px;
+}
+
+.saLandingPageCols {
+    margin-top: 30px;
+}
+
+.saLandingPageLeftCol {
+	width: 100%;
+	border-right: none;
+	border-bottom: 1px solid #646464;
+	margin-bottom: 30px;
+}
+
+.saLandingPageRightCol {
+	width: 100%;
+}
+
+.saLandingPage968 .saLandingPageLeftCol,
+.saLandingPage968 .saLandingPageRightCol {
+    border-bottom: none;
+    width: 100%;
+    margin: 0;
+}
+
+.grayHeroFullPageImage {
+    width: 100%;
+}
+
+.grayHeroFullPageText {
+    width: 100%;
+}
+
+/*.homepageContent {
+    display: inline-block;
+    padding: 0 0 0 3%;
+    width: 96%;
+}*/
+
+.homepageLinks {
+	width: 100%;
+}
+
+.homePageHeroContainer .videoContainer {
+    margin: 60px auto;
+}
+
+/* Rotating Hero */
+
+.homepage-hero-text,
+.standaloneLandingPageLargeHero .homepage-hero-text {
+	padding-left: 4%;
+    width: 93%;
+}
+
+.homepage-hero-img,
+.standaloneLandingPageLargeHero .homepage-hero-img {
+    width: 100%;	
+}
+
+
+/*  Homepage Redesign Styles 10-2014  */
+
+.homepageTiles {
+	padding-top: 0;
+}
+
+#gameHomePage .homePageTileFull {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1px;
+}
+
+.homepage_tile_large_l, 
+.homepage_tile_large_r {
+	width: 100%;
+	height: 600px;
+	display: block;
+}
+
+#gameHomePage .homepage_tile_large_l, 
+#gameHomePage .homepage_tile_large_r {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-right: 0;
+    margin-bottom: 1px;	
+}
+
+#gameHomePage .homePageTileLeft,
+#gameHomePage .homePageTileRight {
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+#gameHomePageHero .homePageHeroText {
+    width: 87%;
+    text-align: center;
+	padding-left: 3%;
+    padding-right: 3%;
+	margin-bottom: 1px;       
+}
+
+.homepage_tile_large_text {
+	width: 92%;
+    height: auto;
+    margin: 0;
+    display: block;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 20px;
+}
+
+#gameHomePage .homepage_tile_large_text {
+	width: 92%;
+    height: auto;
+    margin: 0;
+    display: block;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+.homepage_tile_large_text {
+	height: 290px;	
+}
+
+#gameHomePage .homePageTileFull.twitchTile .homepage_tile_large_text {
+    width: 92%;
+    height: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#gameHomePage .homePageTileFull.twitchTile .homepage_tile_large_text img {
+    width: auto;
+}
+
+.homePageTileSmall {
+	width: 100%;
+	display: block;
+}
+
+#gameHomePage .homePageTileSmall {
+	margin-bottom: 1px;
+}
+
+#gameHomePage .homePageTileSmall.rightTile {
+    width: 100%;
+    display: block;
+	/* position: relative; */
+}
+
+#gameHomePage .homePageTileSmall.rightTile .tileBackground img {
+    width: auto;
+}
+
+#gameHomePage .newsTile .tileBackground {
+    text-align: center;
+}
+
+#gameHomePage .homePageTileSmall.rightTile .tileBackground {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 2%;
+    height: 250px;
+    width: 96%;
+    float: none;
+}
+
+#gameHomePage .tileHoverContent {
+    width: 94%;
+    padding: 0 3% 20px 3%;
+    text-align: center;
+}
+
+#gameHomePage .homePageTileSmall.rightTile .tileHoverContent {
+    width: 91%;
+    padding: 2% 5% 4% 5%;
+	float: none;
+    position: absolute;
+    text-align: center;    
+}
+
+#gameHomePage .homepageTiles h2 {
+	margin-top: 0;
+	text-align: center !important;
+	margin-bottom: 10px;
+}
+
+#gameHomePage .tileButtonLink {
+    float: none;
+}
+
+#gameHomePage .homepage_tile_large_r.twitterTile {
+    width: 100% !important;
+    border: none;
+    display: none;
+}
+
+#gameHomePage .homepage_tile_large_r.twitterTile iframe#twitter-widget-0 {
+	height: 800px !important;
+}
+
+#gameHomePage .twitterTile .ms-fullWidth {
+    width: 90%;
+}
+
+#gameHomePage .featuredTile {
+    border: none;
+}
+
+#gameHomePage .homePageTileFull.twitchTile .homepage_tile_twitch_content {
+	width: 92%;
+    padding: 20px 4%;
+}
+
+.twitchStream .playButton {
+    bottom: 25%;
+    right: 40%;
+}
+
+/*
+.gameHomeIconRowWrapper {
+	margin-top: 0;
+}
+
+.gameHomeIconContainer {
+	width: 96%;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 20px 2%;    
+    text-align: left;
+    height: 96px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;	
+}
+
+.gameHomeIconImg {
+    float: left;
+    width: 35%;
+    padding: 0 5% 0 0;
+    text-align: center;
+}
+
+.gameHomeIconImg img {
+    width: auto;
+    height: 96px;
+}
+
+.gameHomeIconLink {
+    width: 60%;
+    float: left;
+    padding-top: 25px;
+}
+
+.gameHomeIconLink a {
+    font-family: 'KlavikaMediumCondensed', Calibri, Arial, sans-serif;
+    font-size: 25px;
+    margin: 0 0 15px 0;
+    font-weight: normal;
+    line-height: 26px;
+}
+*/
+
+#gameHomePage .featuredTile .homepageTileContent {
+    padding: 0;
+    width: 100%;
+}
+
+.gameHomeIconRowWrapper {
+	margin-top: 0;	
+	display: inline-block;
+	float: left;
+}
+
+.gameHomeIconRow {
+    display: inline-block;
+    float: left;
+}
+
+.gameHomeIconRow:last-child {
+	width: 65%;
+}
+
+.gameHomeIconRow:first-child {
+	width: 35%;
+}
+
+.gameHomeIconImg {
+	height: 150px;
+    display: inline-block;
+    padding: 0 3%;
+    width: 100%; 
+    border-bottom: 1px solid #ccc;
+}
+
+.gameHomeIconImg img {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+    text-align: center;  	
+}
+
+.gameHomeIconLink {
+	height: 150px;
+    display: inline-block;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    padding: 0 7% 0 12%;
+}
+
+.gameHomeIconLink p {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	padding: 0;
+  	margin: 0;  	
+}
+
+.gameHomeIconLink a {
+	font-family: 'KlavikaMediumCondensed', Calibri, Arial, sans-serif;
+	font-size: 23px;
+	margin: 0;
+	font-weight: normal;
+	line-height: 26px;  	
+}
+
+
+#gameHomePage .featuredTile .blackButton {
+    margin-left: 4%;
+}
+
+.pageContentFull#homePage {
+	width: 100%;
+    margin: 0 auto;
+}
+
+/* General Content */
+
+.generalHero {
+    height: auto;
+	margin: 0 0 30px -3%;
+    width: 106%;
+    border-bottom: 1px solid #ccc;
+}
+
+.generalHeroText {
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 10px 3% 0;
+    width: 93%;
+}
+
+.generalHeroImage {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;    
+    margin-bottom: 0;
+}
+
+.generalHeroImage img {
+    width: 100%;
+}
+
+.generalHeroText h2 {
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.generalHeroText p {
+	font-size: 20px;
+	line-height: 25px;
+}
+
+
+.generalProductRow ul {
+	width: 100%;
+    margin-left: 20px;
+}
+
+
+/* Hub Pages */
+
+.hubPageHeroContent {
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+}
+
+.hubPageHeroContainer .hubPageHero {
+	background-size: auto 225px;
+    width: 100%;
+    background-position: 65% 0;
+}
+
+.hubPageHeroText {
+    width: 98%;
+    margin-top: 225px;
+    padding-left: 3%;
+    padding-right: 3%;    
+}
+
+.hubPageHeroImage {
+	margin: 0 -590px;    
+}
+
+.majorHubHero {
+	margin-top: 0;
+}
+
+.majorHubHeroText, .productHubHeroText {
+	width: 95%;
+	padding-top: 10px;
+}
+
+.HeroItem.stacked .productHubHeroText {	
+    display: inline-block;	
+}
+
+
+.majorHubHeroImage, .productHubHeroImage {
+	width: 100%;
+}
+
+.majorHubHeroImage img {
+	width: 100%;
+}
+
+.page-border {
+	margin-top: 0;
+	padding: 0;
+}
+
+.pageContent {
+	display: inline-block;
+	float: left;
+	width: 95%;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+.majorHubGrid {
+	border-top: none;
+	margin-top: -10px;
+	margin-left: 0.5%;
+	width: 99%;
+}
+
+.majorHubGridRow {
+    width: 100%;
+}
+
+.majorHubGrid .majorHubGridColumn {
+	border-top: 1px solid #ddd;
+	margin-bottom: 20px;
+}	
+
+.majorHubGridColumn,
+.majorHubGridColumnGroup {
+	width: 100%;
+	border-top: none;
+}
+
+.majorHubGridHeader {
+	/* display: inline-block;  */
+	padding: 0;
+	float: left; 
+}
+
+.majorHubGridHeader:hover,
+.productHubGridHeader:hover { 
+	padding: 0;	   
+}
+
+.majorHubGridContent {
+	display: inline-block; 
+	width: 86%;
+	float: left;    
+}
+
+.majorHubGridColumn.group {
+	width: 100%;
+	border-right: none;
+	float: left;
+}
+
+.majorHubGridColumn.group .majorHubGridContent {
+    border-top: none;
+    padding: 7% 0 0 7%;
+    width: 90%;
+}
+
+.majorHubGridHeaderFull {
+    display: inline-block;
+    float: left;
+    padding: 7% 0 7% 7%;
+    width: 93%;  
+}
+
+/* Rotating Banners */
+
+.pageContentFull .HeroItem {
+    height: auto;
+    margin-bottom: 0;
+    margin-left: -4%;
+    margin-top: -10px;
+    min-height: 0;
+    width: 108%;
+}
+
+.pageContentFull .HeroItem {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+
+.pageContentFull .HeroItem h2 {
+    margin-top: 0;
+}
+
+.pageContentFull .HeroItem .major-hub-hero-text {
+	padding: 10px 0 30px 3.09917%;
+	width: 95%;
+}
+
+.pageContentFull .HeroItem .major-hub-hero-img {
+	width: 100%;
+}
+
+.pageContentFull #heronav {
+    padding-left: 3%;
+}
+
+/* Banner */
+
+.bannerGrayBg {
+	margin-bottom: 30px !important;
+}
+
+.bannerGrayText {
+    padding: 25px 0 0 0;
+}
+
+.bannerGrayBg.bannerGrayText {
+	margin-bottom: 0 !important;	
+}
+
+.imageTextLeft,
+.imageTextRight {
+	float: left;
+	width: 100%;
+}
+
+.pageContent#game .gamePageRow .imageTextLeft,
+.pageContent#game .gamePageRow .imageTextRight {
+    text-align: center;
+}
+
+.pageContent#game .gamePageRow .imageTextLeft h2,
+.pageContent#game .gamePageRow .imageTextRight h2,
+.pageContent#game .gamePageRow .imageTextLeft h3,
+.pageContent#game .gamePageRow .imageTextRight h3,
+.pageContent#game .gamePageRow .imageTextLeft p,
+.pageContent#game .gamePageRow .imageTextRight p {
+    text-align: left;
+}
+
+
+.pageContent#game .gamePageRow .imageTextLeft .ms-rtePosition-1,
+.pageContent#game .gamePageRow .imageTextRight .ms-rtePosition-1 {
+    float: none;
+}
+
+.pageContent#game .gamePageRow .imageTextLeft img,
+.pageContent#game .gamePageRow .imageTextRight img {
+    margin-bottom: 20px;
+}
+
+
+/* Minor Hub */
+
+.minorHubHero {
+    height: auto;
+	margin: 0 0 30px -3%;
+    width: 106%;
+    border-bottom: 1px solid #ccc;
+}
+
+.minorHubHeroText {
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+	padding: 30px 3% 20px;
+    width: 93%;
+}
+
+.minorHubHeroImage {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;    
+    margin-bottom: 0;
+}
+
+.minorHubHeroImage img {
+    width: 100%;
+}
+
+.minorHubHeroText h2 {
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.minorHubHeroText p {
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.minorHubHeroText p:last-child {
+	padding-bottom: 10px;
+}
+
+.minorHubColumn {
+	width: 100%;
+	margin-top: 0;
+}
+
+.minorHubColumn:first-child {
+	margin-top: 25px;
+}
+
+.pageContent.minorHub .dfwp-column {
+	width: 100% !important;
+	padding-left: 0;
+}
+
+.twoColumnLeft,
+.twoColumnRight {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#sideNavBox,
+#left-col {
+	width: 100%;
+}
+
+#sideNavBox {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+#left-col li .menu-item-text {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+#left-col li {
+	width: 100%;	
+}
+
+#left-col li.display:hover > .ms-core-listMenu-item {
+    
+    /*color: #999; 
+    background: transparent url('Images/left-nav-plus.png') no-repeat 96% 25px;      */   
+}
+
+#left-col li ul li.display:hover > .ms-core-listMenu-item {  
+    background-image: none;    
+}
+
+#left-col li.static {
+	display: none;
+}
+
+#left-col li.display {
+	display: inline-block;
+}
+
+#left-col li.selected {
+	width: 100%;
+	display: inline-block;
+}
+
+#left-col li.display a {
+    background: url("Images/left-nav-plus.png") no-repeat scroll 96% 18px;
+    padding: 15px 18% 15px 3%;
+    width: 80%;    
+}
+
+#left-col li.display a:hover {
+    background: transparent url('Images/left-nav-plus.png') no-repeat 96% 18px; 
+    color: #999;
+}
+
+#left-col li.selected > .ms-core-listMenu-item {
+    width: 80%; 
+    color: #999;    
+}
+
+#left-col li a.selected {
+    width: 80%;    
+    background: transparent url("Images/left-nav-plus.png") no-repeat 96% 18px;
+    padding: 15px 18% 15px 3%;
+}
+
+#left-col li a.selected:hover {
+    cursor: pointer;
+    background: transparent url('Images/left-nav-plus.png') no-repeat 96% 18px;
+}
+
+#left-col li.selected > a.open {
+    color: #000;    
+}
+
+#left-col li a.open {
+    width: 80%; 
+    color: #000;	
+    background: transparent url('Images/left-nav-minus.png') no-repeat 96% 18px; 	
+}
+
+#left-col li a.open:hover {
+    width: 80%; 
+    color: #000;	
+    background: transparent url('Images/left-nav-minus.png') no-repeat 96% 18px; 	
+}
+
+#left-col li:hover,
+#left-col li a:hover {
+    background-image: none;
+}
+
+#left-col li ul li .menu-item-text {
+    font-size: 24px;
+	line-height: 34px;  
+}
+
+#left-col li ul li:hover,
+#left-col li ul li a:hover {
+    background-color: #ededed;   
+    background-image: none;    
+}
+
+#left-col li ul li.display a {
+    width: 80%;
+    padding: 10px 3.7%;    
+    background-image: none; 
+}
+
+#left-col .ms-core-listMenu-verticalBox .ms-listMenu-editLink a {
+    background-image: none;
+}
+
+
+/* Product Listing */
+
+.productListingHubHero {
+    /* background-color: transparent; */
+    height: auto;
+    margin: 0 0 0 -3%;
+    width: 106%;
+}
+
+.productListingHubHeroText {
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 0 3% 40px;
+    width: 93%;
+}
+
+.productListingHubHeroImage {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0 3% 3% 3%;    
+    margin-bottom: 25px;
+}
+
+/*
+.productListingHubHeroImage img {
+    width: 90%;
+}
+
+
+.productListingHubHeroText h2 {
+	font-size: 25px;
+	color: #999;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+*/
+
+.productListingHubHeroText h2 {
+	margin-bottom: 15px;
+}
+
+.productListingHubHeroText p {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+
+.productListingHubHeroText p:last-child {
+	padding-bottom: 0;
+}
+
+
+
+/* Product Detail */
+
+.productDetailHero {
+    height: auto;
+    margin: 0;
+    width: 100%;
+}
+
+.productDetailHeroText {
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 0;
+    width: 100%;
+}
+
+.productDetailHeroImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.productDetailHeroIcons {
+	float: left;
+	margin: 30px 0 0 0;	
+	width: 100%;
+}
+
+.productDetailHeroText h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.productDetailHeroText p {
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.productDetailHeroLink {
+    margin: 10px 0 0;
+    clear: none;
+}
+
+.productDetailHero2 {
+    height: auto;
+    margin: 0;
+    width: 100%;
+}
+
+.productDetailHero2Text,
+.productDetailHeroRight .productDetailHero2Text {
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 0;
+    width: 100%;
+}
+
+.productDetailHero2Image,
+.productDetailHeroRight .productDetailHero2Image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.productDetailColumn,
+.productDetailColumnLast {
+	width: 100%;
+	margin-top: 0;
+}
+
+.productDetailColumn:first-child {
+	margin-top: 25px;
+}
+
+#productDetail .productDetailHero {
+	margin-bottom: 5px;
+}
+
+#productDetail .productDetailHeroText {
+	width: 94%;
+}
+
+.productDetailTwoColumnLeft,
+.productDetailTwoColumnRight {
+	width: 100%;
+}
+
+.productDetailTwoColumnLeft {
+	margin-bottom: 25px;
+}
+
+.productDetailTwoColumnLeft img,
+.productDetailTwoColumnRight img {
+	width: 100%;
+}
+
+.productDetailTwoColumnContent {
+  padding-left: 4%;
+  padding-right: 4%;  
+}
+
+.productDetailTwoColumnLink {
+  padding-left: 4%;
+  padding-right: 4%; 
+}
+
+.productDetailLeft,
+.productDetailRight {
+	width: 100%;
+}
+
+.productDetailLeft img,
+.productDetailRight img {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.productDetailProcCol {
+	width: 97%;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 25px;
+}
+
+
+
+/* Great Page */
+
+.greatPageHero {
+	margin-left: -4%; 
+	width: 107%;
+}
+
+.greatPageHeroImage {
+	width: 100%;
+}
+
+.greatPageHeroImage img {
+	width: 100%;
+}
+
+.greatPageHeroText {
+	width: 93%;
+}
+
+.greatPageContentLeft .greatPageContentImage, 
+.greatPageContentRight .greatPageContentImage {
+	width: 100%;
+	padding-bottom: 20px;
+	float: left;
+}
+
+.greatPageContentLeft .greatPageContentImage img, 
+.greatPageContentRight .greatPageContentImage img {
+	width: 100%;
+}
+
+.greatPageContentLeft .greatPageContentText,
+.greatPageContentRight .greatPageContentText {
+    width: 100%;
+}
+
+.greatPageResources .groupmarker {
+    width: 100%;
+}
+
+.greatPageRotator {
+    width: 100%;
+}
+
+.greatPageRotator .greatPageContainer {
+    width: 100%;	
+}
+
+.greatPageRotatorContainer {
+    width: 100%;	
+}
+
+#greatPageRotatorNav {
+    /* width: 95%; */
+    margin-left: 0;
+}
+
+#greatPageScrollLeft, 
+#greatPageScrollRight {
+    display: none;
+}
+
+#greatPageRotatorContent1,
+#greatPageRotatorContent2,
+#greatPageRotatorContent3 {
+	width: 100%;
+}
+
+.greatPageRotatorText {
+    width: 100%;
+}
+
+.greatPageRotatorButton {
+    margin-right: 0;
+}
+
+
+
+/*
+.greatPageTable {
+	float: left;
+	width: 100%;
+	margin: 0 0 0 -3%;
+	width: 105%;
+}
+*/
+
+#landingPageRows .greatPageContentLeft .greatPageContentImage,
+#landingPageRows .pageContentLeft .pageContentImage {
+    width: 100%;
+    float: left;
+    margin: 0;
+    text-align: center;	
+}
+
+
+#landingPageRows .greatPageContentLeft .greatPageContentText,
+#landingPageRows .pageContentLeft .pageContentText {
+	overflow: auto;
+    width: 100%;
+    float: left;
+    margin: 0;   
+}
+
+#landingPageRows .greatPageContentRight .greatPageContentImage,
+#landingPageRows .pageContentRight .pageContentImage {
+    width: 100%;
+    float: left;
+    margin: 0;
+    text-align: center;	    	    	  
+}
+
+#landingPageRows .greatPageContentRight .greatPageContentText,
+#landingPageRows .pageContentRight .pageContentText {
+	overflow: auto;
+    width: 100%;
+    float: left;
+    margin: 0;   
+}
+
+
+
+.ls-responsive .liquid-slider .panel .panel-wrapper {
+    overflow: hidden;
+}
+
+		/* Force table to not be like tables anymore */
+.ls-responsive .liquid-slider .panel .panel-wrapper table, 
+.ls-responsive .liquid-slider .panel .panel-wrapper thead, 
+.ls-responsive .liquid-slider .panel .panel-wrapper tbody, 
+.ls-responsive .liquid-slider .panel .panel-wrapper th, 
+.ls-responsive .liquid-slider .panel .panel-wrapper td, 
+.ls-responsive .liquid-slider .panel .panel-wrapper tr { 
+			display: block; 
+}
+		
+		/* Hide table headers (but not display: none;, for accessibility) */
+.ls-responsive .liquid-slider .panel .panel-wrapper thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+.ls-responsive .liquid-slider .panel .panel-wrapper tr { border: 1px solid #ccc; }
+		
+.ls-responsive .liquid-slider .panel .panel-wrapper td { 
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee; 
+			position: relative;
+			padding-left: 50%; 
+		}
+		
+.ls-responsive .liquid-slider .panel .panel-wrapper td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%; 
+			padding-right: 10px; 
+			white-space: nowrap;
+		}
+		
+
+.table-wrapper { 
+	position: relative; 
+	margin-bottom: 20px; 
+	overflow: hidden; 
+	border-right: 1px solid #ccc; 
+}
+
+.table-wrapper div.scrollable table {
+	margin-left: 35%;
+}
+
+.table-wrapper div.scrollable { 
+	overflow: scroll; 
+	overflow-y: hidden; 
+}
+
+.responsive td, 
+.responsive th {
+	position: relative;
+	/* white-space: nowrap; */
+	overflow: hidden;
+}
+
+.responsive th:first-child, 
+.responsive td:first-child,
+.responsive td:first-child,
+.responsive.pinned td {
+	display: none;
+}
+
+.pinned { 
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	width: 35%;
+	overflow: hidden;
+	overflow-x: hidden;
+	background-color: #fff;
+	border: none;	
+}
+
+.pinned table { 
+	border-right: none; 
+	border-left: none;
+	width: 100%; 
+}
+
+.pinned table th, 
+.pinned table td {
+	border-right: none; 
+}
+
+.pinned td:last-child { 
+	border-bottom: none;
+}
+
+.pinned .ms-rteTable-default > tbody > tr > th,
+.pinned .ms-rteTable-default > tbody > tr > td, 
+.scrollable .ms-rteTable-default > tbody > tr > th,
+.scrollable .ms-rteTable-default > tbody > tr > td {
+	padding: 0 5px;
+	border-right: none;	
+}
+
+
+.pinned img,
+.scrollable img {
+	margin: 0 !important;
+}
+
+
+/* Tables */
+
+.formTable {
+	width: 100%;
+}
+
+.formTable input[type="text"],
+.formTable input[type="select"],
+.formTable .dropdown {
+	width: 90%;
+}
+
+.tableScroll {
+	overflow: scroll;
+}
+
+.tabImageLeft240 .image {
+	width: 100%;
+}
+
+.tabImageLeft240 .text {
+	width: 100%;
+}
+
+.dfwp-column {
+    width: 100% !important;
+}
+
+#EUCookieMsg {
+	width: auto !important;
+	right: 23px !important;
+}
+
+/* Game */
+
+.game-banner-cta {
+	margin-top: 0;
+	position: relative;
+	padding: 10px 3%;
+    border-bottom: 1px solid #ccc;
+	float: left;
+	width: 100%;
+	bottom: 0;	
+}
+
+#game.pageContent .gameHeroText {
+    width: 85%;
+}
+
+.pageContent#game .HeroContent div[class*="ExternalClass"] {
+    display: inline-block;
+}
+
+.pageContent#game .gameHeroImage img {
+	width: 100%;
+}
+
+.gamePageRow.gamePageContentLeft .gamePageContentImage,
+.gamePageRow.gamePageContentLeft .gamePageContentText,
+.gamePageRow.gamePageContentRight .gamePageContentImage,
+.gamePageRow.gamePageContentRight .gamePageContentText {
+	float: left;
+    width: 100%;
+}
+
+.gamePageRow.gamePageContentLeft .gamePageContentImage {
+	margin-bottom: 30px;
+}
+
+#game.pageContent .gameLeftColumn,
+#game.pageContent .gameRightColumn {
+    width: 100%;
+}
+
+.pageContent#game .twoColumnLeft,
+.pageContent#game .twoColumnRight {
+	width: 100%;
+	float: left;
+}
+
+#game.pageContent .verticalHero {
+    width: 100%;
+    float: left;
+    height: auto;
+}
+
+#game.pageContent .gamePromoContainer .gamePromoOne,
+#game.pageContent .gamePromoContainer .gamePromoTwo,
+.columnContainer .gamePromoOne,
+.columnContainer .gamePromoTwo {
+    width: 100%;
+}
+
+.gamePromoContainer .gamePromoOne .gamePromoText, 
+.gamePromoContainer .gamePromoTwo .gamePromoText,
+.columnContainer .gamePromoOne .gamePromoText,
+.columnContainer .gamePromoTwo .gamePromoText {
+    width: 100%;
+}
+
+.gamePromoContent {
+    width: 100%;
+}
+
+.pageContent#game .gameList {
+	width: 99%;
+}
+
+.gameHomePageHeroContainer .heroBg {
+    height: 300px !important;
+}
+
+.gameHomePageHeroContainer .heroText {
+	padding-top: 300px;
+}
+
+.verticalHeroText {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;   
+}
+
+
+#videoLightbox {
+	width: 80%;
+	height: auto;
+}
+
+#videoLightbox .videoContainer iframe {
+    width: 100% !important;
+}
+
+.videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* padding-top: 30px; */
+    height: auto !important; 
+    /* overflow: hidden; */
+    margin-top: 0;
+}
+ 
+.videoContainer iframe,
+.videoContainer object,
+.videoContainer embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Rotating Content */
+
+.rotatingContentImage {
+	width: 94%;
+	margin: 0 3%;
+	float: left;
+}
+
+.rotatingContentImage img {
+	width: 100%;
+}
+
+.rotatingContentText {
+	width: 94%;
+	margin: 0 3%;
+	float: left;
+}
+
+.rotatingContentLogo p {	
+	width: 100%;
+}
+
+/* Standalone Landing Page */
+
+.landingPageThreeColumn,
+.landingPageThreeColumnLast {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.standaloneLandingPage .imageTextLeft,
+.standaloneLandingPage .imageTextLeft img, 
+.standaloneLandingPage .imageTextRight {
+	width: 100%;
+}
+
+.rightImageTextRight {
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.rightImageTextLeft {
+	float: left;
+	width: 100%;
+	overflow: auto;
+}
+
+.threeColumnBorderTop {
+    width: 100%;
+}
+
+.threeColumnBorderTopLast {
+    width: 100%;     
+}
+
+
+
+/*
+input[type="password"], input[type="text"], input[type="file"], textarea, .ms-inputBox {
+    padding: 2px 5px;
+}
+
+.productDetailHeroImage {
+    width: 100%;
+    height: auto;
+}
+
+.productDetailHeroImage img {
+    width: 90%;
+}
+
+.productDetailHeroText {
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    line-height: 25px;
+    width: 100%;
+}
+
+.productDetailHeroText h2 {
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    color: #999;
+    text-transform: uppercase;
+    line-height: 25px;
+    width: 100%;
+}
+*/
+
+#productHub.pageContentFull {
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+
+#productHub.pageContentFull .HeroItem.stacked {
+    float: left;
+    height: auto !important;
+    margin: 0;
+    width: 100%;
+    background-color: #000 !important;    
+}
+
+.HeroItem.stacked .heroContent.imageLeft,
+.HeroItem.stacked .heroContent.imageleft,
+.HeroItem.stacked .heroContent.imageRight,
+.HeroItem.stacked .heroContent.imageright,
+.HeroItem.stacked .HeroContent.imageCenter,
+.HeroItem.stacked .HeroContent.imagecenter {
+    float: left;
+    padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.HeroItem.stacked .HeroContent.imageLeft .productHubHeroText,
+.HeroItem.stacked .HeroContent.imageRight .productHubHeroText,
+.HeroItem.stacked .HeroContent.imageCenter .productHubHeroText,
+.HeroItem.stacked .HeroContent.imageleft .productHubHeroText,
+.HeroItem.stacked .HeroContent.imageright .productHubHeroText,
+.HeroItem.stacked .HeroContent.imagecenter .productHubHeroText {
+	display: inline-block;
+	margin-top: 0;
+	width: 92%;
+	position: inherit;
+    background-color: #000;	
+    padding: 20px 20px 5px 20px; 	
+}
+
+.HeroItem.stacked .HeroContent.imageRight img,
+.HeroItem.stacked .HeroContent.imageright img {
+    left: 50%;
+    margin: 0 auto 0 -1040px;
+}
+
+.HeroItem.stacked .HeroContent.imageRight .heroTitlePointer img,
+.HeroItem.stacked .HeroContent.imageright .heroTitlePointer img {
+    left: 0;
+    margin: 0;
+}
+
+.HeroItem.stacked .productHubHeroText h2 {
+	margin-top: 0;   
+}
+
+.HeroItem.stacked .productHubHeroText p.cta {
+	display: none;
+	color: #f26621;	
+}
+
+.HeroItem.stacked .heroText .heroQuote {
+	font-size: 24px;
+	line-height: 34px;
+}  
+
+#productHub .HeroItem.stacked .heroContent,
+#landingPageBlack .HeroItem.stacked .heroContent {
+	width: 94%;
+	margin-left: 3%;	
+}
+
+#productHub .HeroItem.stacked .heroContent.imageLeft,
+#landingPageBlack .HeroItem.stacked .heroContent.imageLeft {
+	margin-left: 3%;
+	width: 94%;
+}
+
+#productHub .HeroItem.stacked .heroContent.imageCenter,
+#landingPageBlack .HeroItem.stacked .heroContent.imageCenter {
+	height: auto !important;
+	width: 100%;
+	margin: 0;
+}
+
+.HeroItem.stacked.HeroItem .imageCenter .productHubHeroText h2, 
+.HeroItem.stacked.HeroItem .imageCenter .productHubHeroText p {
+	padding-left: 3%;
+	width: 94%;
+}
+
+.HeroItem.stacked.HeroItem .productHubHeroText h2, 
+.HeroItem.stacked.HeroItem .productHubHeroText p {
+	width: 100%;
+}
+
+.HeroItem.stacked.HeroItem .productHubHeroText h2 {
+	font-size: 45px;
+	line-height: 45px;		
+}
+
+#productHub .HeroItem.stacked .heroContent .productHubHeroText,
+#gameFeaturedHubHero .HeroItem.stacked .heroContent .productHubHeroText,
+#landingPageBlack .HeroItem.stacked .heroContent .productHubHeroText  {
+	width: 100%;
+	padding: 20px 0 5px 0;
+	margin-top: 225px !important;  
+}
+
+#productHub .HeroItem.stacked .heroBg,
+#gameFeaturedHubHero .HeroItem.stacked .heroBg,
+#landingPageBlack .HeroItem.stacked .heroBg {
+	/* background-position: 27.5% 0; */
+	background-position: 28.7% 0;
+}
+
+.HeroItem.stacked .heroBg {
+  background-position: -80px 0;
+}
+
+#productHub .HeroItem.stacked .heroBg.imageRight,
+#gameFeaturedHubHero .HeroItem.stacked .heroBg.imageRight,
+#landingPageBlack .HeroItem.stacked .heroBg.imageRight,
+#productHub .HeroItem.stacked .heroBg.imageright,
+#gameFeaturedHubHero .HeroItem.stacked .heroBg.imageright,
+#landingPageBlack .HeroItem.stacked .heroBg.imageright {
+	/* background-position: 77% 0; */
+	background-position: 73.5% 0;
+}
+
+#productHub .HeroItem.stacked .heroBg.imageCenter,
+#landingPageBlack .HeroItem.stacked .heroBg.imageCenter {
+	background-position: center 0;
+	background-size: auto 250px;
+	height: auto !important;
+}
+
+.HeroItem.stacked .heroVidContainer {
+	text-align: left;
+}
+
+#productHub .productHubContainer .columnContainer {
+	margin-bottom: 0;
+}
+
+#fullScreenPromoPage .pageSection {
+	min-height: 0 !important;
+}
+
+#fullScreenPromoPage .pageContentFull {
+	min-height: 0 !important;
+}
+
+#fullScreenPromoPage.pageContentFull .HeroItem,
+#homePageHero.pageContentFull .HeroItem {
+  	width: auto !important;
+  	height: auto !important;  	
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroBg,
+#homePageHero .HeroItem.stacked .heroBg {
+	background-position: center -80px !important;
+	background-size: auto 350px !important;
+	background-color: #000;	
+  	height: auto !important; 
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroContent,
+#homePageHero .HeroItem.stacked .heroContent {
+	padding: 0;
+	background-color: #000; 
+	width: 94%;
+	margin: 290px 3% 20px 3%;
+	height: auto !important;	
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroContent .heroLogo,
+#homePageHero .HeroItem.stacked .heroContent .heroLogo {
+	width: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 10px;		
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroContent .heroLogo img,
+#homePageHero .HeroItem.stacked .heroContent .heroLogo img {
+	width: 20%;
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroContent .heroText,
+#homePageHero .HeroItem.stacked .heroContent .heroText {
+	width: 100%;
+	margin-top: 0;	
+}
+
+#fullScreenPromoPage .HeroItem.stacked .heroContent .btnDown {
+	display: none;
+}
+
+#fullScreenPromoPage .twoColumnRight {
+	display: none;
+}
+
+#fullScreenPromoPage .heroLogo{
+	display: none;
+}
+
+.heroDownBtn {
+	display: none;
+}
+
+.ignitionForm {
+  	margin-left: 0;
+}
+
+.ignitionForm .formEntry {
+  	width: 100%;
+}
+
+.ignitionForm .formEntry input,
+.ignitionForm .formEntry select {
+  	width: 100%;
+}
+
+.ignitionForm .formOpt {
+  	margin-left: 0;
+}
+
+
+
+
+.stacked.HeroItem .heroText h1, 
+.stacked.HeroItem .heroText h2 {
+	font-size: 45px;
+	line-height: 45px;
+}
+ 
+.stacked.HeroItem .heroText p {
+	font-size: 16px;
+	line-height: 16px;
+}
+
+/* CORE Infographic */
+
+.coreInfg #main-wrapper {
+	width: 100%;
+	background: #ededed url("Images/main-bg-640.jpg") no-repeat top center;
+}
+
+.coreInfg #numbers {
+	min-height: 400px; 
+	width: 380px; 
+	margin: 0 auto;
+}
+
+.coreInfg #numbers .number {
+	color: #ed1c24;
+	padding: 0;
+	border: 1px solid #9d9fa2;
+	width: 20px;
+	height: 19px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 16px;
+	transition: all .2s;
+	position: absolute;
+}
+
+.coreInfg #numbers .number:hover {
+	border: 1px solid #9d9fa2;
+	width: 18px;
+	height: 17px;
+	cursor: pointer;
+}
+
+.coreInfg #numbers .number:active, #numbers .number.active {
+	border: 2px solid #9d9fa2;
+	width: 18px;
+	height: 17px;
+	cursor: pointer;
+	background: #ed1c24;
+	color: #fff;
+}
+
+.coreInfg #hotspot-1 {top: -9px; left: 185px;}
+.coreInfg #hotspot-2 {top: 44px; left: 131px;}
+.coreInfg #hotspot-3 {top: 162px; left: 104px;}
+.coreInfg #hotspot-4 {top: 103px; left: 49px;}
+.coreInfg #hotspot-5 {top: 85px; left: 321px;}
+.coreInfg #hotspot-6 {top: 143px; left: 353px;}
+
+
+
+.mailForm .formLabel {
+	width: 100%;
+	margin-bottom: 5px;	
+}
+
+.mailForm .formInput {
+	width: 95%;			
+}
+
+.ls-wrapper .ls-nav {
+    width: 98%;
+}
+
+/* Where to Buy */
+
+.wtbReseller {
+	width: 100%;
+	padding-right: 0;
+	padding-bottom: 30px;	
+}
+
+.wtbReseller:last-child {
+	padding-bottom: 0;	
+}
+
+
+/*  BEGIN Link Lists  */
+
+.ImageLeftOrangeButton {
+    float: left;
+    margin-bottom: 25px;
+}
+
+.ImageLeftOrangeButton .imageTextLeft {
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 0 !important;
+	margin: 20px 0 10px 0;
+}
+
+.ImageLeftOrangeButton .imageTextRight {
+	width: 100%;
+	overflow: visible;
+	float: left;
+	clear: both;	
+}
+
+li .imageLeftTextRightNoWrap {
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.newsTile {
+    width: 96% !important;
+}
+
+.liquid-slider .imageTextLeft,
+.liquid-slider .imageTextLeft img {
+	width: 100%;
+}
+
+.liquid-slider .imageTextLeft {
+	margin-bottom: 10px;
+}
+
+.liquid-slider .imageTextRight {
+	width: 100%;
+	float: left;
+}
+
+/* Display Templates */
+
+/* Help Me Choose */
+
+.floatingRefiner {
+	min-width: 0;
+	min-height: 0;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.filterDropDown:last-child {
+	width: 94%;
+}
+
+#Container select {
+	width: 100%;
+}
+
+.filterSliderBarGraph {
+	text-align: center;
+}
+
+.filterSliderBarGraph .ms-ref-refinername:link, 
+.filterSliderBarGraph .ms-ref-refinername:visited {
+  margin-bottom: 10px;
+}
+
+.ms-ref-refinername:link, 
+.ms-ref-refinername:visited {
+	width: 100%;
+}
+
+.histogram_container {
+	margin: 0 auto;
+}
+
+.slider_extent_label_section {
+	margin: 0 auto;
+}
+
+.slideronly_container {
+	margin: 0 auto;
+	width: 160px;
+}
+
+.wsgItem {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.wsgItem .imageContainer img {
+	width: 100%;
+}
+
+.wsgItem ul.linklist li {
+	display: inline-block;
+}
+
+
+/* 404 Page */
+
+#pageNotFound #SearchBox_keyword2 {
+	width: 88% !important;
+}
+
+/* AMD Is Everywhere */
+
+.amdIsEverywhere .imgFull {
+    margin-bottom: 0;
+}
+
+.twoColumnLeft {
+    margin-bottom: 30px;
+}
+
+.twoColumnLeft h1 {
+    padding-bottom: 20px;
+}
+
+.twoColumnRight img {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+ul.fourColumnList li,
+ul.threeColumnList li {
+    width: 97%;
+}
+
+ul.fourColumnList li img,
+ul.threeColumnList li img {
+    width: 100%;
+}
+
+.caseStudies p {
+    width: 100%;
+}
+
+.caseStudies a.pointer {
+    width: 100%;
+}
+
+.caseStudies a.pointer {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+/* Search Results */
+
+.searchResults {
+    width: 100%;
+}
+
+.shopPromo {
+    width: 100%;
+    float: left;
+}
+
+ul#shopModule {
+    float: left;
+    width: 94%;
+}
+
+.shopModPriceRow {
+    margin-left: 3%;
+    width: 97%;
+}
+
+.shopModPriceResults {
+    width: 100%;
+}
+
+a.shopModPrice {
+    text-align: center;
+}
+
+.shopModItem {
+    margin-right: 0;
+}
+
+.shopModPriceResults {
+    border-bottom: #d9d9d9 1px solid;
+    float: left;
+    margin: -15px 0 15px 0;
+    width: 100%;
+}
+
+#prevnext {
+    width: 94%;
+}
+
+/* Login Landing Page */
+
+#loginLandingPage.pageContent {
+    margin-top: 0;
+}
+
+#loginLandingPage .titleLoginContainer {
+    width: 94%;
+    min-height: 0;
+    margin: 0 auto;
+    background: transparent url("Images/login-content-bg.png") repeat left top;
+    padding: 0 3%;
+}
+
+#loginLandingPage .titleContainer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#loginLandingPage .loginContainer {
+    width: 100%;
+    border-top: 1px solid #000;
+    border-left: none;    
+    float: left;
+    padding-left: 0;
+    padding-top: 30px;    
+}
+
+.HeroContent.Capsaicin {
+	display: none;
+}
+
+#landingPageBlack #fname,
+#landingPageBlack #lname,
+#landingPageBlack #ctry,
+#landingPageBlack #ema,
+#landingPageBlack #ctry,
+#landingPageBlack #stpr,
+#landingPageBlack #optin {
+	width: 97%;
+}
+
+#landingPageBlack #fname input,
+#landingPageBlack #lname input,
+#landingPageBlack #ctry input,
+#landingPageBlack #ema input {
+	width: 97.8%;
+}
+
+#landingPageBlack #ctry select,
+#landingPageBlack #stpr select {
+	width: 100%;
+}
+
+
+#landingPageBlack #lname,
+#landingPageBlack #ema {
+	padding-top: 20px;
+}
+
+#landingPageBlack #ema {
+	float: left;
+	clear: right;
+}
+
+#landingPageBlack #fname, 
+#landingPageBlack #lname, 
+#landingPageBlack #ctry {
+    padding-right: 0;
+}
+
+
+#landingPageBlack .imageTextLeft {
+    padding-right: 0;
+    text-align: center;
+}
+
+#landingPageBlack .countdownClock {
+	left: 33%;
+}
+
+#landingPageBlack .countdownClock iframe {
+	/* left: -50%; */
+}
+
+.newHorizonHero {
+    background-position: bottom center;
+    height: 278px;
+    background-size: auto 100%;
+}
+
+.newHorizonHero h1 {
+    padding: 30px 0 0 0;
+}
+
+.newHorizonHero p {
+	width: 70%;
+    margin: 0 auto;
+}
+
+.newHorizonHero .countdownClock {
+    left: auto !important;
+    right: 0;
+    bottom: 0;
+    top: 200px;
+}
+
+#landingPageBlack .newHorizonEventHead .rightImageTextRight {
+	margin: 0 3%;
+	width: 94%;
+}
+
+#landingPageBlack .newHorizonEventHead .rightImageTextRight img {
+	width: 100%;
+}
+
+.newHorizonEventHead {
+	display: inline-block;
+}
+
+.newHorizonEventHead.vidMain {
+	width: 100%;
+	overflow: inherit;
+}
+
+.newHorizonEventHead.vidMain img {
+	height: 278px;
+}
+
+.newHorizonEventHeadTitleContainer {
+    top: 60px;
+    width: 100%;
+}
+
+.newHorizonEventHeadTitle h1 {
+    padding: 0;
+    text-align: center;
+}
+
+h2.newHorizonEventSub {
+    padding: 30px 9%;
+}
+
+#landingPageBlack .newHorizonEventContent .imageTextLeft {
+    width: 94%;	
+}
+
+
+#landingPageBlack .newHorizonEventContent .imageTextLeft img {
+    width: 100%;	
+}
+
+.newHorizonEventCols .twoColFullLeft,
+.newHorizonEventCols .twoColFullRight {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+.newHorizonEventCols .twoColFullLeft {
+    margin-bottom: 30px;
+}
+
+.newHorizonEventCols .twoColFullLeft .whiteBorderButton a,
+.newHorizonEventCols .twoColFullRight .whiteBorderButton a {
+	float: none;
+}
+
+.threeColFull {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.threeColFull:first-child {
+	margin-left: 0;
+}
+
+.threeColFull:last-child {
+	margin-right: 0;
+}
+
+.threeColFull .whiteBorderButton a {
+	float: none;
+}

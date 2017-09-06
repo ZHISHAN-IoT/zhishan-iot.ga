@@ -1,0 +1,8 @@
+#E-mail:webmaster(at)zhishan-iot.ga
+
+#LOG:
+ v00.00.01 2017-06-17 create index.html and set background image
+ v00.00.02 2017-08-09 add /page/semiconductor/acquisition-rec.html
+ v00.00.03 2017-08-10 adjust size of index image
+ v00.00.04 2017-08-17 add info and override background image of /page/semiconductor/acquisition-rec.html
+#END_OF_FILE

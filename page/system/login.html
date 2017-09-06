@@ -1,0 +1,64 @@
+<!--
+  @Author:ZHISHAN IoT
+  @Dessciption:login page
+  -->
+
+<!DOCTYPE html>              <!-- indicates this file follows HTML5 standard -->
+<html id="background_zz">
+
+    <head>
+		<!-- page config -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="ZHISHAN IoT - drive your world"/>
+        <meta name="keywords" content="android,digital-curcuit,LAN,MCU,radio/wireless"/>
+        <meta name="renderer" content="webkit"/>          <!-- using current browser's default core -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ZHISHAN IoT - login</title>
+
+		<!-- style sheet -->
+        <link rel="stylesheet" type="text/css" href="/style/background.css">
+        <link rel="stylesheet" type="text/css" href="/style/font.css">
+		<link rel="stylesheet" type="text/css" href="/style/ui.css">
+
+		<!-- javascript file -->
+		<script type="text/javascript" src="/script/javascript/login.js"></script>
+    </head>
+
+	<body id="ui_baseBody">
+
+<!-- TODO -->
+		<!-- top bar -->
+		<div class="topbar">
+			<div class="topbody">      
+				<ul class="toplist" style="vertical-align: text-bottom">
+					<li style="height: 45px">
+						<audio class="btn-audio" autoplay="autoplay" controls="control" loop="loop" preload="auto" style="height: 100%">
+							<source src="/music/きっとまたいつか(一定会再见).mp3"/>
+							Your browser can't support audio tag.
+						</audio>
+					</li>
+					<li><a class="title" href="/index.html"><h4><b>ZHISHAN-IoT</b></h4></a></li>
+					<li style="width: 60px"><a href="#">about</a></li>
+					<li style="width: 60px"><a href="#">mShow</a></li>
+					<li style="width: 60px"><a href="#">mView</a></li>
+				</ul>
+			</div>
+		</div>
+
+<!-- TODO -->
+		<div id="ui_indexDiv" style="width: 100%;height: 100%;">
+			<div id="ui_indexDiv02" style="height:90%;width:90%;">
+				</br></br></br></br></br>
+				<ul>
+					<li style="list-style-type:none"><a>Username&nbsp;</a><input id="inName" style="width:150px" type="text"></input></li>
+					<li style="list-style-type:none"><a>Password&nbsp;</a><input id="in" style="width:150px" type="text"></input></li>
+					</br>
+					<li style="list-style-type:none"><button onclick="loginAuthentication()" style="width:80px">login</button></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<!-- END OF FILE -->

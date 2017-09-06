@@ -1,0 +1,24 @@
+.gatedImg {
+    width: 15px;
+    height: 15px;
+}
+
+#licenseAgreement {
+    display: none;
+}
+
+#additionalInfo {
+    display: none;
+}
+
+#gateError {
+    display: none;
+}
+
+#newRequestInfo {
+    display: none;
+}
+
+#existingRequestInfo {
+    display: none;
+}

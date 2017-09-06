@@ -1,0 +1,1 @@
+!function(a,b){a.About=function(){function a(){return this.init=function(){b(document).ready(function(){})},this.init()}return new a}()}(window.ADI=window.ADI||{},jQuery,window);

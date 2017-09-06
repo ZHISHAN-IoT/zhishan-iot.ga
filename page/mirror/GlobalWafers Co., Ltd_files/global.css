@@ -1,0 +1,147 @@
+﻿ body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-image: url('../../pages/gw/images/bbgg.jpg');
+}
+a:hover
+{
+    color: #FF0000;
+}
+
+.main_control_block
+{
+    width: 850px;
+}
+.main_top_banner_block
+{
+    height: 70px;
+}
+.main_menu_block
+{
+    height: 23px;
+    vertical-align: top;
+    display: block;
+}
+
+.other_link_block
+{
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: #FFFFFF;
+    font-size: x-small;
+}
+.logo_block
+{
+    float: left;
+}
+
+.main_content_block
+{
+    
+}
+
+.main_bottom_block
+{
+    font-size: 11px;
+    line-height: 12px;
+    color: #333333;
+    background-color: #D1D8F2;
+}
+
+.left_control_block
+{
+    width: 239px;
+    float: left;
+    display: block;
+    vertical-align: bottom;
+}
+
+.right_control_block
+{
+    float: right;
+    padding-left: 26px;
+}
+
+.list_item
+{
+    font-size: 13px;
+	line-height: 20px;
+	color: #333333;
+    font-weight: normal;
+}
+.last_date_title
+{
+    font-size: 11px;
+    line-height: 13px;
+    color: #333333;
+}
+
+.sub_content_top_block
+{
+    height: 93px;
+}
+.sub_content_left_block
+{
+    border-width: 1px;
+    width: 238px;
+    background-color: #113DB9;
+    border-left-style: solid;
+    border-left-color: #5C77BE;
+}
+.sub_content_right_block
+{
+    padding: 17px 12px 17px 12px;
+    background-color: #FFFFFF;
+    padding-right: 0px;
+}
+.sub_content_menu_block
+{
+    margin: 17px 12px 17px 12px;
+    width: 214px;
+    border-collapse: collapse;
+}
+
+.sub_content_menu_block a
+{
+    font-size: 13px;
+	line-height: 20px;
+	color: #CCCCCC;
+}
+.content_default
+{
+    font-size: 13px;
+    line-height: 20px;
+    color: #333333;
+}
+.content_title
+{
+    font-size: 16px;
+    line-height: 20px;
+    color: #000066;
+    font-weight: bold;
+}
+.content_sub_title
+{
+    font-size: 13px;
+    line-height: 20px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.data_pager
+{
+    font-size: 13px;
+    line-height: 20px;
+    color: #333333;
+    font-weight: normal;
+}
+
+.linktit {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 15px;
+	line-height: 20px;
+	color: #CCCCCC;
+	font-weight: bold;
+}

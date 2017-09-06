@@ -1,0 +1,1 @@
+var exclutionList=["^http[s]?://registration(.*?)(.corpnt.analog.com|.analog.com).*.(login.aspx)"];
