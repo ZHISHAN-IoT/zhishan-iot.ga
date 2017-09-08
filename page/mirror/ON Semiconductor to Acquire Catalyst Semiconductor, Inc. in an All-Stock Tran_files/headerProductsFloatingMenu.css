@@ -1,0 +1,97 @@
+.floatingMenuTopMenu {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  display: none;
+  max-width: 250px;
+  z-index: 100;
+  box-shadow: #777 0 0 5px;
+  /*box-shadow: #000 0 0 10px -3px;*/
+  border-radius: 0 10px 10px 10px;
+}
+
+.floatingMenuTopMenu a, .floatingMenuTopMenu a:hover, .floatingMenuTopMenu a:visited {
+  color: white;
+  font: bold 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.floatingMenuTopMenu div:hover > a div {
+  background-color: #3A78A9;
+  border: none;
+}
+
+.floatingMenuTopMenu div:hover {
+  background-color: #3A78A9;
+  border: 1px solid #4194E9;
+  border-bottom-color: #235A92;
+  border-left-color: #235A92;
+}
+
+.floatingMenuTopMenu div {
+  color: white;
+  font: bold 11px Verdana, Arial, Helvetica, sans-serif;
+  background-color: #006218;
+  padding: 2px;
+  display: block;
+  cursor: pointer;
+}
+
+.headingTopMenu {
+  color: white;
+  font: bold 11px Verdana, Arial, Helvetica, sans-serif;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.firstLevelTaxTopMenu {
+  margin-bottom: -2px;
+  margin-left: -10px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.topItemTopMenu, .topBottomItemTopMenu, .middleItemTopMenu, .bottomItemTopMenu {
+  border: 1px solid green;
+  border-bottom-color: #004210;
+  border-left-color: #004210;
+}
+
+.topItemTopMenu {
+  position: relative;
+  border-radius: 0 10px 0 0;
+}
+
+.bottomItemTopMenu {
+  position: relative;
+  border-radius: 0 0 10px 10px;
+}
+
+.topBottomItemTopMenu {
+  position: relative;
+  border-radius: 0 10px 10px 10px;
+}
+
+.topItemTopMenu div, .topBottomItemTopMenu div, .middleItemTopMenu div, .bottomItemTopMenu div {
+  margin: 0 5px;
+}
+
+.headingTextTopMenu {
+  margin-left: 15px;
+}
+
+.headingBulletTopMenu {
+  float: left;
+}
+
+.arrowTopMenu {
+  background-color: #006218;
+  position: absolute;
+  z-index: 101;
+  color: white;
+  width: 10px;
+  text-align: center;
+}

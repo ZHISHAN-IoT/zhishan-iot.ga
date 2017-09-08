@@ -1,0 +1,104 @@
+.loginBox {
+	width: 300px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.loginLabel {
+	text-align: right;
+}
+
+.loginInfo .loginInputBox {
+	width: 150px; #
+	margin-left: 4px;
+}
+
+.loginSeparator {
+	padding-left: 10px;
+	padding-right: 10px;
+	background-image: url("/site/images/separator_gray.gif");
+	background-repeat: repeat-y;
+	background-position: 50%
+}
+
+table.loginLayout td {
+	vertical-align: top;
+}
+
+#Login .body td {
+	vertical-align: middle;
+}
+
+.loginLayout {
+	margin-top: 15px;
+	margin-left: 40px;
+}
+
+.loginInfo {
+	width: 100%;
+	padding: 5px;
+}
+
+.loginInfo td {
+	padding: 3px;
+}
+
+.loginButtons {
+	margin-top: 10px;
+}
+
+.loginRemember {
+	border-collapse: collapse;
+}
+
+.loginRemember td {
+	padding-left: 0px;
+	padding-right: 5px;
+}
+
+#rememberLogin {
+	margin: 0px;
+	padding-left: 0px;
+}
+
+.loginButtons {
+	border-collapse: collapse;
+}
+
+.loginButtons td {
+	padding-left: 0px;
+	padding-right: 5px;
+}
+
+.loginBox h2 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.loginBox ul {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.loginRegister {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.forgotPswdBox {
+	width: 380px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+}
+
+.forgotPswdBox input {
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+.error-messages {
+	color: red;
+}
