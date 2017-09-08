@@ -6,3 +6,4 @@
  v00.00.03 2017-08-10 adjust size of index image
  v00.00.04 2017-08-17 add info and override background image of /page/semiconductor/acquisition-rec.html
 #END_OF_FILE
+ v00.00.05 2017-09-08 bond BAIDU ZHANZHANG tool
