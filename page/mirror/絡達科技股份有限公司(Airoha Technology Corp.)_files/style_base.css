@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS 載入順序:
+	Layout Base
+		基本版型, 含距離, 不含色彩/背景圖
+	Module Base
+		功能模組樣式
+	Style Base (color / image)
+		版型色彩/背景圖
+		文字及內容樣式
+	Type.css
+		設計師樣式
+ */
+/*-----------------------------------基本色彩及背景圖-------------------------------------------*/
+.header_bg{ /*header背景圖容器*/
+	background-color: #CCC;	
+}
+.main_bg{ /*main背景圖容器*/
+	background-color: #EEE;
+}
+.footer_bg{ /*footer背景圖容器*/
+	color:#333;
+	background-color: #CCC;
+}
+.header{ /*為避免.header_bg的背景圖在視窗過窄時跑位, 可重複於.header設定相同背景圖*/
+	background-color: #AAA;
+	background-image:none;
+}
+.main{/*為避免.header_bg的背景圖在視窗過窄時跑位, 可重複於.header設定相同背景圖*/
+	background-color:#FFF;
+}
+.footer{/*為避免.footer_bg的背景圖在視窗過窄時跑位, 可重複於.footer設定相同背景圖*/
+	background-color: #AAA;
+}
+
+/*------------------------- .header 內容設定 -------------------------*/
+.header .title{
+	position:absolute;
+	top:0;
+	left:0;
+	width:200px;
+}
+.header .title a {
+	 background: no-repeat scroll 0 0 transparent;
+	 background-image:none;
+	 width: 300px;
+ 	 height: 60px;
+	/* [disabled]text-indent: -9999px; */
+}	
+.header .banner{
+	background-color:#999;
+	height:200px;
+}
+/*-----------------------------------文字及內容樣式-------------------------------------------*/
+/* 
+	設計師先將div.editor加上.border類別,
+	則內部table預設有邊框
+ */
+.editor.border table,
+.editor.border table th,
+.editor.border table td
+{
+	border:1px solid #000000;
+}
+
+/* 客戶可在table上設 class, 指定表格有邊框 */
+.editor table.border,
+.editor table.border th,
+.editor table.border td
+{
+	border:1px solid #000000;
+}
+
+.editor table.no-border,
+.editor table.no-border th,
+.editor table.no-border td
+{
+	border:none;
+}
+
+

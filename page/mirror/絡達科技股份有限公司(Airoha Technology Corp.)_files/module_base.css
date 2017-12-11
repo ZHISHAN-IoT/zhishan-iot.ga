@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS 載入順序:
+	Layout Base
+		基本版型, 含距離, 不含色彩/背景圖
+	Module Base
+		功能模組樣式
+	Style Base (color / image)
+		版型色彩/背景圖
+		文字及內容樣式
+	Type.css
+		設計師樣式
+ */
